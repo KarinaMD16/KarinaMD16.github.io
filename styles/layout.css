@@ -16,7 +16,64 @@
 
 /* layout del catalogo // karina */
 
+#catalog-section{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 2.4vh 2.4vh 5vh 3vh;
+    justify-content: center;
+}
 
+
+#catalog-title-id{
+    text-align: center;
+}
+
+.edible-products-container{
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.drinkable-products-container{
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card{
+    height: 20vh;
+    width: 20vw;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.product-card img{
+    object-fit: cover;
+}
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1vw;
+    
+}
+
+.more-pics-products{
+    display: flex;
+}
+
+.product-info button{
+    margin-top: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
 
 /* layout de los servicios // orlando */
 
@@ -32,6 +89,60 @@
 
 /* layout del form // karina */
 
+#form-section{
+    padding: 2.4vh 2.4vh 5vh 7vw;
+}
+
+#contact-form-title-id{
+    margin-bottom: 8vh;
+}
+
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "name phone"
+    "email email"
+    "message message"
+    ". submit";
+    row-gap: 5vh;
+    column-gap: 7vw;
+}
+
+.form-space {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.form-name{
+    grid-area: name;
+}
+
+.form-phone{
+    grid-area: phone;
+}
+
+.form-email{
+    grid-area: email;
+}
+
+.form-message{
+    grid-area: message;
+}
+
+.form-button{
+    grid-area: submit;
+    justify-self: end;
+    align-self: center;
+}
 
 
 /* layout del footer // elein */
