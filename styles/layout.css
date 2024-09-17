@@ -4,10 +4,25 @@
 
 /* layout del header // daniel */
 
-
-
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ul{
+    display: flex;
+    align-items: center;
+}
 /* layout del hero // daniel */
-
+#hero{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#hero-company-data{
+    display: flex;
+    flex-direction: column;
+}
 
 
 /* layout de productos destacados // diana */
