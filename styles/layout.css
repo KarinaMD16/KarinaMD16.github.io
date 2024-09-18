@@ -98,7 +98,6 @@ ul{
 
 /* layout de los servicios // orlando */
 #featured-services-section{
-    width: 100vw;
     height: 150vh;
     display: flex;
     flex-direction: column;
