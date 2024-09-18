@@ -153,9 +153,33 @@ nav ul{
 /* estilos de about us //  elein */
 
 
-
 /* estilos de reviews // daniel */
-
+#first-color .review-card{
+    background-color: #CDF0EA;
+    height: 35vh;
+    width: 23vw;
+    border-radius: 8px;
+    padding: 5vh;
+}
+#second-color .review-card{
+    background-color: #F7DBF1;
+    height: 35vh;
+    width: 23vw;
+    border-radius: 8px;
+    padding: 5vh;
+}
+#third-color .review-card{
+    background-color: #BFAEE2;
+    height: 35vh;
+    width: 23vw;
+    border-radius: 8px;
+    padding: 5vh;
+}
+.user-info img{
+    border-radius: 40px;
+    height: 40px;
+    width: 40px;
+}
 
 
 /* estilos del form // karina */
