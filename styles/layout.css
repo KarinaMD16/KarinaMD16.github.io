@@ -98,21 +98,21 @@ ul{
 
 /* layout de los servicios // orlando */
 #featured-services-section{
-    width: 1440px;
-    height: 1024px;
+    width: 100vw;
+    height: 150vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 2vw;
 }
 #featured-services-title-id{
     text-align: center;
 
 }
 .services-card-cup-design-service{
-    width: 1097px;
-    height: 323px;
+    width: 70vw;
+    height: 45vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -121,22 +121,20 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 6%;
+    margin-left: 5vw;
 }
 .services-card-cup-design-service img{
-    width: 577px;
-    height: 323px;
-    border-radius: 0px 38px 38px 0px;
-    border: 3px solid #CACACA;
+    width: 40vw;
+    height: 45vh;
 }
 .services-card-section{
     display: flex;
-    gap: 30px;
+    gap: 2vw;
 }
 .services-card{
     display: flex;
-    width: 492px;
-    height: 324px;
+    width: 35vw;
+    height: 45vh;
     align-items: center;
     justify-content: center;
 }
@@ -147,20 +145,20 @@ ul{
 }
 
 .service-title-container h2{
-    width: 348px;
-    height: 48px;
+    width: 25vw;
+    height: 10vh;
 }
 .service-title-container h4{
-    width: 390px;
-    height: 131px;
+    width: 26vw;
+    height: 21vh;
 }
 .service-title-container p{
-    width: 186px;
-    height: 12px;
+    width: 13vw;
+    height: 1vh;
 }
 .secondary-buton{
-    width: 190.5px;
-    height: 42px;
+    width: 15vw;
+    height: 6vh;
 }
 
 
