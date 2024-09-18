@@ -97,7 +97,68 @@ ul{
 }
 
 /* layout de los servicios // orlando */
+#featured-services-section{
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+#featured-services-title-id{
+    text-align: center;
 
+}
+.services-card-cup-design-service{
+    width: 70vw;
+    height: 45vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.services-card-cup-design-service div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5vw;
+}
+.services-card-cup-design-service img{
+    width: 40vw;
+    height: 45vh;
+}
+.services-card-section{
+    display: flex;
+    gap: 2vw;
+}
+.services-card{
+    display: flex;
+    width: 35vw;
+    height: 45vh;
+    align-items: center;
+    justify-content: center;
+}
+.service-title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-title-container h2{
+    width: 25vw;
+    height: 10vh;
+}
+.service-title-container h4{
+    width: 26vw;
+    height: 21vh;
+}
+.service-title-container p{
+    width: 13vw;
+    height: 1vh;
+}
+.secondary-buton{
+    width: 15vw;
+    height: 6vh;
+}
 
 
 /* layout de about us //  elein */
