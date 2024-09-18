@@ -111,20 +111,16 @@ ul{
 }
 .services-card-cup-design-service{
     width: 70vw;
-    height: 45vh;
+    height: 60vh;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 .services-card-cup-design-service div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 5vw;
+   padding: 8vh;
 }
 .services-card-cup-design-service img{
-    width: 40vw;
-    height: 45vh;
+    width: 35vw;
+    height: 59vh;
 }
 .services-card-section{
     display: flex;
@@ -132,20 +128,15 @@ ul{
 }
 .services-card{
     display: flex;
-    width: 35vw;
+    width: 34.5vw;
     height: 45vh;
-    align-items: center;
-    justify-content: center;
-}
+}   
 .service-title-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.service-title-container h2{
-    width: 25vw;
-    height: 10vh;
+    width: 100%;
+    align-items: center;  
+    gap: 2vh;  
 }
 .service-title-container h4{
     width: 26vw;
@@ -155,10 +146,7 @@ ul{
     width: 13vw;
     height: 1vh;
 }
-.secondary-buton{
-    width: 15vw;
-    height: 6vh;
-}
+
 
 
 /* layout de about us //  elein */
