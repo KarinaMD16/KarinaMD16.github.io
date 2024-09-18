@@ -154,6 +154,12 @@ nav ul{
 
 
 /* estilos de reviews // daniel */
+#customer-reviews-title-id{
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
 #first-color .review-card{
     background-color: #CDF0EA;
     height: 35vh;
@@ -180,7 +186,7 @@ nav ul{
     height: 40px;
     width: 40px;
 }
-
+    
 
 /* estilos del form // karina */
 
