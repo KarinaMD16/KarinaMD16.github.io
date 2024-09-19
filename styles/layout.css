@@ -114,7 +114,6 @@ ul{
     height: 35vh;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 .services-card-cup-design-service div{
     display: flex;
@@ -168,11 +167,37 @@ ul{
 
 /* layout de reviews // daniel */
 
+#customer-reviews-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 85vh;
+    gap: 6vh;
+}
+#customer-reviews-title-id{
+    margin-left: 7vw;
+}
+#card-section{
+    display: flex;
+    justify-content: space-evenly;
+}
+.review-card{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
 
 
 /* layout del form // karina */
 
 #form-section{
+    margin: 0;
     padding: 2.4vh 2.4vh 5vh 7vw;
 }
 
