@@ -110,8 +110,8 @@ ul{
 
 }
 .services-card-cup-design-service{
-    width: 70vw;
-    height: 45vh;
+    width: 60vw;
+    height: 35vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -123,8 +123,8 @@ ul{
     margin-left: 5vw;
 }
 .services-card-cup-design-service img{
-    width: 40vw;
-    height: 45vh;
+    width: 30vw;
+    height: 35vh;
 }
 .services-card-section{
     display: flex;
@@ -132,8 +132,8 @@ ul{
 }
 .services-card{
     display: flex;
-    width: 35vw;
-    height: 45vh;
+    width: 30vw;
+    height: 35vh;
     align-items: center;
     justify-content: center;
 }
@@ -149,10 +149,10 @@ ul{
 }
 .service-title-container h4{
     width: 26vw;
-    height: 21vh;
+    height: 10vh;
 }
 .service-title-container p{
-    width: 13vw;
+    width: 10vw;
     height: 1vh;
 }
 .secondary-buton{
