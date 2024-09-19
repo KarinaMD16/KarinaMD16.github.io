@@ -133,13 +133,72 @@ code{
     margin-top: 5vh;
 }
 .secondary-buton{
+    width: 13vw;
+    height: 5vh;
     border-radius: 8px;
     background: #BFAEE2;
     color: #FFF;
     font-family:"Poppins";
-    font-size:1.3em;
+    font-size:1em;
     border: none;
 }
 .secondary-buton:hover{
     background: #9083aa;
 }   
+#aside 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+}
+.aside-container
+{
+    display: flex;
+    gap: 5vw;
+}
+.my-aside{
+    width: 20vw;
+    height: 60vh;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #CDF0EA;
+}
+#opciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3vh;
+}
+#opciones div img{
+    width: 128px;
+    margin-bottom: 1vh;
+}
+.links{
+    display: flex;
+    font-size: 1.1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a{
+    color: #000;
+    text-decoration: none;
+}
+
+#label
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+}
+footer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
