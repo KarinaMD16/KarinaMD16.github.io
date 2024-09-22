@@ -9,11 +9,38 @@
     "companyLocation": "Chicago, Illinois USA"
   },
 
-  "header": {
-    "IDHeader": 1,
-    "titleNav": "Inicio",
-    "urlNav": "/home"
-  },
+  "header": [
+    {
+        "IDHeader": 1,
+        "titleNav": "Home",
+        "urlNav": "/index.html"
+    },
+    {
+        "IDHeader": 2,
+        "titleNav": "About Us",
+        "urlNav": "#about-us-section"
+    },
+    {
+        "IDHeader": 3,
+        "titleNav": "Products",
+        "urlNav": "#featured-products-section"
+    },
+    {
+        "IDHeader": 4,
+        "titleNav": "Services",
+        "urlNav": "#featured-services-section"
+    },
+    {
+        "IDHeader": 5,
+        "titleNav": "Style Page",
+        "urlNav": "/stylepage.html"
+    },
+    {
+        "IDHeader": 6,
+        "titleNav": "Contact",
+        "urlNav": "#form-section"
+    }
+  ],
 
   "hero": {
     "IDHero": 1,
@@ -39,25 +66,56 @@
     },
     {
         "IDSectionTitles": 3,
-        "stName": "Featured Services"
+        "stName": "Unleash your sweet side"
     },
     {
         "IDSectionTitles": 4,
-        "stName": "About Us"
+        "stName": "A cup of inspiration"
     },
     {
         "IDSectionTitles": 5,
+        "stName": "Featured Services"
+    },
+    {
+        "IDSectionTitles": 6,
+        "stName": "About Us"
+    },
+    {
+        "IDSectionTitles": 7,
         "stName": "Customer Reviews"
     }
   ],
 
-  "featuredProducts": {
-    "IDProducts": 1,
-    "productName": "Producto 1",
-    "productDescription": "Descripción del producto 1",
-    "productPicture": "producto1.jpg",
-    "productPrice": 100.0
-  },
+  "featuredProducts": [
+    {
+      "IDProducts": 1,
+      "productName": "Macaroon",
+      "productDescription": "Delicious almond-based pastry, crunchy on the outside and soft on the inside.",
+      "productPicture": "https://i.ibb.co/H4J1q44",
+      "productPrice": 5
+    },
+    {
+      "IDProducts": 2,
+      "productName": "Donut",
+      "productDescription": "Classic donut with a fluffy texture and a variety of glazes.",
+      "productPicture": "https://i.ibb.co/2yDJb2d/donut.webp",
+      "productPrice": 5
+    },
+    {
+      "IDProducts": 3,
+      "productName": "Coffee",
+      "productDescription": "Freshly brewed coffee made from premium beans.",
+      "productPicture": "https://i.ibb.co/1XhHmq3/coffee.webp",
+      "productPrice": 10
+    },
+    {
+      "IDProducts": 4,
+      "productName": "Mochi",
+      "productDescription": "Soft and chewy rice cake filled with sweet flavors.",
+      "productPicture": "https://i.ibb.co/nrTWz5y/mochi.webp",
+      "productPrice": 5
+    }
+  ],
 
   "catalog": [
     {
@@ -74,6 +132,21 @@
       "catalogImage": "https://i.ibb.co/9y7RkQv/pancakes.webp",
       "catalogName": "Pancake",
       "catalogPrice": 5
+    },
+    {
+      "catalogImage": "https://i.ibb.co/CHsh3SW/hot-chocolate.webp",
+      "catalogName": "Hot Chocolate",
+      "catalogPrice": 3
+    },
+    {
+        "catalogImage": "https://i.ibb.co/mqN2r9T/coffee-1.webp",
+        "catalogName": "Coffee",
+        "catalogPrice": 4
+    },
+    {
+        "catalogImage": "https://i.ibb.co/8YZxGnY/capuccino.webp",
+        "catalogName": "Capuccino",
+        "catalogPrice": 3
     }
   ],
 
