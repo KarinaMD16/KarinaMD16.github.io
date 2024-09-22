@@ -42,6 +42,19 @@ section{
 
 /* estilos de productos destacados // diana */
 
+.featured-products-card{
+    text-align: left;
+    border: 1px solid #ddd;
+   padding: 10px;
+    box-shadow: 0 6px 8px rgb(153, 153, 153); /*para las sombras */
+}
+
+.secondary-buton{
+    border-radius: 6px;
+    background-color: rgb(205, 152, 255);
+   height: 30px;
+   
+}
 
 
 /* estilos del catalogo // karina */
