@@ -1,7 +1,8 @@
 {
   "company": {
     "IDCompany": 1,
-    "companyLogo": "https://i.ibb.co/CBT4hvm/LogoNoBG.png",
+    "companyImagoLogo": "https://i.ibb.co/CBT4hvm/LogoNoBG.png",
+    "companyIsoLogo": "https://i.ibb.co/x1f2Ft1/Isologo.png",
     "companyName": "The Sugar Vault",
     "companyDescription": "Find delights that will awaken your senses, let each visit to this place become a daily escape, one cup at a time.",
     "companyPhoneNumber": "+123456789",
