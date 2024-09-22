@@ -16,7 +16,7 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li id="home-background"><a href="#">Home</a></li>
                     <li><a href>About Us</a></li>
                     <li><a href>Products</a></li>
                     <li><a href>Services</a></li>
@@ -31,9 +31,9 @@
                 <div id="hero-company-data">
                     <img src="src/sugar_vaultLogo.png" id="hero-logo-id" alt>
                     <h4 id="hero-description-id">Find delights that will awaken your senses, let each
-                        visit to this place become a daily escape, one cup at a time</h4>
+                        visit to this place become a daily escape, one cup at a time.</h4>
                 </div>
-                <img src="src/Bubble Tea.png" id="hero-background-pic-id" alt="">
+                <img id="bubbletea" src="src/Bubble Tea.png" id="hero-background-pic-id" alt="">
             </section>
 
             <section id="featured-products-section">    <!-- productos destacados // diana -->
@@ -117,92 +117,139 @@
             </section>
 
             <section id="catalog-section">              <!-- catalogo // karina -->
-                <h1 id="catalog-title-id">Our Catalog</h1>
+                <h1 id="catalog-title-id">our <span>Catalog</span></h1>
+                    
+                <div class="catalog-subtitle-container">
+                    <h2>Unleash your sweet side</h2>
+                </div>
 
                 <div class="edible-products-container">
-                    <div class="food-cards-title-container"></div>
-                        <h2>Unleash your sweet side</h2>
-                    </div>
-                    
                     <div class="product-card">
-                        <h3>Name</h3>
-                        <h4>Price</h4>
-                        <img src="https://superbaker.ru/wp-content/uploads/2024/03/mochi-decorated6.jpg" alt="">
+                        <div class="product-info">
+                            <h3>Pancakes</h3>
+                            <h4>$5</h4>
+
+                            <div class="more-pics-products">
+                                <button class="more-options-button">1</button>
+                                <button class="more-options-button">2</button>
+                                <button class="more-options-button">3</button>
+                            </div>
+                        </div>
+                        <img src="src/pancakes.jpg" alt="">
                     </div>
             
                     <div class="product-card">
-                        <h3>Name</h3>
-                        <h4>Price</h4>
-                        <img src="https://superbaker.ru/wp-content/uploads/2024/03/mochi-decorated6.jpg" alt="">
+                        <div class="product-info">
+                            <h3>Cupcakes</h3>
+                            <h4>$5</h4>
+
+                            <div class="more-pics-products">
+                                <button class="more-options-button">1</button>
+                                <button class="more-options-button">2</button>
+                                <button class="more-options-button">3</button>
+                            </div>
+                        </div>
+                        <img src="src/cupcake.jpg" alt="">
                     </div>
 
                     <div class="product-card">
-                        <h3>Name</h3>
-                        <h4>Price</h4>
-                        <img src="https://superbaker.ru/wp-content/uploads/2024/03/mochi-decorated6.jpg" alt="">
+                        <div class="product-info">
+                            <h3>Donuts</h3>
+                            <h4>$5</h4>
+
+                            <div class="more-pics-products">
+                                <button class="more-options-button">1</button>
+                                <button class="more-options-button">2</button>
+                                <button class="more-options-button">3</button>
+                            </div>
+                        </div>
+                        <img src="src/donut.jpg" alt="">
                     </div>
                     
+                </div>
+                
+                <div class="catalog-subtitle-container">
+                    <h2>A cup of inspiration</h2>
                 </div>
 
                 <div class="drinkable-products-container">
-                    <div class="drinks-cards-title-container">
-                        <h2>A cup of inspiration</h2>
-                    </div>
-
                     <div class="product-card">
-                        <h3>Name</h3>
-                        <h4>Price</h4>
-                        <img src="https://superbaker.ru/wp-content/uploads/2024/03/mochi-decorated6.jpg" alt>
+                        <div class="product-info">
+                            <h3>Hot chocolate</h3>
+                            <h4>$2,75</h4>
+
+                            <div class="more-pics-products">
+                                <button class="more-options-button">1</button>
+                                <button class="more-options-button">2</button>
+                                <button class="more-options-button">3</button>
+                            </div>
+                        </div>
+                        <img src="src/hot chocolate.jpg" alt>
                     </div>
                     
                     <div class="product-card">
-                        <h3>Name</h3>
-                        <h4>Price</h4>
-                        <img src="https://superbaker.ru/wp-content/uploads/2024/03/mochi-decorated6.jpg" alt>
+                        <div class="product-info">
+                            <h3>Capuccino</h3>
+                            <h4>$2,90</h4>
+
+                            <div class="more-pics-products">
+                                <button class="more-options-button">1</button>
+                                <button class="more-options-button">2</button>
+                                <button class="more-options-button">3</button>
+                            </div>
+                        </div>
+                        <img src="src/capuccino.jpg" alt>
                     </div>
+
                     <div class="product-card">
-                        <h3>Name</h3>
-                        <h4>Price</h4>
-                        <img src="https://superbaker.ru/wp-content/uploads/2024/03/mochi-decorated6.jpg" alt>
+                        <div class="product-info">
+                            <h3>Coffee</h3>
+                            <h4>2,50</h4>
+
+                            <div class="more-pics-products">
+                                <button class="more-options-button">1</button>
+                                <button class="more-options-button">2</button>
+                                <button class="more-options-button">3</button>
+                            </div>
+                        </div>
+                        <img src="src/coffee.png" alt>
                     </div>
                 </div>
             </section>
 
+        
             <section id="featured-services-section">        <!-- servicios // orlando -->
-                <h1 id="featured-services-title-id">Featured Services</h1>
-                
-                <div class="services-card" class="cup-design-service" id="cup-design-service-id">
-                    <img src="https://superbaker.ru/wp-content/uploads/2024/03/mochi-decorated6.jpg" alt="">
-                    
+                <h1 id="featured-services-title-id">Featured <span>Services</span></h1>
+                <div class="services-card-cup-design-service" id="cup-design-service-id">
                     <div class="service-title-container">
                         <h2>Design your own cup</h2>
+                        <h4>Buy our always available “Creativity cups” that come with all the necessary supplies to paint your favorite and unique design!</h4>
                     </div>
-                    
-                    <h4>Description</h4>
+                    <img src="src/handmade.png" alt="">
+                </div>
+                <div class="services-card-section">
+                    <div class="services-card">
+                        <div class="service-title-container">
+                            <h2>Special Events</h2>
+                            <h4>Now you can book our place and make your events even more special!</h4>
+                            <button class="secondary-buton">Read more</button>
+                        </div>
+                    </div>
+    
+                    <div class="services-card">
+                        <div class="service-title-container">
+                            <h2>Free Delivery</h2>
+                            <h4>Now you can get a free delivery to enjoy your order from the comfort of your home!*</h4>
+                            <button class="secondary-buton">Read more</button>
+                            <p>*At participating locations</p>
+                        </div>
+        
+                        
+                    </div>
                 </div>
 
-                <div class="services-card">
-                    <div class="service-title-container">
-                        <h2>Special Events</h2>
-                    </div>
-                    
-                    <h4>Description</h4>
-
-                    <button class="secondary-buton">Read more</button>
-                </div>
-
-                <div class="services-card">
-                    <div class="service-title-container">
-                        <h2>Free Delivery</h2>
-                    </div>
-
-                    <h4>Description</h4>
-                    
-                    <p>Restrictions</p>
-                    
-                    <button class="secondary-buton">Read more</button>
-                </div>
             </section>
+            
 
             <section id="about-us-section">                 <!-- about us // elein -->
                 <img src="" alt="">
@@ -218,8 +265,9 @@
 
             <section id="customer-reviews-section">             <!-- reviews // daniel -->
                 <h1 id="customer-reviews-title-id">Customer Reviews</h1>
-                
-                <div class="review-card"></div>
+            <div id="card-section">
+                <div id="first-color">
+                <div class="review-card">
                     <div class="review-rating">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                             <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
@@ -237,21 +285,23 @@
                             <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
                         </svg>
                     </div>
-                    
-                    <h4 id="review-title-id">Review Title</h4>
-                    
-                    <p id="review-body-id">review body</p>
-                    
+                    <div>
+                        <h3 id="review-title-id">Review Title</h3>
+                        <p id="review-body-id">review body</p>
+                    </div>
                     <div class="user-info">
                         <img src="https://static.vecteezy.com/system/resources/previews/035/832/826/non_2x/ai-generated-beautiful-young-business-woman-portrait-woman-face-smiling-cute-girl-with-long-hair-studio-shot-isolated-on-gray-background-photo.jpg" alt="">
-                        
+                        <div>
                         <h4 id="user-name-id">Reviewer name</h4>
                         
                         <p>Date</p>
+                        </div>
                     </div>
+                </div>
                 </div>
 
-                <div class="review-card"></div>
+                <div id="second-color">
+                <div class="review-card">
                     <div class="review-rating">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                             <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
@@ -270,20 +320,25 @@
                         </svg>
                     </div>
                     
-                    <h4 id="review-title-id">Review Title</h4>
-                    
-                    <p id="review-body-id">review body</p>
-                    
+                    <div>
+                        <h3 id="review-title-id">Review Title</h3>
+                        <p id="review-body-id">review body</p>
+                    </div>
+
                     <div class="user-info">
                         <img src="https://static.vecteezy.com/system/resources/previews/035/832/826/non_2x/ai-generated-beautiful-young-business-woman-portrait-woman-face-smiling-cute-girl-with-long-hair-studio-shot-isolated-on-gray-background-photo.jpg" alt="">
                         
-                        <h4 id="user-name-id">Reviewer name</h4>
-                        
-                        <p>Date</p>
+                        <div>
+                            <h4 id="user-name-id">Reviewer name</h4>
+                            
+                            <p>Date</p>
+                        </div>
                     </div>
+                </div>
                 </div>
 
-                <div class="review-card"></div>
+                <div id="third-color">
+                <div class="review-card">
                     <div class="review-rating">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                             <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
@@ -301,44 +356,49 @@
                             <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
                         </svg>
                     </div>
-                    
-                    <h4 id="review-title-id">Review Title</h4>
-                    
-                    <p id="review-body-id">review body</p>
-                    
+                     <div>
+                        <h3 id="review-title-id">Review Title</h3>
+                        <p id="review-body-id">review body</p>
+                    </div>
                     <div class="user-info">
                         <img src="https://static.vecteezy.com/system/resources/previews/035/832/826/non_2x/ai-generated-beautiful-young-business-woman-portrait-woman-face-smiling-cute-girl-with-long-hair-studio-shot-isolated-on-gray-background-photo.jpg" alt="">
                         
-                        <h4 id="user-name-id">Reviewer name</h4>
-                        
-                        <p>Date</p>
+                        <div>
+                            <h4 id="user-name-id">Reviewer name</h4>
+                            
+                            <p>Date</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+            </div>
             </section>
 
             <section id="form-section">                     <!-- form // karina -->
-                <h1 id="contact-form-title-id">Contact us</h1> 
+                <h1 id="contact-form-title-id">contact us</h1> 
 
+               <div class="form-container">
                 <form action="#" method="post">
-                    <div class="form-space">
+                    <div class="form-space form-name">
                         <label>Name</label>
                         <input type="name" name="Name" id="form-name" placeholder="Write your name">
                     </div>
-                    <div class="form-space">
+                    <div class="form-space form-phone">
                         <label>Phone number</label>
                         <input type="phone" name="Phone" id="form-phone" placeholder="Write your phone number">
                     </div>
-                    <div class="form-space">
+                    <div class="form-space form-email">
                         <label>Email</label>
                         <input type="email" name="email" id="form-email" placeholder="Write your email">
                     </div>
                     
-                    <div class="form-space">
+                    <div class="form-space form-message">
                         <label>Message</label>
                         <input type="message" name="message" id="form-message" placeholder="Write a message">
                     </div>
                     <button type="submit" class="form-button">Submit</button>
                 </form>
+               </div>
             </section>
 
         </main>
