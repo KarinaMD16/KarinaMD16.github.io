@@ -1,0 +1,125 @@
+
+.drip-container {
+    z-index: 2;
+    animation: wave 1s ease-out forwards;
+
+}
+
+.drops {
+    -webkit-filter: url('#liquid');
+    filter: url('#liquid');
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    animation: fade-in .1s linear .4s forwards;
+    left: 20vw;
+}
+
+.drop1,
+.drop2 {
+    width: 21px;
+    height: 24px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    background-color: #d0bbf9
+}
+
+.drop3, .drop4, .drop5, .drop6, .drop7, .drop8, .drop9 {
+    width: 30px;
+    height: 24px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #d0bbf9;
+}
+
+.drop3{
+    left: 50px;
+    animation: drop 3s cubic-bezier(1, .19, .66, .12) .5s infinite;
+}
+
+.drop4{
+    left: 100px;
+    width: 43px;
+    animation: drop 2.2s cubic-bezier(1, .19, .66, .12) .5s infinite;
+}
+
+.drop5{
+    left: 220px;
+    animation: drop 1.5s cubic-bezier(1, .19, .66, .12) .5s infinite;
+}
+
+.drop6{
+    left: 420px;
+    width: 20px;
+    animation: drop 1.4s cubic-bezier(1, .19, .66, .12) .5s infinite;
+}
+
+.drop7{
+    left: 620px;
+    width: 32px;
+    animation: drop 2.6s cubic-bezier(1, .19, .66, .12) .5s infinite;
+}
+
+.drop8 {
+    width: 21px;
+    left: 880px;
+    animation: drop 1.3s cubic-bezier(1, .19, .66, .12) .5s infinite;
+}
+
+.drop9 {
+    width: 20px;
+    height: 90px;
+    left: 780px;
+    animation: drop 2.3s cubic-bezier(1, .19, .66, .12) .5s infinite;
+}
+
+.drop1 {
+    width: 59vw;
+    height: 10vh;
+    bottom: 2px;
+    border-radius: 0;
+}
+
+.drop2 {
+    animation: drop 1.3s cubic-bezier(1, .19, .66, .12) .5s infinite;
+}
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes drop {
+    0% {
+        bottom: 0px;
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: -200px;
+    }
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0 160px;
+        background-size: 170px 300px;
+    }
+
+    100% {
+        background-position: 500px -18px;
+        background-size: 250px 150px;
+    }
+}
