@@ -1,0 +1,205 @@
+{
+  "company": {
+    "IDCompany": 1,
+    "companyImagoLogo": "https://i.ibb.co/CBT4hvm/LogoNoBG.png",
+    "companyIsoLogo": "https://i.ibb.co/x1f2Ft1/Isologo.png",
+    "companyName": "The Sugar Vault",
+    "companyDescription": "Find delights that will awaken your senses, let each visit to this place become a daily escape, one cup at a time.",
+    "companyPhoneNumber": "+123456789",
+    "companyEmail": "TheSugarVault@contact.com",
+    "companyLocation": "Chicago, Illinois USA"
+  },
+
+  "header": [
+    {
+        "IDHeader": 1,
+        "titleNav": "Home",
+        "urlNav": "/index.html"
+    },
+    {
+        "IDHeader": 2,
+        "titleNav": "About Us",
+        "urlNav": "#about-us-section"
+    },
+    {
+        "IDHeader": 3,
+        "titleNav": "Products",
+        "urlNav": "#featured-products-section"
+    },
+    {
+        "IDHeader": 4,
+        "titleNav": "Services",
+        "urlNav": "#featured-services-section"
+    },
+    {
+        "IDHeader": 5,
+        "titleNav": "Style Page",
+        "urlNav": "/stylepage.html"
+    },
+    {
+        "IDHeader": 6,
+        "titleNav": "Contact",
+        "urlNav": "#form-section"
+    }
+  ],
+
+  "hero": {
+    "IDHero": 1,
+    "heroPicture": "https://i.ibb.co/0XWz8tz/Bubble-Tea.webp"
+  },
+
+  "contactForm": {
+    "IDContactForm": 1,
+    "contactFormName": "hola",
+    "contactFormEmail": "email@empresa.com",
+    "contactFormNumber": "+987654321",
+    "contactFormMessage": "aaaaaaaAAAAAAAAA"
+  },
+
+  "sectionTitles": [
+    {
+        "IDSectionTitles": 1,
+        "stName": "Featured Products"
+    },
+    {
+        "IDSectionTitles": 2,
+        "stName": "our Catalog"
+    },
+    {
+        "IDSectionTitles": 3,
+        "stName": "Unleash your sweet side"
+    },
+    {
+        "IDSectionTitles": 4,
+        "stName": "A cup of inspiration"
+    },
+    {
+        "IDSectionTitles": 5,
+        "stName": "Featured Services"
+    },
+    {
+        "IDSectionTitles": 6,
+        "stName": "About Us"
+    },
+    {
+        "IDSectionTitles": 7,
+        "stName": "Customer Reviews"
+    }
+  ],
+
+  "featuredProducts": [
+    {
+      "IDProducts": 1,
+      "productName": "Macaroon",
+      "productDescription": "Delicious almond-based pastry, crunchy on the outside and soft on the inside.",
+      "productPicture": "https://i.ibb.co/H4J1q44",
+      "productPrice": 5
+    },
+    {
+      "IDProducts": 2,
+      "productName": "Donut",
+      "productDescription": "Classic donut with a fluffy texture and a variety of glazes.",
+      "productPicture": "https://i.ibb.co/2yDJb2d/donut.webp",
+      "productPrice": 5
+    },
+    {
+      "IDProducts": 3,
+      "productName": "Coffee",
+      "productDescription": "Freshly brewed coffee made from premium beans.",
+      "productPicture": "https://i.ibb.co/1XhHmq3/coffee.webp",
+      "productPrice": 10
+    },
+    {
+      "IDProducts": 4,
+      "productName": "Mochi",
+      "productDescription": "Soft and chewy rice cake filled with sweet flavors.",
+      "productPicture": "https://i.ibb.co/nrTWz5y/mochi.webp",
+      "productPrice": 5
+    }
+  ],
+
+  "catalog": [
+    {
+      "catalogImage": "https://i.ibb.co/tmf1P7k/donut.webp",
+      "catalogName": "Donuts",
+      "catalogPrice": 5
+    },
+    {
+      "image": "https://i.ibb.co/82PMdXQ/cupcake.webp",
+      "catalogName": "Cupcake",
+      "catalogPrice": 5
+    },
+    {
+      "catalogImage": "https://i.ibb.co/9y7RkQv/pancakes.webp",
+      "catalogName": "Pancake",
+      "catalogPrice": 5
+    },
+    {
+      "catalogImage": "https://i.ibb.co/CHsh3SW/hot-chocolate.webp",
+      "catalogName": "Hot Chocolate",
+      "catalogPrice": 3
+    },
+    {
+        "catalogImage": "https://i.ibb.co/mqN2r9T/coffee-1.webp",
+        "catalogName": "Coffee",
+        "catalogPrice": 4
+    },
+    {
+        "catalogImage": "https://i.ibb.co/8YZxGnY/capuccino.webp",
+        "catalogName": "Capuccino",
+        "catalogPrice": 3
+    }
+  ],
+
+  "services": [
+    {
+      "IDServices": 1,
+      "servicesName": "Handmade Cup",
+      "servicesPicture": "https://i.ibb.co/xGBngPx/handmade.webp",
+      "servicesDescription": "Buy our always available “Creativity cups” that come with all the necessary supplies to paint your favorite and unique design!"
+    },
+    {
+      "IDServices": 2,
+      "servicesName": "Special Events",
+      "servicesPicture": "",
+      "servicesDescription": "Now you can book our place and make your events even more special!"
+    },
+    {
+      "IDServices": 3,
+      "servicesName": "Free Delivery",
+      "servicesPicture": "",
+      "servicesDescription": "Now you can get a free delivery to enjoy your order from the comfort of your home!*"
+    }
+  ],
+
+  "aboutUS": {
+    "IDAboutUs": 1,
+    "aboutDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    "aboutImg": "https://i.ibb.co/nz69msZ/aboutus.webp",
+    "aboutButton": "Contact Us"
+  },
+
+  "reviews": [
+    {
+      "IDReviews": 1,
+      "reviewerName": "Emily Smith",
+      "reviewerPicture": "https://i.ibb.co/mqt4yFY/emilysmith.webp",
+      "reviewDescription": "Great experience! The food was delicious and the atmosphere was wonderful.",
+      "reviewDate": "2024-09-01"
+    },
+    {
+      "IDReviews": 2,
+      "reviewerName": "Dan Xavier",
+      "reviewerPicture": "https://i.ibb.co/Dw6vP5g/danxavier.webp",
+      "reviewDescription": "Amazing service, quick delivery, and the product quality is top-notch!",
+      "reviewDate": "2024-09-05"
+    },
+    {
+      "IDReviews": 3,
+      "reviewerName": "Julieta Johnson",
+      "reviewerPicture": "https://i.ibb.co/nM81rXS/juelietajohnson.webp",
+      "reviewDescription": "Loved the handmade cups! Such a fun and creative activity, highly recommended.",
+      "reviewDate": "2024-09-10"
+    }
+  ]
+}
