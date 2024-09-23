@@ -69,11 +69,9 @@ height: 30vh;
     width: 85px;
     height: 85px;
    margin:0 auto;
-    object-fit: cover;
-    border-radius: 85px;
+    object-fit: contain;
 }
 .button{
-  width: 100%;
  display: flex;
  justify-content: center;
  
