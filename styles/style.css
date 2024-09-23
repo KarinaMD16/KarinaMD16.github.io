@@ -89,6 +89,10 @@ nav ul {
 
 
 /* estilos de productos destacados // diana */
+#featured-products-cards-container-id{
+    z-index: 3;
+}
+
 .featured-products-cards-container {
     box-shadow: 0 6px 6px rgb(153, 153, 153);
     /*para las sombras */
