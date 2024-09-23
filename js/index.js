@@ -221,10 +221,13 @@ function renderReviews(data) {
         personContainer.appendChild(usersReviewerName);
         personContainer.appendChild(reviewPostDate);
 
+<<<<<<< HEAD
         // Añadir las estrellas al contenedor de la tarjeta
         
 
         // Añadir la tarjeta al contenedor principal
+=======
+>>>>>>> origin/kary-featuress
         reviewContainer.appendChild(reviewCard);
     });
 }
