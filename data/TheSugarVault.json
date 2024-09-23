@@ -132,18 +132,21 @@
     {
       "reviewerName": "Emily Smith",
       "reviewerPicture": "https://i.ibb.co/mqt4yFY/emilysmith.webp",
-      "reviewDescription": "Great experience! The food was delicious and the atmosphere was wonderful.",
+      "reviewTitle":"Great experience! ",
+      "reviewDescription": "The food was delicious and the atmosphere was wonderful.",
       "reviewDate": "2024-09-01"
     },
     {
       "reviewerName": "Dan Xavier",
       "reviewerPicture": "https://i.ibb.co/Dw6vP5g/danxavier.webp",
+      "reviewTitle":"Such a unique place",
       "reviewDescription": "Amazing service, quick delivery, and the product quality is top-notch!",
       "reviewDate": "2024-09-05"
     },
     {
       "reviewerName": "Julieta Johnson",
       "reviewerPicture": "https://i.ibb.co/nM81rXS/juelietajohnson.webp",
+      "reviewTitle":"Super delicious!",
       "reviewDescription": "Loved the handmade cups! Such a fun and creative activity, highly recommended.",
       "reviewDate": "2024-09-10"
     }
