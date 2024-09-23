@@ -3,105 +3,145 @@
 /* exclusivamente para estilos */
 /* colores, fuentes, fondos, bordes, estilos de botones, animaciones */
 
-body{
+body {
     background-color: #F9F9F9;
     color: black;
     margin: 0;
 }
 
-body h1, h2{
+body h1,
+h2 {
     font-family: "Spicy Rice", serif;
 }
 
-body h3, h4, p, a, label{
+body h3,
+h4,
+p,
+a,
+label {
     font-family: "Poppins", sans-serif;
 }
 
-body h1, h2, h3, h4, p{
-    margin: 0; 
+body h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
 }
 
-body img{
-    width: 100px; /* Eliminar al terminar.
+body img {
+    width: 100px;
+    /* Eliminar al terminar.
     solo esta para que se pueda ver el html mas claramente */
 }
 
-section{
-    margin: 40px 0;
-    /* Eliminar al terminar.
-    solo esta para que puedan distinguir sus secciones al principio */
-}
-
 /* estilos del header // daniel */
-header{
+header {
     background-color: #FFFFFF;
     height: 15vh;
     box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
 }
-header img{
+
+header img {
     height: 70px;
     width: 80px;
     padding: 25px;
 }
-nav a{
+
+nav a {
     text-decoration: none;
     color: black;
 }
-nav ul{
+
+nav ul {
     list-style-type: none;
     gap: 20px;
     padding: 25px;
 }
-#home-background{
+
+#home-background {
     background-color: #BFAEE2;
     padding: 5px;
     border-radius: 8px;
 }
 
 /* estilos del hero // daniel */
-#hero{
+#hero {
     margin: 0;
     height: 83vh;
 }
-#bubbletea{
+
+#bubbletea {
     height: 75vh;
     width: 40vh;
     margin: 0 15vh 0 0;
 }
-#hero-company-data{
+
+#hero-company-data {
     width: 34%;
     gap: 20px;
 }
-#hero-company-data img{
-   width: 70%;
+
+#hero-company-data img {
+    width: 70%;
 }
 
 
-
 /* estilos de productos destacados // diana */
+.featured-products-cards-container {
+    box-shadow: 0 6px 6px rgb(153, 153, 153);
+    /*para las sombras */
+    background-color: #F9F9F9;
+}
 
+.featured-products-card {
+    text-align: left;
+    border-left: 3px solid #ddd;
+    border-bottom: 3px solid #ddd;
+    border-top: 3px solid #ddd;
+    padding: 10px;
+}
+
+.secondary-buton {
+    border-radius: 6px;
+    background-color: rgb(205, 152, 255);
+    height: 30px;
+
+}
+
+#featured-products-title-id {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5vw;
+
+}
+
+#featured-products-title-id span {
+    color: #AA8BE8;
+}
 
 
 /* estilos del catalogo // karina */
 
-#catalog-section{
+#catalog-section {
     background: linear-gradient(137deg, #CDF0EA 39.02%, #F7DBF1 80.22%);
 }
 
-#catalog-section h1{
+#catalog-section h1 {
     color: black;
     font-style: normal;
     font-weight: 400;
     font-size: 2.5vw;
-    
+
 }
 
-#catalog-title-id span{
+#catalog-title-id span {
     color: #AA8BE8;
 
 }
 
-.catalog-subtitle-container{
+.catalog-subtitle-container {
     background: #BFAEE2;
     width: 20vw;
     padding: .5vw;
@@ -110,33 +150,34 @@ nav ul{
     text-align: center;
 }
 
-.catalog-subtitle-container h2{
+.catalog-subtitle-container h2 {
     color: #F9F9F9;
     text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
     font-style: normal;
     font-weight: 400;
 }
 
-.product-card{
+.product-card {
     background-color: #F9F9F9;
     border: none;
     border-radius: 30px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    
+
 }
 
-.product-card h3, h4{
+.product-card h3,
+h4 {
     font-weight: 600;
 }
 
-.product-card img{
+.product-card img {
     border: none;
     border-radius: 30px;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
 
 }
 
-.product-info button{
+.product-info button {
     width: 20px;
     height: 20px;
     border-radius: 100%;
@@ -148,134 +189,156 @@ nav ul{
 
 /* estilos de los servicios // orlando */
 
-    #featured-services-section{
-        position: relative;
-        background:#F9F9F9;
-        overflow: hidden;
-    }
-    #featured-services-section::after,#featured-services-section::before{
-        content: "";
-        position: absolute;
-        opacity: 0.45;
-        border-radius: 30%;
-    }
-    #featured-services-section::after{
-        width: 60vw; 
-        height: 130vh;  
-        background:#F7DBF1; 
-        bottom: -120px; /* Posición de la mancha */  
-        left: -220px;  
-        z-index: 0; /* Detrás del contenido */ 
-        filter: blur(20px); 
-    }
-    #featured-services-section::before{
-        width: 30vw; 
-        height: 35vh;  
-        background: #CDF0EA;
-        top: -50px; /* Posición de la mancha */  
-        right: -50px; 
-        z-index: 0; /* Detrás del contenido */ 
-        filter: blur(20px); 
-    }
-    #featured-services-section h1{
-        color: #000;
-        font-family:"Spicy Rice";
-        font-size:3em;
-        font-style:normal;
-        font-weight:400;
-    }
-    #featured-services-title-id span{
-        color: #AA8BE8;
-    }
-    .services-card-cup-design-service{
-        border-radius:40px;
-        background: #F9F9F9;
-        box-shadow:6px 4px 11.6px 0px rgba(0, 0, 0, 0.25);
-        z-index: 1;
-    }
-    .services-card-cup-design-service img{
-        border-radius: 0px 38px 38px 0px;
-        border: 3px solid #CACACA;
-    }
-    .services-card{
-        border-radius:40px;
-        background: #F9F9F9;
-        box-shadow:6px 4px 11.6px 0px rgba(0,0,0,0.25);
-        z-index: 1;
-    }
-    .service-title-container h2{
-        color: #BFAEE2;
-        font-family:"Poppins";
-        font-size:2em;
-        font-style:normal;
-        font-weight:600;
-    }
-    .service-title-container h4{
-        color: #5B5B5B;
-        font-family:"Poppins";
-        font-size:1em;
-        font-weight:500;
-    }
-    .service-title-container p{
-        color: #5B5B5B;
-        font-family:"Poppins";
-        font-size: 0.7em;
-        font-weight:500;
-    }
-    .secondary-buton{
-        border-radius: 8px;
-        background: #BFAEE2;
-        color: #FFF;
-        font-family:"Poppins";
-        font-size:1em;
-        border: none;
-    }
-    .secondary-buton:hover{
-        background: #9083aa;
-    }
+#featured-services-section {
+    position: relative;
+    background: #F9F9F9;
+    overflow: hidden;
+}
+
+#featured-services-section::after,
+#featured-services-section::before {
+    content: "";
+    position: absolute;
+    opacity: 0.45;
+    border-radius: 30%;
+}
+
+#featured-services-section::after {
+    width: 60vw;
+    height: 130vh;
+    background: #F7DBF1;
+    bottom: -120px;
+    /* Posición de la mancha */
+    left: -220px;
+    z-index: 0;
+    /* Detrás del contenido */
+    filter: blur(20px);
+}
+
+#featured-services-section::before {
+    width: 30vw;
+    height: 35vh;
+    background: #CDF0EA;
+    top: -50px;
+    /* Posición de la mancha */
+    right: -50px;
+    z-index: 0;
+    /* Detrás del contenido */
+    filter: blur(20px);
+}
+
+#featured-services-section h1 {
+    color: #000;
+    font-family: "Spicy Rice";
+    font-size: 3em;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#featured-services-title-id span {
+    color: #AA8BE8;
+}
+
+.services-card-cup-design-service {
+    border-radius: 40px;
+    background: #F9F9F9;
+    box-shadow: 6px 4px 11.6px 0px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.services-card-cup-design-service img {
+    border-radius: 0px 38px 38px 0px;
+    border: 3px solid #CACACA;
+}
+
+.services-card {
+    border-radius: 40px;
+    background: #F9F9F9;
+    box-shadow: 6px 4px 11.6px 0px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.service-title-container h2 {
+    color: #BFAEE2;
+    font-family: "Poppins";
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.service-title-container h4 {
+    color: #5B5B5B;
+    font-family: "Poppins";
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.service-title-container p {
+    color: #5B5B5B;
+    font-family: "Poppins";
+    font-size: 0.7em;
+    font-weight: 500;
+}
+
+.secondary-buton {
+    border-radius: 8px;
+    background: #BFAEE2;
+    color: #FFF;
+    font-family: "Poppins";
+    font-size: 1em;
+    border: none;
+}
+
+.secondary-buton:hover {
+    background: #9083aa;
+}
 
 
 /* estilos de about us //  elein */
 
 
 /* estilos de reviews // daniel */
-#customer-reviews-title-id{
+#customer-reviews-title-id {
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
 }
-#first-color .review-card{
+
+#first-color .review-card {
     background-color: #CDF0EA;
     height: 35vh;
     width: 23vw;
     border-radius: 8px;
     padding: 5vh;
 }
-#second-color .review-card{
+
+#second-color .review-card {
     background-color: #F7DBF1;
     height: 35vh;
     width: 23vw;
     border-radius: 8px;
     padding: 5vh;
 }
-#third-color .review-card{
+
+#third-color .review-card {
     background-color: #BFAEE2;
     height: 35vh;
     width: 23vw;
     border-radius: 8px;
     padding: 5vh;
 }
-.user-info img{
+
+.user-info img {
     border-radius: 40px;
     height: 40px;
     width: 40px;
 }
-    
+
 
 /* estilos del form // karina */
 
-#form-section h1{
+#form-section h1 {
     color: black;
     font-style: normal;
     font-weight: 400;
@@ -283,29 +346,29 @@ nav ul{
     text-align: center;
 }
 
-#form-title-id span{
+#form-title-id span {
     color: #AA8BE8;
 
 }
 
-.form-container form{
+.form-container form {
     width: 60%;
 }
 
-.form-space{
+.form-space {
     display: flex;
     flex-direction: column;
     background-color: transparent;
 }
 
-form input{
+form input {
     background-color: transparent;
     border: none;
     border-bottom: solid 2px black;
     padding: 1vw;
 }
 
-.form-message input{
+.form-message input {
     border-radius: 20px;
     background: #F7DBF1;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -313,7 +376,7 @@ form input{
     border: none;
 }
 
-.form-button{
+.form-button {
     border-radius: 20px;
     background: #CDF0EA;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
