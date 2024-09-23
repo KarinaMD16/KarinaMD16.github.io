@@ -187,15 +187,8 @@ nav ul{
     #featured-services-title-id span{
         color: #AA8BE8;
     }
-    .services-card-cup-design-service{
-        border-radius:40px;
-        background: #F9F9F9;
-        box-shadow:6px 4px 11.6px 0px rgba(0, 0, 0, 0.25);
-        z-index: 1;
-    }
-    .services-card-cup-design-service img{
-        border-radius: 0px 38px 38px 0px;
-        border: 3px solid #CACACA;
+    .services-card img{
+        border-radius: 15px 15px 15px 15px;
     }
     .services-card{
         border-radius:40px;
@@ -206,14 +199,14 @@ nav ul{
     .service-title-container h2{
         color: #BFAEE2;
         font-family:"Poppins";
-        font-size:2em;
+        font-size:1.7em;
         font-style:normal;
         font-weight:600;
     }
     .service-title-container h4{
         color: #5B5B5B;
         font-family:"Poppins";
-        font-size:1em;
+        font-size:0.9em;
         font-weight:500;
     }
     .service-title-container p{

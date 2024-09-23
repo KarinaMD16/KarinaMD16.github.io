@@ -107,23 +107,7 @@ ul{
 }
 #featured-services-title-id{
     text-align: center;
-    margin-bottom: 10vh;
-}
-.services-card-cup-design-service{
-    width: 60vw;
-    height: 35vh;
-    display: flex;
-    justify-content: space-between;
-}
-.services-card-cup-design-service div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 3vw;
-}
-.services-card-cup-design-service img{
-    width: 30vw;
-    height: 35vh;
+    margin-bottom: 15vh;
 }
 .services-card-section{
     display: flex;
@@ -131,24 +115,30 @@ ul{
 }
 .services-card{
     display: flex;
-    width: 30vw;
-    height: 35vh;
+    width: 25vw;
+    height: 70vh;
     align-items: center;
     justify-content: center;
+    text-align: center;
+}
+.services-card img{
+    width: 20vw;
+    height: 30vh;
 }
 .service-title-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1.5vw;
 }
 
 .service-title-container h2{
-    width: 25vw;
-    height: 10vh;
+    width: 23vw;
+    height: 7vh;
 }
 .service-title-container h4{
-    width: 26vw;
+    width: 20vw;
     height: 10vh;
 }
 .service-title-container p{
