@@ -164,14 +164,26 @@ function renderReviews(data) {
     const reviewContainer = document.getElementById('card-section');
     reviewContainer.innerHTML = '';
 
-    const bgColor = ['#CDF0EA', '#F7DBF1', '#BFAEE2']; // Colores de fondo
+    const bgColor = ['#CDF0EA', '#F7DBF1', '#BFAEE2']; 
 
     data.reviews.forEach((review, index) => {
         const reviewCard = document.createElement('div');
         reviewCard.className = 'review-card';
 
-        // Usar el arreglo de colores correctamente
         reviewCard.style.backgroundColor = bgColor[index % bgColor.length];
+
+        const starContainer = document.createElement('div');
+        starContainer.className = 'review-stars';
+
+        for (let i = 0; i < 5; i++) {
+            const starSvg = document.createElement('span');
+            starSvg.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+            `;
+            starContainer.appendChild(starSvg);
+        }
 
         const reviewContentContainer = document.createElement('div');
 
@@ -179,7 +191,7 @@ function renderReviews(data) {
         reviewTitle.textContent = review.reviewTitle;
 
         const reviewContent = document.createElement('p');
-        reviewContent.textContent = review.reviewDescription; // Asignar texto correctamente
+        reviewContent.textContent = review.reviewDescription; 
 
         const reviewerInfo = document.createElement('div');
         reviewerInfo.className = 'user-info';
@@ -195,21 +207,6 @@ function renderReviews(data) {
 
         const reviewPostDate = document.createElement('p');
         reviewPostDate.textContent = review.reviewDate;
-
-        // Agregar las estrellas
-        const starContainer = document.createElement('div');
-        starContainer.className = 'review-stars';
-
-        // Crear las estrellas usando el SVG proporcionado
-        for (let i = 0; i < 5; i++) {
-            const starSvg = document.createElement('span');
-            starSvg.innerHTML = `
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                </svg>
-            `;
-            starContainer.appendChild(starSvg);
-        }
 
         reviewCard.appendChild(starContainer);
         reviewCard.appendChild(reviewContentContainer);
