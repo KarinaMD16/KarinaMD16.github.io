@@ -8,11 +8,12 @@
             type="image/x-icon">
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="styles/layout.css">
+        <link rel="stylesheet" href="styles/backgroundstyles.css">
     </head>
     <body>
         <header>            <!-- header // daniel -->
             <div id="header-logo-container">
-                <img src="src/Isologo.png" id="header-logo-id" alt>
+                <img src="" id="header-logo-id" alt="">
             </div>
             <nav>
                 <ul>
@@ -29,66 +30,37 @@
         <main>
             <section id="hero">         <!-- hero // daniel -->
                 <div id="hero-company-data">
-                    <img src="src/sugar_vaultLogo.png" id="hero-logo-id" alt>
-                    <h4 id="hero-description-id">Find delights that will awaken your senses, let each
-                        visit to this place become a daily escape, one cup at a time.</h4>
+                    <img src="" id="hero-logo-id" alt="">
+                    
+                    <h4 id="hero-description-id"></h4>
                 </div>
-                <img id="bubbletea" src="src/Bubble Tea.png" id="hero-background-pic-id" alt="">
+                <img id="bubbletea" src="" id="hero-background-pic-id" alt="">
             </section>
 
             <section id="featured-products-section">    <!-- productos destacados // diana -->
-                <h1 id="featured-products-title-id">Featured Products</h1>
+                <h1 id="featured-products-title-id">Featured <span>Products</span></h1>
 
-                <div class="featured-products-cards-container">
-                    <div class="featured-products-card">
-                        <h3 class="title">Nombre</h3>
-                        <h4 class="price">Precio</h4>
-                        <button class="secondary-buton">Read more</button>
-                    </div>
-
-                    <div class="featured-products-card">
-                        <h3 class="title">Nombre</h3>
-                        <h4 class="price">Precio</h4>
-                        <button class="secondary-buton">Read more</button>
-                    </div>
-                    
-                    <div class="featured-products-card">
-                        <h3 class="title">Nombre</h3>
-                        <h4 class="price">Precio</h4>
-                        <h4 class="price"></h4>
-                        <button class="secondary-buton">Read more</button>
-                    </div>
-                    
-                    <div class="featured-products-card">
-                        <h3 class="title">Nombre</h3>
-                        <h4 class="price">Precio</h4>
-                        <button class="secondary-buton">Read more</button>
-                    </div>
-                    
-                    <div class="featured-products-card">
-                        <h3 class="title">Nombre</h3>
-                        <h4 class="price">Precio</h4>
-                        <button class="secondary-buton">Read more</button>
-                    </div>
-                    
-                    <div class="featured-products-card">
-                        <h3 class="title">Nombre</h3>
-                        <h4 class="price">Precio</h4>
-                        <button class="secondary-buton">Read more</button>
-                    </div>
-                    
-                    <div class="featured-products-card">
-                        <h3 class="title">Nombre</h3>
-                        <h4 class="price">Precio</h4>
-                        <button class="secondary-buton">Read more</button>
-                    </div>
-                    
-                    <div class="featured-products-card">
-                        <h3 class="title">Nombre</h3>
-                        <h4 class="price">Precio</h4>
-                        <button class="secondary-buton">Read more</button>
-                    </div>
-                    
+                <div id="featured-products-cards-container-id" class="featured-products-cards-container"></div>
+                <div class="drip-container">
+                    <div class="drops">
+                        <div class="drop1"></div>
+                        <div class="drop2"></div>  
+                        <div class="drop3"></div>  
+                        <div class="drop4"></div>
+                        <div class="drop5"></div>
+                        <div class="drop6"></div>
+                        <div class="drop7"></div>
+                        <div class="drop8"></div>
+                        <div class="drop9"></div>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                          <defs>
+                            <filter id="liquid">
+                              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="liquid" />
+                            </filter>
+                          </defs>
+                        </svg>
                 </div>
             </section>
 
@@ -96,101 +68,14 @@
                 <h1 id="catalog-title-id">our <span>Catalog</span></h1>
                     
                 <div class="catalog-subtitle-container">
-                    <h2>Unleash your sweet side</h2>
+                    <h2 id="food-catalog-subtitle-id"></h2>
                 </div>
-
-                <div class="edible-products-container">
-                    <div class="product-card">
-                        <div class="product-info">
-                            <h3 id="food-catalog-name-id">Pancakes</h3>
-                            <h4 id="food-catalog-price-id">$5</h4>
-
-                            <div class="more-pics-products">
-                                <button class="more-options-button">1</button>
-                                <button class="more-options-button">2</button>
-                                <button class="more-options-button">3</button>
-                            </div>
-                        </div>
-                        <img id="food-catalog-pic-id" src="src/pancakes.jpg" alt="">
-                    </div>
-            
-                    <div class="product-card">
-                        <div class="product-info">
-                            <h3>Cupcakes</h3>
-                            <h4>$5</h4>
-
-                            <div class="more-pics-products">
-                                <button class="more-options-button">1</button>
-                                <button class="more-options-button">2</button>
-                                <button class="more-options-button">3</button>
-                            </div>
-                        </div>
-                        <img src="src/cupcake.jpg" alt="">
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-info">
-                            <h3>Donuts</h3>
-                            <h4>$5</h4>
-
-                            <div class="more-pics-products">
-                                <button class="more-options-button">1</button>
-                                <button class="more-options-button">2</button>
-                                <button class="more-options-button">3</button>
-                            </div>
-                        </div>
-                        <img src="src/donut.jpg" alt="">
-                    </div>
-                    
-                </div>
+                <div id="food-catalog-id" class="edible-products-container"></div>
                 
                 <div class="catalog-subtitle-container">
-                    <h2>A cup of inspiration</h2>
+                    <h2 id="drinks-catalog-subtitle-id"></h2>
                 </div>
-
-                <div class="drinkable-products-container">
-                    <div class="product-card">
-                        <div class="product-info">
-                            <h3 id="drinks-catalog-name-id">Hot chocolate</h3>
-                            <h4 id="drinks-catalog-price-id">$2,75</h4>
-
-                            <div class="more-pics-products">
-                                <button class="more-options-button">1</button>
-                                <button class="more-options-button">2</button>
-                                <button class="more-options-button">3</button>
-                            </div>
-                        </div>
-                        <img id="drinks-catalog-pic-id" src="src/hot chocolate.jpg" alt>
-                    </div>
-                    
-                    <div class="product-card">
-                        <div class="product-info">
-                            <h3>Capuccino</h3>
-                            <h4>$2,90</h4>
-
-                            <div class="more-pics-products">
-                                <button class="more-options-button">1</button>
-                                <button class="more-options-button">2</button>
-                                <button class="more-options-button">3</button>
-                            </div>
-                        </div>
-                        <img src="src/capuccino.jpg" alt>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-info">
-                            <h3>Coffee</h3>
-                            <h4>2,50</h4>
-
-                            <div class="more-pics-products">
-                                <button class="more-options-button">1</button>
-                                <button class="more-options-button">2</button>
-                                <button class="more-options-button">3</button>
-                            </div>
-                        </div>
-                        <img src="src/coffee.png" alt>
-                    </div>
-                </div>
+                <div id="drinks-catalog-id" class="drinkable-products-container"></div>
             </section>
 
         
