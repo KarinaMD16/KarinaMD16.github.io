@@ -135,7 +135,7 @@ height: 30vh;
 }
 
 /* layout de los servicios // orlando */
-#featured-services-section{
+#services-section{
     height: 150vh;
     display: flex;
     flex-direction: column;
@@ -143,53 +143,44 @@ height: 30vh;
     align-items: center;
     gap: 2vw;
 }
-#featured-services-title-id{
+#services-title-id{
     text-align: center;
-    margin-bottom: 10vh;
+    margin-bottom: 15vh;
 }
-.services-card-cup-design-service{
-    width: 60vw;
-    height: 35vh;
-    display: flex;
-    justify-content: space-between;
-}
-.services-card-cup-design-service div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 3vw;
-}
-.services-card-cup-design-service img{
-    width: 30vw;
-    height: 35vh;
-}
-.services-card-section{
+.services-card-section
+{
     display: flex;
     gap: 2vw;
 }
-.services-card{
+.service-card{
     display: flex;
-    width: 30vw;
-    height: 35vh;
+    width: 25vw;
+    height: 70vh;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
-.service-title-container{
+.serviceInfo{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1.5vw;
+}
+.serviceInfo img{
+    width: 20vw;
+    height: 30vh;
 }
 
-.service-title-container h2{
-    width: 25vw;
+.serviceInfo h2{
+    width: 23vw;
+    height: 7vh;
+}
+.serviceInfo h4{
+    width: 20vw;
     height: 10vh;
 }
-.service-title-container h4{
-    width: 26vw;
-    height: 10vh;
-}
-.service-title-container p{
+.serviceInfo p{
     width: 10vw;
     height: 1vh;
 }
@@ -197,7 +188,6 @@ height: 30vh;
     width: 13vw;
     height: 5vh;
 }
-
 
 /* layout de about us //  elein */
 

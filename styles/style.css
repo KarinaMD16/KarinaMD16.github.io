@@ -173,18 +173,18 @@ nav ul{
 
 /* estilos de los servicios // orlando */
 
-    #featured-services-section{
+    #services-section{
         position: relative;
         background:#F9F9F9;
         overflow: hidden;
     }
-    #featured-services-section::after,#featured-services-section::before{
+    #services-section::after,#services-section::before{
         content: "";
         position: absolute;
         opacity: 0.45;
         border-radius: 30%;
     }
-    #featured-services-section::after{
+    #services-section::after{
         width: 60vw; 
         height: 130vh;  
         background:#F7DBF1; 
@@ -193,7 +193,7 @@ nav ul{
         z-index: 0; /* Detrás del contenido */ 
         filter: blur(20px); 
     }
-    #featured-services-section::before{
+    #services-section::before{
         width: 30vw; 
         height: 35vh;  
         background: #CDF0EA;
@@ -202,46 +202,40 @@ nav ul{
         z-index: 0; /* Detrás del contenido */ 
         filter: blur(20px); 
     }
-    #featured-services-section h1{
+    #services-section h1{
         color: #000;
         font-family:"Spicy Rice";
         font-size:3em;
         font-style:normal;
         font-weight:400;
     }
-    #featured-services-title-id span{
+    #services-title-id span{
         color: #AA8BE8;
     }
-    .services-card-cup-design-service{
-        border-radius:40px;
-        background: #F9F9F9;
-        box-shadow:6px 4px 11.6px 0px rgba(0, 0, 0, 0.25);
-        z-index: 1;
-    }
-    .services-card-cup-design-service img{
-        border-radius: 0px 38px 38px 0px;
-        border: 3px solid #CACACA;
-    }
-    .services-card{
+
+    .service-card{
         border-radius:40px;
         background: #F9F9F9;
         box-shadow:6px 4px 11.6px 0px rgba(0,0,0,0.25);
         z-index: 1;
     }
-    .service-title-container h2{
+    .serviceInfo img{
+        border-radius: 15px 15px 15px 15px;
+    }
+    .serviceInfo h2{
         color: #BFAEE2;
         font-family:"Poppins";
-        font-size:2em;
+        font-size:1.7em;
         font-style:normal;
         font-weight:600;
     }
-    .service-title-container h4{
+    .serviceInfo h4{
         color: #5B5B5B;
         font-family:"Poppins";
-        font-size:1em;
+        font-size:0.9em;
         font-weight:500;
     }
-    .service-title-container p{
+    .serviceInfo p{
         color: #5B5B5B;
         font-family:"Poppins";
         font-size: 0.7em;
@@ -258,7 +252,6 @@ nav ul{
     .secondary-buton:hover{
         background: #9083aa;
     }
-
 
 /* estilos de about us //  elein */
 #about-us-section{

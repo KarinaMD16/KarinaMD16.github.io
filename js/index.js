@@ -152,8 +152,47 @@ function renderCatalog (data) {
     });
 }
 
+
 function renderServices (data) {
 
+    const servicesContainer = document.getElementById('services-card-container-id');
+    servicesContainer.innerHTML = '';
+
+    data.services.forEach(services => {
+
+        const serviceCard = document.createElement('div');
+        serviceCard.className = 'service-card';
+
+        const serviceInfo = document.createElement('div');
+        serviceInfo.className ='serviceInfo';
+
+        const serviceImg = document.createElement('img');
+        serviceImg.src = services.servicesPicture;
+        serviceImg.alt = services.servicesName;
+
+        const serviceName = document.createElement('h2');
+        serviceName.textContent = services.servicesName;
+
+        const serviceDescription = document.createElement('h4');
+        serviceDescription.textContent = services.servicesDescription;
+
+        const serviceButton = document.createElement('button');
+        serviceButton.className ='secondary-buton';
+        serviceButton.textContent = 'Read More';
+
+        const serviceParagraph = document.createElement('p');
+        serviceParagraph.textContent =services.servicesParagraph;
+
+        serviceInfo.appendChild(serviceImg);
+        serviceInfo.appendChild(serviceName);
+        serviceInfo.appendChild(serviceDescription);
+        serviceInfo.appendChild(serviceButton);
+        serviceInfo.appendChild(serviceParagraph);
+
+        serviceCard.appendChild(serviceInfo);
+
+        servicesContainer.appendChild(serviceCard);
+    });
 }
 
 function renderAboutUs (data) {
