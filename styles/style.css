@@ -348,3 +348,24 @@ form input{
 }
 
 /* estilos del footer // elein */
+
+footer
+{
+    background-color: #F9F9F9;
+}
+
+.social-media svg
+{
+    fill: #E88DB8;
+}
+
+#footer-logo
+{
+    height: 15vh;
+    width: 18vw;
+}
+
+#footer-email
+{
+    text-decoration: underline;
+}
