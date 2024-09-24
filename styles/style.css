@@ -192,18 +192,18 @@ h4 {
 
 /* estilos de los servicios // orlando */
 
-    #featured-services-section{
+    #services-section{
         position: relative;
         background:#F9F9F9;
         overflow: hidden;
     }
-    #featured-services-section::after,#featured-services-section::before{
+    #services-section::after,#services-section::before{
         content: "";
         position: absolute;
         opacity: 0.45;
         border-radius: 30%;
     }
-    #featured-services-section::after{
+    #services-section::after{
         width: 60vw; 
         height: 130vh;  
         background:#F7DBF1; 
@@ -212,7 +212,7 @@ h4 {
         z-index: 0; /* Detrás del contenido */ 
         filter: blur(20px); 
     }
-    #featured-services-section::before{
+    #services-section::before{
         width: 30vw; 
         height: 35vh;  
         background: #CDF0EA;
@@ -221,14 +221,14 @@ h4 {
         z-index: 0; /* Detrás del contenido */ 
         filter: blur(20px); 
     }
-    #featured-services-section h1{
+    #services-section h1{
         color: #000;
         font-family:"Spicy Rice";
         font-size:3em;
         font-style:normal;
         font-weight:400;
     }
-    #featured-services-title-id span{
+    #services-title-id span{
         color: #AA8BE8;
     }
     .services-card img{

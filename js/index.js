@@ -385,6 +385,44 @@ function renderCatalog (data) {
 
 function renderServices (data) {
 
+    const servicesContainer = document.getElementById('services-card-container-id');
+    servicesContainer.innerHTML = '';
+
+    data.services.forEach(service => {
+
+        const serviceCard = document.createElement('div');
+        serviceCard.className = 'service-card';
+
+        const serviceTitleContainer = document.createElement('div');
+        serviceTitleContainer.className ='service-title-container';
+
+        const serviceImg = document.createElement('img');
+        serviceImg.src = service.servicesPicture;
+        serviceImg.alt = service.servicesName;
+
+        const serviceName = document.createElement('h2');
+        serviceName.textContent = service.servicesName;
+
+        const serviceDescription = document.createElement('h4');
+        serviceDescription.textContent = service.servicesDescription;
+
+        const serviceButton = document.createElement('button');
+        serviceButton.className ='secondary-button';
+        serviceButton.textContent = 'Read More';
+
+        const serviceParagraph = document.createElement('p');
+        serviceParagraph.textContent =service.serviceParagraph;
+
+        serviceTitleContainer.appendChild(serviceImg);
+        serviceTitleContainer.appendChild(serviceName);
+        serviceTitleContainer.appendChild(serviceDescription);
+        serviceTitleContainer.appendChild(serviceButton);
+        serviceTitleContainer.appendChild(serviceParagraph);
+
+        serviceCard.appendChild(serviceTitleContainer);
+
+        servicesContainer.appendChild(serviceCard);
+    });
 }
 
 function renderAboutUs (data) {
