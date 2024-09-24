@@ -108,17 +108,17 @@
   
   "drinksCatalog": [
     {
-      "drinksCatalogImage": "https://i.ibb.co/CHsh3SW/hot-chocolate.webp",
+      "drinksCatalogImage": "https://i.ibb.co/xf4cHs9/hot-chocolate.webp",
       "drinksCatalogName": "Hot Chocolate",
       "drinksCatalogPrice": 3
     },
     {
-      "drinksCatalogImage": "https://i.ibb.co/mqN2r9T/coffee-1.webp",
+      "drinksCatalogImage": "https://i.ibb.co/KG63Pwv/coffee-Cat.webp",
       "drinksCatalogName": "Coffee",
       "drinksCatalogPrice": 4
     },
     {
-      "drinksCatalogImage": "https://i.ibb.co/8YZxGnY/capuccino.webp",
+      "drinksCatalogImage": "https://i.ibb.co/MfVzp33/capuccino.webp",
       "drinksCatalogName": "Capuccino",
       "drinksCatalogPrice": 3
     }
