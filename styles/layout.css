@@ -204,6 +204,28 @@ height: 30vh;
 
 /* layout de about us //  elein */
 
+#about-us-section
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-info
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.about-title
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 
 /* layout de reviews // daniel */
@@ -295,3 +317,29 @@ height: 30vh;
 
 
 /* layout del footer // elein */
+
+#page-footer-id
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60vh;
+    box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.25);
+    justify-content: space-evenly;
+}
+
+.social-media
+{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+
+#footer-info
+{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
