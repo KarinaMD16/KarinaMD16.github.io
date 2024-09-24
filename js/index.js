@@ -157,7 +157,10 @@ function renderServices (data) {
 }
 
 function renderAboutUs (data) {
-
+    document.getElementById('about-us-logo').src = data.company.companyIsoLogo;
+    document.getElementById('about-us-description').textContent = data.aboutUs.aboutDescription;
+    document.getElementById('about-us-button').textContent = data.aboutUs.aboutButton;
+    document.getElementById('flower-mochis').src = data.aboutUs.aboutImg;
 }
 
 function renderReviews(data) {
@@ -212,9 +215,10 @@ function renderReviews(data) {
         reviewCard.appendChild(reviewContentContainer);
         reviewCard.appendChild(reviewerInfo);
         
+        reviewContentContainer.appendChild(starContainer);
         reviewContentContainer.appendChild(reviewTitle);
         reviewContentContainer.appendChild(reviewContent);
-
+        
         reviewerInfo.appendChild(reviewerPic);
         reviewerInfo.appendChild(personContainer);
 
