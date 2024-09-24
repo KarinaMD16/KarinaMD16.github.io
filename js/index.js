@@ -6,7 +6,7 @@ function loadData() {
 
 function renderInfo(data){
     renderHeader(data);
-    renederHero(data);
+    renederHero(data);  
     renderSectionTitles(data);
     renderFeaturedProducts(data);
     renderCatalog(data);
