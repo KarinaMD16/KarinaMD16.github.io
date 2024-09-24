@@ -35,6 +35,238 @@
     <section id="sidebar">
         <h1>Sidebar</h1>
     </section>
+    <section id="input">
+            <h1>Inputs</h1>
+            <div id="form-container">
+                <form action="#" method="post">
+                    <div class="form-space form-name">
+                        <label>Name</label>
+                        <input type="name" name="Name" id="form-name" placeholder="Write your name">
+                    </div>
+                    <div class="form-space form-phone">
+                        <label>Phone number</label>
+                        <input type="phone" name="Phone" id="form-phone" placeholder="Write your phone number">
+                    </div>
+                    <div class="form-space form-email">
+                        <label>Email</label>
+                        <input type="email" name="email" id="form-email" placeholder="Write your email">
+                    </div>
+                    
+                    <div class="form-space form-message">
+                        <label>Message</label>
+                        <input type="message" name="message" id="form-message" placeholder="Write a message">
+                    </div>
+                </form>
+            </div>
+            <div id="code-section">
+            <div>
+                <h2>Código HTML:</h2>
+        <pre><code>
+    &lt;div id=&quot;form-container&quot;&gt;
+        &lt;form action=&quot;#&quot; method=&quot;post&quot;&gt;
+            &lt;div class=&quot;form-space form-name&quot;&gt;
+                &lt;label&gt;Name&lt;/label&gt;
+                &lt;input type=&quot;name&quot; name=&quot;Name&quot; id=&quot;form-name&quot; placeholder=&quot;Write your name&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-space form-phone&quot;&gt;
+                &lt;label&gt;Phone number&lt;/label&gt;
+                &lt;input type=&quot;phone&quot; name=&quot;Phone&quot; id=&quot;form-phone&quot; placeholder=&quot;Write your phone number&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-space form-email&quot;&gt;
+                &lt;label&gt;Email&lt;/label&gt;
+                &lt;input type=&quot;email&quot; name=&quot;email&quot; id=&quot;form-email&quot; placeholder=&quot;Write your email&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-space form-message&quot;&gt;
+                &lt;label&gt;Message&lt;/label&gt;
+                &lt;input type=&quot;message&quot; name=&quot;message&quot; id=&quot;form-message&quot; placeholder=&quot;Write a message&quot;&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+        </code></pre>
+            </div>
+            <div>
+                <h2>Código CSS:</h2>
+        <pre><code>
+    form input {
+        background-color: transparent;
+        border: none;
+        border-bottom: solid 2px black;
+        padding: 1vw;
+    }
+
+    .form-space {
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+    }
+
+    .form-message input {
+        border-radius: 20px;
+        background: #F7DBF1;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 2vw;
+        border: none;
+        margin-top: 2vh;
+    }
+        </code></pre>
+            </div>
+            </div>
+        </section>
+        <section id="buttons">
+            <h1>Buttons</h1>
+            <div id="style-section">
+                <div id="submit-section">
+                    <div id="submit">
+                        <button id="submit" type="submit" class="form-button">Submit</button>
+                    </div>
+                    <h2>HTML</h2>
+                    <pre><code>
+        &lt;button id=&quot;submit&quot; type=&quot;submit&quot; class=&quot;form-button&quot;&gt;Submit&lt;/button&gt;
+                    </code></pre>
+                    <h2>Código CSS del Botón Submit:</h2>
+    <pre><code>
+    #submit {
+        border-radius: 20px;
+        background: #CDF0EA;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        border: none;
+        width: 10vw;
+        height: 10vh;
+        font-size: 2vh;
+    }
+    </code></pre>
+
+                </div>
+                <div id="readmore-section">
+                    <div id="readmore">
+                        <button class="secondary-buton">Read more</button>
+                    </div>
+                    <h2>HTML</h2>
+    <pre><code>
+    &lt;button class=&quot;secondary-buton&quot;&gt;Read more&lt;/button&gt;
+    </code></pre>
+    <h2>Código CSS del Botón Secundario:</h2>
+    <pre><code>
+    .secondary-buton {
+        width: 13vw;
+        height: 5vh;
+        border-radius: 8px;
+        background: #BFAEE2;
+        color: #FFF;
+        font-family:"Poppins";
+        font-size:1em;
+        border: none;
+    }
+
+    .secondary-buton:hover {
+        background: #9083aa;
+    }
+    </code></pre>
+
+                </div>
+            </div>
+    </section>
+    <section id="aside">
+        <h1>Aside</h1>
+        <aside class=" my-aside">
+            <section id="opciones">
+                <div>
+                    <img src="src/sugar_vaultLogo.png" alt="">
+                </div>
+                <div class="links">
+                    <a href="">Home</a>
+                </div>
+                <div class="links">
+                    <a href="">Products</a>
+                </div>
+                <div class="links">
+                    <a href="">Services</a>
+                </div>
+                <div class="links">
+                    <a href="" >About Us</a>
+                </div>
+                <div class="links">
+                    <a href="">Log out</a>
+                </div>
+            </section>
+        </aside>
+        <div class="aside-container">
+            <div>
+                <h2>Código HTML</h2>
+                <pre><code>
+                    &lt;aside class=&quot;my-aside&quot;&gt;
+                        &lt;section id=&quot;opciones&quot;&gt;
+                            &lt;div&gt;
+                                &lt;img src=&quot;src/sugar_vaultLogo.png&quot; alt=&quot;&quot;&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;links&quot;&gt;
+                                &lt;a href=&quot;&quot;&gt;Home&lt;/a&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;links&quot;&gt;
+                                &lt;a href=&quot;&quot;&gt;Products&lt;/a&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;links&quot;&gt;
+                                &lt;a href=&quot;&quot;&gt;Services&lt;/a&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;links&quot;&gt;
+                                &lt;a href=&quot;&quot;&gt;About Us&lt;/a&gt
+                            &lt;/div&gt;
+                            &lt;div class=&quot;links&quot;&gt;
+                                &lt;a href=&quot;&quot;&gt;Log out&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/section&gt;
+                    &lt;/aside&gt;
+                </code></pre>
+            </div>
+            <div>
+                <h2>Código CSS</h2>
+                <pre><code>
+                    .my-aside{
+                        width: 20vw;
+                        height: 60vh;
+                        border-radius: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #CDF0EA;
+                    }
+                    #opciones{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        gap: 3vh;
+                    }
+                    #opciones div img{
+                        width: 128px;
+                        margin-bottom: 1vh;
+                    }
+                    .links{
+                        display: flex;
+                        font-size: 1.1em;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+                    .links a{
+                        color: #000;
+                        text-decoration: none;
+                    }
+                    
+                </code></pre>
+            </div>
+        </div>
+    </section>
+    <section id="label">
+        <h1>Label</h1>
+        <div>
+            <label>Name</label>
+        </div>
+        <h2>Codigo html del label</h2>
+        <pre><code>
+            &lt;label&gt;Name&lt;/label&gt;
+        </code></pre>
+    </section>
     <footer>
         <h1>Footer</h1>
     </footer>
