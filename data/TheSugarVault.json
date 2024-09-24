@@ -118,7 +118,8 @@
     {
       "servicesName": "Free Delivery",
       "servicesPicture": "",
-      "servicesDescription": "Now you can get a free delivery to enjoy your order from the comfort of your home!*"
+      "servicesDescription": "Now you can get a free delivery to enjoy your order from the comfort of your home!*",
+      "servicesParagraph": "*At participating locations"
     }
   ],
   
