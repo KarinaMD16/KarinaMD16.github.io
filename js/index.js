@@ -6,7 +6,7 @@ function loadData() {
 
 function renderInfo(data){
     renderHeader(data);
-    renederHero(data);  
+    renderHero(data);  
     renderSectionTitles(data);
     renderFeaturedProducts(data);
     renderCatalog(data);
@@ -19,7 +19,7 @@ function renderHeader (data) {
     document.getElementById('header-logo-id').src = data.company.companyIsoLogo;
 }
 
-function renederHero (data) {
+function renderHero (data) {
     document.getElementById('hero-logo-id').src = data.company.companyImageLogo;
     document.getElementById('hero-description-id').textContent = data.company.companyDescription;
     document.getElementById('bubbletea').src = data.hero.heroPicture;
