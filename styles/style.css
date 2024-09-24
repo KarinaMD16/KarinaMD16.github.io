@@ -7,6 +7,7 @@ body{
     background-color: #F9F9F9;
     color: black;
     margin: 0;
+    width: 100%;
 }
 
 body h1, h2{
@@ -21,10 +22,6 @@ body h1, h2, h3, h4, p{
     margin: 0; 
 }
 
-body img{
-    width: 100px; /* Eliminar al terminar.
-    solo esta para que se pueda ver el html mas claramente */
-}
 
 /* estilos del header // daniel */
 header{
@@ -54,6 +51,7 @@ nav ul{
 
 /* estilos del hero // daniel */
 #hero{
+    width: 100%;
     margin: 0;
     height: 83vh;
 }
@@ -64,7 +62,7 @@ nav ul{
 }
 #hero-company-data{
     width: 34%;
-    gap: 20px;
+    gap: 2vw;
 }
 #hero-company-data img{
    width: 70%;
@@ -263,19 +261,32 @@ nav ul{
 
 
 /* estilos de about us //  elein */
+#about-us-section{
+    background: linear-gradient(270deg, #CDF0EA 0%, #BFAEE2 50.4%);
+}
+
+.about-title h1{
+    color: #F9F9F9;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5vw;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
 
 #flower-mochis
 {
     height: 75vh;
     width: 60vh;
     margin: 0 15vh 0 0;
-    margin-left: 5vw;
+    margin: 8vh;
+    border-radius: 58px;
+    box-shadow: 0px 11px 28px 0px rgba(0, 0, 0, 0.25);
 }
 
 #about-us-logo
 {
-    height: 7vh;
-    width: 4vw;
+    width: 12vh;
     margin-left: 2vw;
 }
 
@@ -287,6 +298,9 @@ nav ul{
     border: #ffffff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 18px;
+    font-size: medium;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
 }
 
 /* estilos de reviews // daniel */
@@ -302,15 +316,16 @@ nav ul{
     border-radius: 8px;
     padding: 5vh;
 }
+
 .user-info img{
     border-radius: 40px;
     height: 40px;
     width: 40px;
+    object-fit: cover;
 }
     
 
 /* estilos del form // karina */
-
 #form-section h1{
     color: black;
     font-style: normal;
@@ -321,11 +336,6 @@ nav ul{
 
 #form-title-id span{
     color: #AA8BE8;
-
-}
-
-.form-container form{
-    width: 60%;
 }
 
 .form-space{
@@ -354,8 +364,8 @@ form input{
     background: #CDF0EA;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border: none;
-    width: 10vw;
-    height: 10vh;
+    width: 20vh;
+    height: 5vw;
     font-size: 2vh;
 }
 
@@ -374,7 +384,7 @@ footer
 #footer-logo
 {
     height: 15vh;
-    width: 18vw;
+    width: 20vw;
 }
 
 #footer-email
