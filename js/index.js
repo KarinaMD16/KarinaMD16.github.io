@@ -273,3 +273,38 @@ document.addEventListener('DOMContentLoaded', function() {
         renderInfo(data);
     });
 });
+
+
+// scripts de la pagina de estilos 
+
+
+// alert
+
+function showAlert() {
+    document.getElementById('alert-msg').style.display = 'block';
+    document.getElementById('alert-overlay').style.display = 'block';
+}
+
+function hideAlert(){
+    document.getElementById('alert-msg').style.display = 'none';
+    document.getElementById('alert-overlay').style.display = 'none';
+}
+
+
+// modal
+
+function showModal() {
+    document.getElementById('modal-msg').style.display = 'block';
+    document.getElementById('modal-overlay').style.display = 'block';
+}
+
+function closeModal(){
+    document.getElementById('modal-msg').style.display = 'none';
+    document.getElementById('modal-overlay').style.display = 'none';
+}
+
+function continueBtn(){
+    document.getElementById('modal-msg').style.display = 'none';
+    document.getElementById('modal-overlay').style.display = 'none';
+    
+}

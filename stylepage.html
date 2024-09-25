@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/styleguide.css">
 </head>
 <body>
-    <header>
+    <header class="styles-header">
         <img src="src/sugar_vaultLogo.png" alt="">
         <h2>Style Guide</h2>
 
@@ -460,5 +460,349 @@
 
 
     </section>
+
+    <section id="alert">
+        <h1>Alert</h1>
+        <button onclick="showAlert()" class="show">Mostrar Alert</button>
+        <div id="alert-overlay" class="overlay"></div>
+
+        <div id="alert-msg" class="alert-msg">
+            <div class="alert-content">
+                <svg xmlns="http://www.w3.org/2000/svg" width=128" height="128" fill="#CDF0D1" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                    <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                    <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+                  </svg>
+                <h3>Succesful</h3>
+                <button class="close-alert" onclick="hideAlert()" >Continue</button>
+            </div>
+        </div>
+
+        <div class="container-code">
+            <div class="html-alert">
+                <h2>Código HTML</h2>
+                <pre><code>&lt;div id="alert-msg" class="alert-msg"&gt;
+                    &lt;div class="alert-content"&gt;
+                        &lt;svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="#CDF0D1" class="bi bi-check2-circle" viewBox="0 0 16 16"&gt;
+                            &lt;path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/&gt;
+                            &lt;path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/&gt;
+                        &lt;/svg&gt;
+                        &lt;h3&gt;Successful&lt;/h3&gt;
+                        &lt;button class="close-alert" onclick="hideAlert()"&gt;Continue&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                </code></pre>                
+            </div>
+    
+            <div class="css-alert">
+                <h2>Código CSS</h2>
+                <pre><code>                 
+.alert-msg{
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 50%;
+    top: 50%;
+    width: 30vw;
+    height: 35vh;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #F9F9F9;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    animation: show-popup  0.5s ease forwards;
+}
+
+.alert-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.close-alert{
+    border-radius: 15.5px;
+    background-color: #CDF0D1;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 2vh 7vw;
+    border: none;
+    z-index: 1001;
+    font-weight: bold;
+    cursor: pointer; 
+}
+
+.close-alert:hover{
+    background: #b6d6ba;
+    
+}
+
+.close-alert{
+    border-radius: 15px;
+    background: #CDF0D1;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+                </code></pre>
+            </div>
+
+            <div class="js-alert">
+                <h2>Código JS</h2>
+                <pre><code>
+function showAlert() {
+    document.getElementById('alert-msg').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
+}
+                    
+function hideAlert(){
+    document.getElementById('alert-msg').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+}
+                </code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="modal">
+        <h1>Modal</h1>
+        <button onclick="showModal()" class="show">Mostrar Modal</button>
+        <div id="modal-overlay" class="overlay"></div>
+
+        <div id="modal-msg" class="modal">
+            
+                <header class="modal-header">
+                    <span class="close" onclick="closeModal()" id="closeModal">&times;</span>
+                </header>
+
+                
+                <div class="modal-content">
+                    <img src="src/sugar_vaultLogo.png" alt="">
+                    <h2>Your message has been submitted successfully</h2>
+                    <h4>Thank your for reaching out to us! We highly appreciate your opinions regarding our business.</h4>
+                </div>
+
+                <footer class="modal-footer">
+                    <button onclick="continueBtn()" class="secondary-buton">Continue</button>
+                </footer>
+        </div>
+
+        <div class="container-code">
+            <div class="html">
+                <h2>Código HTML</h2>
+                <pre><code>
+                    &lt;div id="modal-msg" class="modal"&gt;
+                    
+                        &lt;header class="modal-header"&gt;
+                            &lt;span class="close" onclick="closeModal()" id="closeModal"&gt;&times;&lt;/span&gt;
+                        &lt;/header&gt;
+                    
+                        &lt;div class="modal-content"&gt;
+                            &lt;img src="src/sugar_vaultLogo.png" alt=""&gt;
+                            &lt;h2&gt;Your message has been submitted successfully&lt;/h2&gt;
+                            &lt;h4&gt;Thank your for reaching out to us! We highly appreciate your opinions regarding our business.&lt;/h4&gt;
+                        &lt;/div&gt;
+                    
+                        &lt;footer class="modal-footer"&gt;
+                            &lt;button onclick="continueBtn()" class="secondary-buton"&gt;Continue&lt;/button&gt;
+                        &lt;/footer&gt;
+                    
+                    &lt;/div&gt;
+                    </code></pre>
+            </div>
+    
+            <div class="css">
+                <h2>Código CSS</h2>
+                <pre><code>
+                    
+#modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 50%;
+    top: 50%;
+    width: 30vw;
+    height: 35vh;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #F9F9F9;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 3vw;
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal h4 {
+    margin: 0 0 3vh;
+}
+
+.modal-footer{
+    display: flex;
+    justify-content: center;
+}
+                </code></pre>
+            </div>
+
+            <div class="js">
+                <h2>Código JS</h2>
+                <pre><code>
+
+function showModal() {
+    document.getElementById('modal-msg').style.display = 'block';
+    document.getElementById('modal-overlay').style.display = 'block';
+}
+                    
+function closeModal(){
+    document.getElementById('modal-msg').style.display = 'none';
+    document.getElementById('modal-overlay').style.display = 'none';
+}
+                    
+function continueBtn(){
+    document.getElementById('modal-msg').style.display = 'none';
+    document.getElementById('modal-overlay').style.display = 'none';
+}
+                </code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="table">
+        <h1>Table</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Units Sold</th>
+                    <th>Price (USD)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mochi</td>
+                    <td>150</td>
+                    <td>$3.50</td>
+                </tr>
+                <tr>
+                    <td>Bubble Tea</td>
+                    <td>200</td>
+                    <td>$5.00</td>
+                </tr>
+                <tr>
+                    <td>Macaron</td>
+                    <td>120</td>
+                    <td>$2.75</td>
+                </tr>
+                <tr>
+                    <td>Matcha Latte</td>
+                    <td>180</td>
+                    <td>$4.50</td>
+                </tr>
+                <tr>
+                    <td>Croissant</td>
+                    <td>130</td>
+                    <td>$3.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div id="container-table-code">
+            <div>
+                <h2>Código HTML</h2>
+                    <pre><code>
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Product&lt;/th&gt;
+            &lt;th&gt;Units Sold&lt;/th&gt;
+            &lt;th&gt;Price (USD)&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Mochi&lt;/td&gt;
+            &lt;td&gt;150&lt;/td&gt;
+            &lt;td&gt;$3.50&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Bubble Tea&lt;/td&gt;
+            &lt;td&gt;200&lt;/td&gt;
+            &lt;td&gt;$5.00&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Macaron&lt;/td&gt;
+            &lt;td&gt;120&lt;/td&gt;
+            &lt;td&gt;$2.75&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Matcha Latte&lt;/td&gt;
+            &lt;td&gt;180&lt;/td&gt;
+            &lt;td&gt;$4.50&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Croissant&lt;/td&gt;
+            &lt;td&gt;130&lt;/td&gt;
+            &lt;td&gt;$3.00&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+</pre>
+            </div>
+    
+            <div>
+                <h2>Código CSS</h2>
+                <pre><code>
+
+table{
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 1px solid #cecece;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #CDF0EA;
+    color: black;
+    border: black;
+    border-right: 1px solid #94b6b1;
+    text-align: center;
+    border-bottom: 1px solid #94b6b1;
+}
+
+table td{
+    border-right: 1px solid #cecece;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+table tr:nth-child(even){
+    background-color: #EBECEC;
+}
+                </code></pre>
+            </div>
+        </div>
+    </section>
 </body>
+<script src="js/index.js"></script>
 </html>
