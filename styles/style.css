@@ -37,17 +37,15 @@ header img{
 nav a{
     text-decoration: none;
     color: black;
+    font-size: 17px;
 }
 nav ul{
-    list-style-type: none;
     gap: 20px;
-    padding: 25px;
 }
-#home-background{
-    background-color: #BFAEE2;
-    padding: 5px;
-    border-radius: 8px;
+nav{
+    margin-right: 50px;
 }
+
 
 /* estilos del hero // daniel */
 #hero{
