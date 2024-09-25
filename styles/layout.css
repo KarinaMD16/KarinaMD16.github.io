@@ -28,6 +28,7 @@ ul{
 #hero-company-data{
     display: flex;
     flex-direction: column;
+    z-index: 1;
 }
 
 
@@ -214,10 +215,6 @@ height: 30vh;
     justify-content: space-between;
 }
 
-.about-us-description-container{
-    width: 90vh;
-}
-
 
 /* layout de reviews // daniel */
 
@@ -227,23 +224,21 @@ height: 30vh;
     justify-content: center;
     height: 85vh;
     gap: 6vh;
+
 }
 #customer-reviews-title-id{
-    margin-left: 7vw;
+    margin-left: 7vw; 
+    z-index: 1;
 }
 #card-section{
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
+    z-index: 1;
 }
 .review-card{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     gap: 3vh;
-}
-.review-stars{
-    margin-bottom: .5vw;
 }
 .user-info{
     display: flex;
@@ -254,13 +249,10 @@ height: 30vh;
 
 
 /* layout del form // karina */
+
 #form-section{
     margin: 0;
     padding: 2.4vh 2.4vh 5vh 7vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
 
 #contact-form-title-id{
@@ -268,7 +260,9 @@ height: 30vh;
 }
 
 .form-container{
-    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-container form{

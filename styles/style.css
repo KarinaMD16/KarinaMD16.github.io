@@ -59,6 +59,7 @@ nav ul{
     height: 75vh;
     width: 40vh;
     margin: 0 15vh 0 0;
+    z-index: 1;
 }
 #hero-company-data{
     width: 34%;
@@ -178,30 +179,6 @@ nav ul{
         background:#F9F9F9;
         overflow: hidden;
     }
-    #services-section::after,#services-section::before{
-        content: "";
-        position: absolute;
-        opacity: 0.45;
-        border-radius: 30%;
-    }
-    #services-section::after{
-        width: 60vw; 
-        height: 130vh;  
-        background:#F7DBF1; 
-        bottom: -120px; /* Posición de la mancha */  
-        left: -220px;  
-        z-index: 0; /* Detrás del contenido */ 
-        filter: blur(20px); 
-    }
-    #services-section::before{
-        width: 30vw; 
-        height: 35vh;  
-        background: #CDF0EA;
-        top: -50px; /* Posición de la mancha */  
-        right: -50px; 
-        z-index: 0; /* Detrás del contenido */ 
-        filter: blur(20px); 
-    }
     #services-section h1{
         color: #000;
         font-family:"Spicy Rice";
@@ -256,6 +233,7 @@ nav ul{
 /* estilos de about us //  elein */
 #about-us-section{
     background: linear-gradient(270deg, #CDF0EA 0%, #BFAEE2 50.4%);
+    z-index: 1;
 }
 
 .about-title h1{
@@ -275,6 +253,7 @@ nav ul{
     margin: 8vh;
     border-radius: 58px;
     box-shadow: 0px 11px 28px 0px rgba(0, 0, 0, 0.25);
+    z-index: 1;
 }
 
 #about-us-logo

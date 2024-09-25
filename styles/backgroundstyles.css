@@ -121,3 +121,121 @@
         background-size: 250px 150px;
     }
 }
+
+#hero::after, #hero::before {
+    content: "";
+    position: absolute;
+    opacity: 0.6;
+
+}
+
+#hero::after {
+    width: 30vw; 
+    height: 80vh;  
+    background:#F7DBF1; 
+    top: 120px; /* Posición de la mancha */  
+    right: 0px;  
+    z-index: 0; /* Detrás del contenido */ 
+    filter: blur(20px); 
+    border-radius: 70% 0 0 70%;
+}
+#hero::before{
+    width: 36vw; 
+    height: 89vh;  
+    background: #CDF0EA;
+    top: -120px; /* Posición de la mancha */  
+    left: -120px; 
+    z-index: 0; /* Detrás del contenido */ 
+    filter: blur(20px); 
+    border-radius: 0 70% 70% 0;
+}
+#featured-products-section::after, #featured-products-section::before
+{
+    content: "";
+    position: absolute;
+    opacity: 0.6;
+    border-radius: 70% 0 0 70%;
+}
+
+#featured-products-section::before{
+    width: 40vw; 
+    height: 90vh;  
+    background: #CDF0EA;
+    bottom: -750px; /* Posición de la mancha */  
+    right: 0px; 
+    z-index: 0; /* Detrás del contenido */ 
+    filter: blur(20px); 
+}
+
+#services-section::after,#services-section::before{
+    content: "";
+    position: absolute;
+    opacity: 0.6;
+    border-radius: 60%;
+}
+#services-section::after{
+    width: 60vw; 
+    height: 130vh;  
+    background:#F7DBF1; 
+    bottom: -220px; /* Posición de la mancha */  
+    left: -320px;  
+    z-index: 0; /* Detrás del contenido */ 
+    filter: blur(20px); 
+}
+#services-section::before{
+    width: 30vw; 
+    height: 50vh;  
+    background: #CDF0EA;
+    top: -70px; /* Posición de la mancha */  
+    right: -60px; 
+    z-index: 0; /* Detrás del contenido */ 
+    filter: blur(20px); 
+}
+
+#customer-reviews-section::after, #customer-reviews-section::before
+{
+    content: "";
+    position: absolute;
+    opacity: 0.6;
+}
+
+#customer-reviews-section::before{
+    width: 30vw; 
+    height: 80vh;  
+    background: #CDF0EA;
+    bottom: -3800px; /* Posición de la mancha */  
+    right: 0px; 
+    z-index: 0; /* Detrás del contenido */ 
+    filter: blur(20px); 
+    border-radius: 70% 0 0 70%;
+}
+
+#customer-reviews-section::after
+{
+    width: 50vw; 
+    height: 50vh;  
+    background:#F7DBF1; 
+    bottom: -3500px; /* Posición de la mancha */  
+    left: -200px;  
+    z-index: 0; /* Detrás del contenido */ 
+    filter: blur(20px);
+    border-radius: 0 0 70% 70%;
+}
+#about-us-section::after, #about-us-section::before
+{
+    content: "";
+    position: absolute;
+    opacity: 0.6;
+    border-radius: 70% 70% 0 0;
+}
+
+#about-us-section::before
+{
+    width: 30vw; 
+    height: 50vh;  
+    background: #F7DBF1; 
+    bottom: -4510px; /* Posición de la mancha */  
+    left: -200px;  
+    z-index: 0; /* Detrás del contenido */
+    filter: blur(20px);
+}
