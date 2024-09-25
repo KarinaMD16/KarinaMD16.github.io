@@ -100,7 +100,7 @@
       "foodCatalogPrice": 5
     },
     {
-      "foodCatalogImage": "https://i.ibb.co/9y7RkQv/pancakes.webp",
+      "foodCatalogImage": "https://i.ibb.co/yyG8m3Z/pancakes.webp",
       "foodCatalogName": "Pancake",
       "foodCatalogPrice": 5
     }
@@ -108,17 +108,17 @@
   
   "drinksCatalog": [
     {
-      "drinksCatalogImage": "https://i.ibb.co/CHsh3SW/hot-chocolate.webp",
+      "drinksCatalogImage": "https://i.ibb.co/xf4cHs9/hot-chocolate.webp",
       "drinksCatalogName": "Hot Chocolate",
       "drinksCatalogPrice": 3
     },
     {
-      "drinksCatalogImage": "https://i.ibb.co/mqN2r9T/coffee-1.webp",
+      "drinksCatalogImage": "https://i.ibb.co/KG63Pwv/coffee-Cat.webp",
       "drinksCatalogName": "Coffee",
       "drinksCatalogPrice": 4
     },
     {
-      "drinksCatalogImage": "https://i.ibb.co/8YZxGnY/capuccino.webp",
+      "drinksCatalogImage": "https://i.ibb.co/MfVzp33/capuccino.webp",
       "drinksCatalogName": "Capuccino",
       "drinksCatalogPrice": 3
     }
@@ -137,7 +137,7 @@
     },
     {
       "servicesName": "Free Delivery",
-      "servicesPicture": "https://i.ibb.co/g3YMrRS/freedelivery.webp",
+      "servicesPicture": "https://i.ibb.co/vHZPmzw/freedelivery.webp",
       "servicesDescription": "Now you can get a free delivery to enjoy your order from the comfort of your home!*",
       "servicesParagraph": "*At participating locations"
     }
