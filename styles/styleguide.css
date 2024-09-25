@@ -202,6 +202,7 @@ code{
     flex-direction: column;
     align-items: center;
 }
+
 #footer
 {
     display: flex;
@@ -483,3 +484,5 @@ table tr:nth-child(even){
 #table pre{
     width: 100%;
 }
+
+
