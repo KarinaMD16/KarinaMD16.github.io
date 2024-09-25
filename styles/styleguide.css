@@ -7,7 +7,7 @@ body img{
     width: 128px;
 }
 
-header{
+.styles-header{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,4 +201,237 @@ footer
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+
+#alert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.show{
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000;
+}
+
+.alert-msg{
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 50%;
+    top: 50%;
+    width: 30vw;
+    height: 35vh;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #F9F9F9;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    animation: show-popup  0.5s ease forwards;
+}
+
+.alert-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.alert-content svg {
+    stroke-width: .2px;
+    stroke: #77ba7e;
+}
+
+.close-alert{
+    border-radius: 15.5px;
+    background-color: #CDF0D1;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 2vh 7vw;
+    border: none;
+    z-index: 1001;
+    font-weight: bold;
+    cursor: pointer; 
+}
+
+.close-alert:hover{
+    background: #b6d6ba;
+    
+}
+
+.close-alert{
+    border-radius: 15px;
+    background: #CDF0D1;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.container-code{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  50% 50%;
+    grid-template-areas: 
+    "html css"
+    "js css";
+    column-gap: 5vw;
+    margin: 0 2vw;
+}
+
+.html{
+    grid-area: html;
+}
+
+.css{
+    grid-area: css;
+}
+
+.js{
+    grid-area: js;
+}
+
+
+#alert pre{
+    width: 100%;
+}
+
+@keyframes show-popup {
+	0% {
+		transform: translate(-50%, -50%)
+		scale(.7);
+
+		opacity: 0;
+	}
+	45% {
+		transform: translate(-50%, -50%)
+		scale(1.05);
+
+		opacity: 1;
+	}
+	80% {
+		transform: translate(-50%, -50%)
+		scale(.95);
+	}
+	100% {
+		transform: translate(-50%, -50%)
+		scale(1);
+	}
+}
+
+#modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 50%;
+    top: 50%;
+    width: 30vw;
+    height: 35vh;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #F9F9F9;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 3vw;
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal h4 {
+    margin: 0 0 3vh;
+}
+
+.modal-footer{
+    display: flex;
+    justify-content: center;
+}
+
+#modal pre{
+    width: 100%;
+}
+
+#table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+table{
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 1px solid #cecece;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #CDF0EA;
+    color: black;
+    border: black;
+    border-right: 1px solid #94b6b1;
+    text-align: center;
+    border-bottom: 1px solid #94b6b1;
+}
+
+table td{
+    border-right: 1px solid #cecece;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+table tr:nth-child(even){
+    background-color: #EBECEC;
+}
+
+#container-table-code{
+    display: flex;
+    gap: 5vw;
+}
+
+
+#table pre{
+    width: 100%;
 }
