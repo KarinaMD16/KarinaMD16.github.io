@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -254,6 +258,100 @@ code{
     text-decoration: underline;
 }
 
+
+#featured-services-section h1{
+    color: #000;
+    font-family:"Spicy Rice";
+    font-size:3em;
+    font-style:normal;
+    font-weight:400;
+}
+#featured-services-title-id span{
+    color: #AA8BE8;
+}
+
+.service-title-container h2{
+    color: #BFAEE2;
+    font-family:"Poppins";
+    font-size:2em;
+    font-style:normal;
+    font-weight:600;
+}
+.service-title-container h3{
+    color: #5B5B5B;
+    font-family:"Poppins";
+    font-size:1.5em;
+    font-weight:500;
+}
+
+.service-title-container h4{
+    color: #5B5B5B;
+    font-family:"Poppins";
+    font-size:1em;
+    font-weight:500;
+}
+#codigo{
+    width: 30%;
+}
+nav a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+nav ul{
+    display:flex;
+    list-style-type: none;
+    gap: 20px;
+    padding: 25px;
+}
+.code{
+    width: 30%;
+
+}
+.menu{
+    top:60px;
+    width:150px;
+    background-color: #e6e4e4;
+    border-radius: 8px;
+    border-right: 2px;
+    padding: 8px;
+
+}
+
+.codigo{
+    width:400px;
+}
+
+#sidebar h2{
+    font-size: 2.em;
+}
+
+#sidebar ul{
+    flex-direction: column;
+    list-style-type: none;
+    padding: 2px;
+}
+#sidebar ul li{
+    margin:10px 0;
+}
+#sidebar ul li a{
+    text-decoration: none;
+    color: #007bff;
+    
+}
+#sidebar ul li a:hover{
+    color: #0056b3;
+}
+
+#side{
+    display: flex;
+
+} 
+.codigo-css{
+    width: 30%;
+}
+
+
 #alert{
     display: flex;
     justify-content: center;
@@ -484,5 +582,3 @@ table tr:nth-child(even){
 #table pre{
     width: 100%;
 }
-
-
