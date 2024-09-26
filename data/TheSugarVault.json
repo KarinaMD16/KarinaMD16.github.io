@@ -1,0 +1,175 @@
+{
+  "company": {
+    "IDCompany": 1,
+    "companyImageLogo": "https://i.ibb.co/CBT4hvm/LogoNoBG.png",
+    "companyIsoLogo": "https://i.ibb.co/x1f2Ft1/Isologo.png",
+    "companyName": "The Sugar Vault",
+    "companyDescription": "Find delights that will awaken your senses, let each visit to this place become a daily escape, one cup at a time.",
+    "companyPhoneNumber": "+123456789",
+    "companyEmail": "TheSugarVault@contact.com",
+    "companyLocation": "Chicago, Illinois USA"
+  },
+
+  "hero": {
+    "heroPicture": "https://i.ibb.co/0XWz8tz/Bubble-Tea.webp"
+  },
+  
+  "contactForm": {
+    "contactFormName": "hola",
+    "contactFormEmail": "email@empresa.com",
+    "contactFormNumber": "+987654321",
+    "contactFormMessage": "aaaaaaaAAAAAAAAA"
+  },
+  
+  "sectionTitles": [
+    {
+      "stName": "Featured Products"
+    },
+    {
+      "stName": "Our Catalog"
+    },
+    {
+      "stName": "Unleash Your Sweet Side"
+    },
+    {
+      "stName": "A Cup of Inspiration"
+    },
+    {
+      "stName": "Featured Services"
+    },
+    {
+      "stName": "About Us"
+    },
+    {
+      "stName": "Customer Reviews"
+    }
+  ],
+  
+  "featuredProducts": [
+    {
+      "productName": "Macaroon",
+      "productPicture": "https://i.ibb.co/547tL44/macaroon.webp",
+      "productPrice": 5
+    },
+    {
+      "productName": "Donut",
+      "productPicture": "https://i.ibb.co/2yDJb2d/donut.webp",
+      "productPrice": 5
+    },
+    {
+      "productName": "Coffee",
+      "productPicture": "https://i.ibb.co/1XhHmq3/coffee.webp",
+      "productPrice": 10
+    },
+    {
+      "productName": "Mochi",
+      "productPicture": "https://i.ibb.co/nrTWz5y/mochi.webp",
+      "productPrice": 5
+    },
+    {
+      "productName": "Cake",
+      "productPicture": "https://i.ibb.co/ccb75Rz/cake.webp",
+      "productPrice": 6
+    },
+    {
+      "productName": "Cookie",
+      "productPicture": "https://i.ibb.co/2h3k9Dw/cookie.webp",
+      "productPrice": 2
+    },
+    {
+      "productName": "Ice Cream",
+      "productPicture": "https://i.ibb.co/wdkH993/icecream.webp",
+      "productPrice": 5
+    },
+    {
+      "productName": "Pie",
+      "productPicture": "https://i.ibb.co/LSTMn5F/pie.webp",
+      "productPrice": 5
+    }
+  ],
+  
+  "foodCatalog": [
+    {
+      "foodCatalogImage": "https://i.ibb.co/tmf1P7k/donut.webp",
+      "foodCatalogName": "Donuts",
+      "foodCatalogPrice": 5
+    },
+    {
+      "foodCatalogImage": "https://i.ibb.co/82PMdXQ/cupcake.webp",
+      "foodCatalogName": "Cupcake",
+      "foodCatalogPrice": 5
+    },
+    {
+      "foodCatalogImage": "https://i.ibb.co/yyG8m3Z/pancakes.webp",
+      "foodCatalogName": "Pancake",
+      "foodCatalogPrice": 5
+    }
+  ],
+  
+  "drinksCatalog": [
+    {
+      "drinksCatalogImage": "https://i.ibb.co/xf4cHs9/hot-chocolate.webp",
+      "drinksCatalogName": "Hot Chocolate",
+      "drinksCatalogPrice": 3
+    },
+    {
+      "drinksCatalogImage": "https://i.ibb.co/KG63Pwv/coffee-Cat.webp",
+      "drinksCatalogName": "Coffee",
+      "drinksCatalogPrice": 4
+    },
+    {
+      "drinksCatalogImage": "https://i.ibb.co/MfVzp33/capuccino.webp",
+      "drinksCatalogName": "Capuccino",
+      "drinksCatalogPrice": 3
+    }
+  ],
+
+  "services": [
+    {
+      "servicesName": "Handmade Cup",
+      "servicesPicture": "https://i.ibb.co/xGBngPx/handmade.webp",
+      "servicesDescription": "Buy our always available “Creativity cups” that come with all the necessary supplies to paint your favorite and unique design!"
+    },
+    {
+      "servicesName": "Special Events",
+      "servicesPicture": "https://i.ibb.co/TvS8w7R/specialevents.webp",
+      "servicesDescription": "Now you can book our place and make your events even more special!"
+    },
+    {
+      "servicesName": "Free Delivery",
+      "servicesPicture": "https://i.ibb.co/vHZPmzw/freedelivery.webp",
+      "servicesDescription": "Now you can get a free delivery to enjoy your order from the comfort of your home!*",
+      "servicesParagraph": "*At participating locations"
+    }
+  ],
+  
+  "aboutUs": {
+    "aboutDescription": "We are a small local business, inspired by asian culture, aesthetics and flavors. We provide a clean, safe and peaceful place and enviroment for you, your friends and family to come hang out and rest your mind for a while, delighting your taste buds with our products, letting your imagination fly and enjoy the moment by painting your own cup.",
+    "aboutImg": "https://i.ibb.co/nz69msZ/aboutus.webp",
+    "aboutButton": "Contact Us"
+  },
+  
+  "reviews": [
+    {
+      "reviewerName": "Emily Smith",
+      "reviewerPicture": "https://i.ibb.co/mqt4yFY/emilysmith.webp",
+      "reviewTitle":"Great experience! ",
+      "reviewDescription": "The food was delicious and the atmosphere was wonderful.",
+      "reviewDate": "2024-09-01"
+    },
+    {
+      "reviewerName": "Dan Xavier",
+      "reviewerPicture": "https://i.ibb.co/Dw6vP5g/danxavier.webp",
+      "reviewTitle":"Such a unique place",
+      "reviewDescription": "Amazing service, quick delivery, and the product quality is top-notch!",
+      "reviewDate": "2024-09-05"
+    },
+    {
+      "reviewerName": "Julieta Johnson",
+      "reviewerPicture": "https://i.ibb.co/nM81rXS/juelietajohnson.webp",
+      "reviewTitle":"Super delicious!",
+      "reviewDescription": "Loved the handmade cups! Such a fun and creative activity, highly recommended.",
+      "reviewDate": "2024-09-10"
+    }
+  ]
+}
