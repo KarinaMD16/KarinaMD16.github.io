@@ -358,36 +358,93 @@ code{
 
 
 nav a{
-    display: flex;
+   
     text-decoration: none;
     color: black;
+    justify-content: center;
+}
+#navbar h1{
+    display: flex;
+    justify-content: center;
+}
+#navbar h2{
+
+  
+ text-align: center;
+    
 }
 nav ul{
     display:flex;
     list-style-type: none;
     gap: 20px;
     padding: 25px;
+    justify-content: center;
 }
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    gap: 20px; 
+}
+
 .code{
-    width: 30%;
+    align-items: baseline;
+    justify-content: center;
+    gap: 5vw;
 
 }
+.cod{
+   
+    align-items: baseline;
+    justify-content: center;
+    gap: 5vw;
+    width: 30%;
+}
+
 .menu{
+    display: flex;
     top:60px;
     width:150px;
     background-color: #e6e4e4;
     border-radius: 8px;
     border-right: 2px;
     padding: 8px;
+   
 
 }
 
 .codigo{
-    width:400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    gap: 20px; 
 }
 
+.codigo-h{
+    align-items: baseline;
+    justify-content: center;
+    gap: 5vw;
+    width: 30%;
+
+}
+
+.co-css{
+    align-items: baseline;
+    justify-content: center;
+    gap: 5vw;
+}
+.side{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    gap: 20px; 
+}
 #sidebar h2{
+    display: flex;
+    
+ text-align: center;
     font-size: 2.em;
+
 }
 
 #sidebar ul{
@@ -411,9 +468,7 @@ nav ul{
     display: flex;
 
 } 
-.codigo-css{
-    width: 30%;
-}
+
 
 
 #alert{
