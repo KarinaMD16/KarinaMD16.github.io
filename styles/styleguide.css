@@ -258,41 +258,105 @@ code{
     text-decoration: underline;
 }
 
+#titles {
+    margin-top: 4vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "heading1 heading1-codigo"
+    "heading2 heading2-codigo"
+    "heading3 heading3-codigo"
+    "heading4 heading4-codigo";
+}
 
-#featured-services-section h1{
+#titles h1{
     color: #000;
     font-family:"Spicy Rice";
-    font-size:3em;
+    font-size:2em;
     font-style:normal;
     font-weight:400;
+    grid-area: heading1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 }
-#featured-services-title-id span{
+
+#titles span{
     color: #AA8BE8;
 }
 
-.service-title-container h2{
+#codigo-h1{
+    grid-area: heading1-codigo;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 5vw;
+}
+
+#h2-ex{
+    grid-area: heading2;
     color: #BFAEE2;
     font-family:"Poppins";
     font-size:2em;
     font-style:normal;
     font-weight:600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.service-title-container h3{
-    color: #5B5B5B;
+
+#codigo-h2{
+    grid-area: heading2-codigo;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 5vw;
+}
+
+#titles h3{
+    grid-area: heading3;
+    color: #000000;
     font-family:"Poppins";
     font-size:1.5em;
     font-weight:500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.service-title-container h4{
-    color: #5B5B5B;
+#codigo-h3{
+    grid-area: heading3-codigo;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 5vw;
+}
+
+#titles h4{
+    grid-area: heading4;
+    color: #000;
     font-family:"Poppins";
     font-size:1em;
     font-weight:500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-#codigo{
-    width: 30%;
+
+#codigo-h4{
+    grid-area: heading4-codigo;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 5vw;
 }
+
+
 nav a{
     display: flex;
     text-decoration: none;
