@@ -270,5 +270,189 @@
     <footer>
         <h1>Footer</h1>
     </footer>
+
+    <section id="checkbox-section">
+        <h1>Checkbox</h1>
+        <section id="checkbox-toppings">
+            <h3>Choose the toppings to go on your mochi:</h3>
+            <label class="container-checkbox">Whipped cream
+                <input type="checkbox" checked="checked">
+                <span class="checkmark-checkbox"></span>
+            </label>
+            <label class="container-checkbox">Strawberry jam
+                <input type="checkbox">
+                <span class="checkmark-checkbox"></span>
+            </label>
+            <label class="container-checkbox">Chocolate sauce
+                <input type="checkbox">
+                <span class="checkmark-checkbox"></span>
+            </label>
+            <label class="container-checkbox">Caramel sauce
+                <input type="checkbox">
+                <span class="checkmark-checkbox"></span>
+            </label>
+        </section>
+        <section id="checkbox-code">
+            <section id="checkbox-html">
+                <h2>Código HTML</h2>
+                <pre><code>
+                    &lt;label class="container-checkbox"&gt;Whipped cream
+                        &lt;input type="checkbox" checked="checked"&gt;
+                        &lt;span class="checkmark-checkbox"&gt;&lt;/span&gt;
+                    &lt;/label&gt;
+                    &lt;label class="container-checkbox"&gt;Strawberry jam
+                        &lt;input type="checkbox"&gt;
+                        &lt;span class="checkmark-checkbox"&gt;&lt;/span&gt;
+                    &lt;/label&gt;
+                    &lt;label class="container-checkbox"&gt;Chocolate sauce
+                        &lt;input type="checkbox"&gt;
+                        &lt;span class="checkmark-checkbox"&gt;&lt;/span&gt;
+                    &lt;/label&gt;
+                    &lt;label class="container-checkbox"&gt;Caramel sauce
+                        &lt;input type="checkbox"&gt;
+                        &lt;span class="checkmark-checkbox"&gt;&lt;/span&gt;
+                    &lt;/label&gt;
+                </code></pre>
+            </section>
+            <section id="checkbox-css">
+                <h2>Código CSS</h2>
+                <pre><code>
+                    .container-checkbox {
+                        position: relative;
+                        padding-left: 3vw;
+                        margin-bottom: 12px;
+                        font-size: 20px;
+                        cursor: pointer;
+                    }
+                    .container-checkbox input{
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                    }
+                    .checkmark-checkbox{
+                        position: absolute;
+                        left: 0;
+                        height: 4vh;
+                        width: 2vw;
+                        background-color: #eee;
+                    } 
+                    .container-checkbox:hover input ~ .checkmark-checkbox{
+                        background-color: #b2afaf;
+                    }
+                    .container-checkbox input:checked ~ .checkmark-checkbox {
+                        background-color: #BFAEE2;
+                    }
+                    .checkmark-checkbox:after{
+                        content: "";
+                        position: absolute;
+                        display: none;
+                    }
+                    .container-checkbox input:checked ~ .checkmark-checkbox:after {
+                        display: block;
+                    }
+                    .container-checkbox .checkmark-checkbox:after{
+                        left: 9px;
+                        top: 5px;
+                        width: 5px;
+                        height: 10px;
+                        border: solid #f3eeff;
+                        border-width: 0 3px 3px 0;
+                        -webkit-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                    }
+                </code></pre>
+            </section>
+        </section>
+    </section>
+
+    <section id="radiobutton-section">
+        <h1>RadioButton</h1>
+        <section id="radiobutton-flavor">
+            <h3>Choose a flavor for your mochi:</h3>
+            <label class="container-radiobutton">Strawberry
+                <input type="radio" checked="checked" name="flavor">
+                <span class="checkmark-radiobutton"></span>
+            </label>
+            <label class="container-radiobutton">Matcha
+                <input type="radio" name="flavor">
+                <span class="checkmark-radiobutton"></span>
+            </label>
+            <label class="container-radiobutton">Mango
+                <input type="radio" name="flavor">
+                <span class="checkmark-radiobutton"></span>
+            </label>
+        </section>
+        <section id="radiobutton-code">
+            <section id="radiobutton-html">
+                <h2>Código HTML</h2>
+                <pre><code>
+                    &lt;label class="container-radiobutton"&gt;Strawberry
+                        &lt;input type="radio" checked="checked" name="flavor"&gt;
+                        &lt;span class="checkmark-radiobutton"&gt;&lt;/span&gt;
+                    &lt;/label&gt;
+                    &lt;label class="container-radiobutton"&gt;Matcha
+                        &lt;input type="radio" name="flavor"&gt;
+                        &lt;span class="checkmark-radiobutton"&gt;&lt;/span&gt;
+                    &lt;/label&gt;
+                    &lt;label class="container-radiobutton"&gt;Mango
+                        &lt;input type="radio" name="flavor"&gt;
+                        &lt;span class="checkmark-radiobutton"&gt;&lt;/span&gt;
+                    &lt;/label&gt;
+                </code></pre>
+            </section>
+            <section id="radiobutton-css">
+                <h2>Código CSS</h2>
+                <pre><code>
+                    .container-radiobutton {
+                        display: block;
+                        position: relative;
+                        margin-bottom: 2vh;
+                        padding-left: 35px;
+                        cursor: pointer;
+                    }
+                    .container-radiobutton input{
+                        position: absolute;
+                        cursor: pointer;
+                        opacity: 0%;
+                    }
+                    .checkmark-radiobutton{
+                        position: absolute;
+                        left: 0;
+                        height: 4vh;
+                        width: 2vw;
+                        background-color: #eee;
+                        border-radius: 50%;
+                    }
+                    .container-radiobutton:hover input ~ .checkmark-radiobutton{
+                        background-color: #b2afaf;
+                    }
+                    .container-radiobutton input:checked ~ .checkmark-radiobutton{
+                        background-color: #BFAEE2;
+                    }
+                    .checkmark-radiobutton:after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+                    }
+                    .container-radiobutton input:checked ~ .checkmark-radiobutton:after {
+                        display: block;
+                    }
+                    .container-radiobutton .checkmark-radiobutton:after {
+                        top: 8px;
+                        left: 9px;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background:#f3eeff;
+                    }
+                </code></pre>
+            </section>
+        </section>
+    </section>
+
+    <section id="dropdown-section">
+        <h1>DROPDOWN</h1>
+    </section>
 </body>
 </html>
