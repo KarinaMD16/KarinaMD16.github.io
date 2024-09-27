@@ -452,7 +452,71 @@
     </section>
 
     <section id="dropdown-section">
-        <h1>DROPDOWN</h1>
+        <h1>Dropdown</h1>
+        <section id="dropdown-services">
+            <div class="dropdown">
+            <button class="dropbtn">Featured services</button>
+                <div class="dropdown-content">
+                    <a href="#">Design your own cup</a>
+                    <a href="#">Special events</a>
+                    <a href="#">Free delivery</a>
+                </div>
+            </div>
+        </section>
+        <section id="dropdown-code">
+            <section id="dropdown-html">
+                <h2>Código HTML:</h2>
+                <pre><code>
+                    &lt;div class="dropdown"&gt;
+                        &lt;button class="dropbtn"&gt;Featured services&lt;/button&gt;
+                            &lt;div class="dropdown-content"&gt;
+                                &lt;a href="#"&gt;Design your own cup&lt;/a&gt;
+                                &lt;a href="#"&gt;Special events&lt;/a&gt;
+                                &lt;a href="#"&gt;Free delivery&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                </code></pre>
+            </section>
+            <section id="dropdown-css">
+                <h2>Código CSS:</h2>
+                <pre><code>
+                    .dropbtn{
+                        background-color:#BFAEE2;
+                        color: white;
+                        padding: 4vh;
+                        font-size: 16px;
+                        border: none;
+                        cursor: pointer;
+                    }
+                    .dropdown{
+                        position: relative;
+                        display: inline-block;
+                    }
+                    .dropdown-content{
+                        display: none;
+                        position: absolute;
+                        background-color: #f9f9f9;
+                        min-width: 160px;
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    }
+                    .dropdown-content a{
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                    }
+                    .dropdown-content a:hover{
+                        background-color: #f1f1f1a8
+                    }
+                    .dropdown:hover .dropdown-content{
+                        display: block;
+                    }
+                    .dropdown:hover .dropbtn{
+                        background-color: #b39ce1;
+                    }
+                </code></pre>
+            </section>
+        </section>
     </section>
 </body>
 </html>
