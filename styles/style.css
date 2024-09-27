@@ -7,6 +7,7 @@ body{
     background-color: #F9F9F9;
     color: black;
     margin: 0;
+    width: 100%;
 }
 
 body h1, h2{
@@ -21,10 +22,6 @@ body h1, h2, h3, h4, p{
     margin: 0; 
 }
 
-body img{
-    width: 100px; /* Eliminar al terminar.
-    solo esta para que se pueda ver el html mas claramente */
-}
 
 /* estilos del header // daniel */
 header{
@@ -40,20 +37,19 @@ header img{
 nav a{
     text-decoration: none;
     color: black;
+    font-size: 17px;
 }
 nav ul{
-    list-style-type: none;
     gap: 20px;
-    padding: 25px;
 }
-#home-background{
-    background-color: #BFAEE2;
-    padding: 5px;
-    border-radius: 8px;
+nav{
+    margin-right: 50px;
 }
+
 
 /* estilos del hero // daniel */
 #hero{
+    width: 100%;
     margin: 0;
     height: 83vh;
 }
@@ -61,10 +57,11 @@ nav ul{
     height: 75vh;
     width: 40vh;
     margin: 0 15vh 0 0;
+    z-index: 1;
 }
 #hero-company-data{
     width: 34%;
-    gap: 20px;
+    gap: 2vw;
 }
 #hero-company-data img{
    width: 70%;
@@ -175,75 +172,45 @@ nav ul{
 
 /* estilos de los servicios // orlando */
 
-    #featured-services-section{
+    #services-section{
         position: relative;
         background:#F9F9F9;
         overflow: hidden;
     }
-    #featured-services-section::after,#featured-services-section::before{
-        content: "";
-        position: absolute;
-        opacity: 0.45;
-        border-radius: 30%;
-    }
-    #featured-services-section::after{
-        width: 60vw; 
-        height: 130vh;  
-        background:#F7DBF1; 
-        bottom: -120px; /* Posición de la mancha */  
-        left: -220px;  
-        z-index: 0; /* Detrás del contenido */ 
-        filter: blur(20px); 
-    }
-    #featured-services-section::before{
-        width: 30vw; 
-        height: 35vh;  
-        background: #CDF0EA;
-        top: -50px; /* Posición de la mancha */  
-        right: -50px; 
-        z-index: 0; /* Detrás del contenido */ 
-        filter: blur(20px); 
-    }
-    #featured-services-section h1{
+    #services-section h1{
         color: #000;
         font-family:"Spicy Rice";
         font-size:3em;
         font-style:normal;
         font-weight:400;
     }
-    #featured-services-title-id span{
+    #services-title-id span{
         color: #AA8BE8;
     }
-    .services-card-cup-design-service{
-        border-radius:40px;
-        background: #F9F9F9;
-        box-shadow:6px 4px 11.6px 0px rgba(0, 0, 0, 0.25);
-        z-index: 1;
-    }
-    .services-card-cup-design-service img{
-        border-radius: 0px 38px 38px 0px;
-        border: 3px solid #CACACA;
-    }
-    .services-card{
+
+    .service-card{
         border-radius:40px;
         background: #F9F9F9;
         box-shadow:6px 4px 11.6px 0px rgba(0,0,0,0.25);
         z-index: 1;
     }
-    .service-title-container h2{
+    .serviceInfo img{
+        border-radius: 15px 15px 15px 15px;
+    }
+    .serviceInfo h2{
         color: #BFAEE2;
         font-family:"Poppins";
-        font-size:2em;
+        font-size:1.7em;
         font-style:normal;
         font-weight:600;
     }
-    .service-title-container h4{
+    .serviceInfo h4{
         color: #5B5B5B;
         font-family:"Poppins";
-        font-size:1em;
+        font-size:0.9em;
         font-weight:500;
     }
-    .service-title-container p{
+    .serviceInfo p{
         color: #5B5B5B;
         font-family:"Poppins";
         font-size: 0.7em;
@@ -261,21 +228,35 @@ nav ul{
         background: #9083aa;
     }
 
-
 /* estilos de about us //  elein */
+#about-us-section{
+    background: linear-gradient(270deg, #CDF0EA 0%, #BFAEE2 50.4%);
+    z-index: 1;
+}
+
+.about-title h1{
+    color: #F9F9F9;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5vw;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
 
 #flower-mochis
 {
     height: 75vh;
     width: 60vh;
     margin: 0 15vh 0 0;
-    margin-left: 5vw;
+    margin: 8vh;
+    border-radius: 58px;
+    box-shadow: 0px 11px 28px 0px rgba(0, 0, 0, 0.25);
+    z-index: 1;
 }
 
 #about-us-logo
 {
-    height: 7vh;
-    width: 4vw;
+    width: 12vh;
     margin-left: 2vw;
 }
 
@@ -287,6 +268,9 @@ nav ul{
     border: #ffffff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 18px;
+    font-size: medium;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
 }
 
 /* estilos de reviews // daniel */
@@ -302,15 +286,16 @@ nav ul{
     border-radius: 8px;
     padding: 5vh;
 }
+
 .user-info img{
     border-radius: 40px;
     height: 40px;
     width: 40px;
+    object-fit: cover;
 }
     
 
 /* estilos del form // karina */
-
 #form-section h1{
     color: black;
     font-style: normal;
@@ -321,11 +306,6 @@ nav ul{
 
 #form-title-id span{
     color: #AA8BE8;
-
-}
-
-.form-container form{
-    width: 60%;
 }
 
 .form-space{
@@ -354,8 +334,8 @@ form input{
     background: #CDF0EA;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border: none;
-    width: 10vw;
-    height: 10vh;
+    width: 20vh;
+    height: 5vw;
     font-size: 2vh;
 }
 
@@ -374,7 +354,7 @@ footer
 #footer-logo
 {
     height: 15vh;
-    width: 18vw;
+    width: 20vw;
 }
 
 #footer-email

@@ -6,7 +6,7 @@ function loadData() {
 
 function renderInfo(data){
     renderHeader(data);
-    renederHero(data);
+    renderHero(data);  
     renderSectionTitles(data);
     renderFeaturedProducts(data);
     renderCatalog(data);
@@ -19,7 +19,7 @@ function renderHeader (data) {
     document.getElementById('header-logo-id').src = data.company.companyIsoLogo;
 }
 
-function renederHero (data) {
+function renderHero (data) {
     document.getElementById('hero-logo-id').src = data.company.companyImageLogo;
     document.getElementById('hero-description-id').textContent = data.company.companyDescription;
     document.getElementById('bubbletea').src = data.hero.heroPicture;
@@ -152,12 +152,54 @@ function renderCatalog (data) {
     });
 }
 
+
 function renderServices (data) {
 
+    const servicesContainer = document.getElementById('services-card-container-id');
+    servicesContainer.innerHTML = '';
+
+    data.services.forEach(services => {
+
+        const serviceCard = document.createElement('div');
+        serviceCard.className = 'service-card';
+
+        const serviceInfo = document.createElement('div');
+        serviceInfo.className ='serviceInfo';
+
+        const serviceImg = document.createElement('img');
+        serviceImg.src = services.servicesPicture;
+        serviceImg.alt = services.servicesName;
+
+        const serviceName = document.createElement('h2');
+        serviceName.textContent = services.servicesName;
+
+        const serviceDescription = document.createElement('h4');
+        serviceDescription.textContent = services.servicesDescription;
+
+        const serviceButton = document.createElement('button');
+        serviceButton.className ='secondary-buton';
+        serviceButton.textContent = 'Read More';
+
+        const serviceParagraph = document.createElement('p');
+        serviceParagraph.textContent =services.servicesParagraph;
+
+        serviceInfo.appendChild(serviceImg);
+        serviceInfo.appendChild(serviceName);
+        serviceInfo.appendChild(serviceDescription);
+        serviceInfo.appendChild(serviceButton);
+        serviceInfo.appendChild(serviceParagraph);
+
+        serviceCard.appendChild(serviceInfo);
+
+        servicesContainer.appendChild(serviceCard);
+    });
 }
 
 function renderAboutUs (data) {
-
+    document.getElementById('about-us-logo').src = data.company.companyIsoLogo;
+    document.getElementById('about-us-description').textContent = data.aboutUs.aboutDescription;
+    document.getElementById('about-us-button').textContent = data.aboutUs.aboutButton;
+    document.getElementById('flower-mochis').src = data.aboutUs.aboutImg;
 }
 
 function renderReviews(data) {
@@ -212,9 +254,10 @@ function renderReviews(data) {
         reviewCard.appendChild(reviewContentContainer);
         reviewCard.appendChild(reviewerInfo);
         
+        reviewContentContainer.appendChild(starContainer);
         reviewContentContainer.appendChild(reviewTitle);
         reviewContentContainer.appendChild(reviewContent);
-
+        
         reviewerInfo.appendChild(reviewerPic);
         reviewerInfo.appendChild(personContainer);
 
@@ -230,3 +273,38 @@ document.addEventListener('DOMContentLoaded', function() {
         renderInfo(data);
     });
 });
+
+
+// scripts de la pagina de estilos 
+
+
+// alert
+
+function showAlert() {
+    document.getElementById('alert-msg').style.display = 'block';
+    document.getElementById('alert-overlay').style.display = 'block';
+}
+
+function hideAlert(){
+    document.getElementById('alert-msg').style.display = 'none';
+    document.getElementById('alert-overlay').style.display = 'none';
+}
+
+
+// modal
+
+function showModal() {
+    document.getElementById('modal-msg').style.display = 'block';
+    document.getElementById('modal-overlay').style.display = 'block';
+}
+
+function closeModal(){
+    document.getElementById('modal-msg').style.display = 'none';
+    document.getElementById('modal-overlay').style.display = 'none';
+}
+
+function continueBtn(){
+    document.getElementById('modal-msg').style.display = 'none';
+    document.getElementById('modal-overlay').style.display = 'none';
+    
+}

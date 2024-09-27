@@ -65,6 +65,26 @@
       "productName": "Mochi",
       "productPicture": "https://i.ibb.co/nrTWz5y/mochi.webp",
       "productPrice": 5
+    },
+    {
+      "productName": "Cake",
+      "productPicture": "https://i.ibb.co/ccb75Rz/cake.webp",
+      "productPrice": 6
+    },
+    {
+      "productName": "Cookie",
+      "productPicture": "https://i.ibb.co/2h3k9Dw/cookie.webp",
+      "productPrice": 2
+    },
+    {
+      "productName": "Ice Cream",
+      "productPicture": "https://i.ibb.co/wdkH993/icecream.webp",
+      "productPrice": 5
+    },
+    {
+      "productName": "Pie",
+      "productPicture": "https://i.ibb.co/LSTMn5F/pie.webp",
+      "productPrice": 5
     }
   ],
   
@@ -80,7 +100,7 @@
       "foodCatalogPrice": 5
     },
     {
-      "foodCatalogImage": "https://i.ibb.co/9y7RkQv/pancakes.webp",
+      "foodCatalogImage": "https://i.ibb.co/yyG8m3Z/pancakes.webp",
       "foodCatalogName": "Pancake",
       "foodCatalogPrice": 5
     }
@@ -88,17 +108,17 @@
   
   "drinksCatalog": [
     {
-      "drinksCatalogImage": "https://i.ibb.co/CHsh3SW/hot-chocolate.webp",
+      "drinksCatalogImage": "https://i.ibb.co/xf4cHs9/hot-chocolate.webp",
       "drinksCatalogName": "Hot Chocolate",
       "drinksCatalogPrice": 3
     },
     {
-      "drinksCatalogImage": "https://i.ibb.co/mqN2r9T/coffee-1.webp",
+      "drinksCatalogImage": "https://i.ibb.co/KG63Pwv/coffee-Cat.webp",
       "drinksCatalogName": "Coffee",
       "drinksCatalogPrice": 4
     },
     {
-      "drinksCatalogImage": "https://i.ibb.co/8YZxGnY/capuccino.webp",
+      "drinksCatalogImage": "https://i.ibb.co/MfVzp33/capuccino.webp",
       "drinksCatalogName": "Capuccino",
       "drinksCatalogPrice": 3
     }
@@ -112,18 +132,19 @@
     },
     {
       "servicesName": "Special Events",
-      "servicesPicture": "",
+      "servicesPicture": "https://i.ibb.co/TvS8w7R/specialevents.webp",
       "servicesDescription": "Now you can book our place and make your events even more special!"
     },
     {
       "servicesName": "Free Delivery",
-      "servicesPicture": "",
-      "servicesDescription": "Now you can get a free delivery to enjoy your order from the comfort of your home!*"
+      "servicesPicture": "https://i.ibb.co/vHZPmzw/freedelivery.webp",
+      "servicesDescription": "Now you can get a free delivery to enjoy your order from the comfort of your home!*",
+      "servicesParagraph": "*At participating locations"
     }
   ],
   
   "aboutUs": {
-    "aboutDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "aboutDescription": "We are a small local business, inspired by asian culture, aesthetics and flavors. We provide a clean, safe and peaceful place and enviroment for you, your friends and family to come hang out and rest your mind for a while, delighting your taste buds with our products, letting your imagination fly and enjoy the moment by painting your own cup.",
     "aboutImg": "https://i.ibb.co/nz69msZ/aboutus.webp",
     "aboutButton": "Contact Us"
   },
