@@ -1,0 +1,98 @@
+
+/*responsive del service*/
+@media(max-width:600px)
+{
+    body
+    {
+        width: 100vw;
+        height: 100vh;
+    }
+    
+#services-section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+#services-section h1{
+    text-align: center;
+    margin-bottom: 15vh;
+    font-size: 2em;
+    z-index: 1;
+}
+.services-card-section
+{
+    display: flex;
+    gap: 2vw;
+}
+.service-card{
+    display: flex;
+    width: 30vw;
+    height:35vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 30px;
+}
+.serviceInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vw;
+}
+.serviceInfo img{
+    width: 25vw;
+    height: 10vh;
+}
+
+.serviceInfo h2{
+    width: 30vw;
+    height: 3vh;
+    font-size: 0.7em;
+}
+.serviceInfo h4{
+    width: 29vw;
+    height: 11vh;
+    font-size: 0.5em;
+}
+.serviceInfo p{
+    width: 25vw;
+    height: 1vh;
+    font-size: 0.3em;
+}
+.secondary-buton{
+    width: 15vw;
+    height: 3vh;
+    font-size: 0.3em;
+}
+
+#services-section::after,#services-section::before{
+    content: "";
+    position: absolute;
+    opacity: 0.9;
+    border-radius: 60%;
+}
+#services-section::after{
+    width: 45vw; 
+    height: 70vh;  
+    background:#F7DBF1; 
+    bottom: -160px; /* Posición de la mancha */  
+    left: -10px;  
+    z-index: 0; /* Detrás del contenido */ 
+    filter: blur(20px); 
+}
+#services-section::before{
+    width: 34vw; 
+    height: 30vh;  
+    background: #CDF0EA;
+    top: -30px; /* Posición de la mancha */  
+    right: -20px; 
+    z-index: 0; /* Detrás del contenido */ 
+    filter: blur(20px); 
+}
+
+
+}
