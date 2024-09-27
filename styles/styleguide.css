@@ -404,12 +404,12 @@ nav ul{
 .menu{
     display: flex;
     top:60px;
-    width:150px;
-    background-color: #e6e4e4;
+    width:15vw;
+    background-color: #F7DBF1;
     border-radius: 8px;
     border-right: 2px;
-    padding: 8px;
-   
+    padding-left: 2vw;
+    
 
 }
 
@@ -457,11 +457,13 @@ nav ul{
 }
 #sidebar ul li a{
     text-decoration: none;
-    color: #007bff;
+    color: black;
+    font-weight: 500;
     
 }
 #sidebar ul li a:hover{
     color: #0056b3;
+    cursor: pointer;
 }
 
 #side{
