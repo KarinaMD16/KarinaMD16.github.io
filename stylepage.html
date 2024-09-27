@@ -140,6 +140,8 @@ h4{
                     <li><a href>Contact</a></li>
                 </ul>
             </nav>
+
+            <section class="container">
             <div class=" code">
             <h2>Código HTML Navbar:</h2>
             <pre><code>
@@ -153,6 +155,8 @@ h4{
             &lt;/ul&gt;
         &lt;/nav&gt;
             </code></pre>
+            </div>
+            <div class="cod">
             <h2>Código CSS Navbar:</h2>
             <pre><code>
                 nav a{
@@ -168,15 +172,17 @@ h4{
                 }
             </code></pre>  
         </div>
+    </section>
 </section>
 
 
 
 
 <section id="sidebar">
-    <h2>sidebar</h2>
+    <h2>Sidebar</h2>
+    <section class="side">
     <div class="menu">
-    <nav>
+      <nav>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About Us</a></li>
@@ -194,7 +200,7 @@ h4{
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
                     <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
                   </svg>
-                  instagram
+                  Instagram
                 </a>
             </li>
             <li>
@@ -206,12 +212,14 @@ h4{
                 </a>
             </li>
         </ul>
-  </nav>
-</div>
-
-  <div class="codigo">
-    <h2>Código HTML sidebar:</h2>
-    <pre><code>
+         </nav>
+     </div>
+   <div>
+</section>   
+    <section class="codigo">
+        <div class="codigo-h">
+             <h2>Código HTML sidebar:</h2>
+                <pre><code>
 &lt;nav&gt;
     &lt;ul&gt;
         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
@@ -221,53 +229,83 @@ h4{
         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Log Out&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/nav&gt;
-    </code></pre>
-    </div>
-    <div class="codigo-css">
-    <h2>Código CSS sidebar:</h2>
-    <pre><code>
-         
-            .menu{
-                top:60px;
-                width:150px;
-                background-color: #e6e4e4;
-                border-radius: 8px;
-                border-right: 2px;
-                padding: 8px;
-            
-            }
+                     </code></pre>
+        </div>
+                <div class="co-css">
+                   <h2>Código CSS sidebar:</h2>
+                  <pre><code>          
+    .menu{
+        display: flex;
+        top:60px;
+        width:15vw;
+        background-color: #F7DBF1;
+        border-radius: 8px;
+        border-right: 2px;
+        padding-left: 2vw;
         
-            .codigo{
-                width:400px;
-            }
-            
-            #sidebar h2{
-                font-size: 2.em;
-            }
-            
-            #sidebar ul{
-                flex-direction: column;
-                list-style-type: none;
-                padding: 2px;
-            }
-            #sidebar ul li{
-                margin:10px 0;
-            }
-            #sidebar ul li a{
-                text-decoration: none;
-                color: #007bff;
-                
-            }
-            #sidebar ul li a:hover{
-                color: #0056b3;
-            }
-            
-            #side{
-                display: flex;
-            
-            }    
-    </code></pre>  
-    </div>
+
+    }
+
+    .codigo{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; 
+        gap: 20px; 
+    }
+
+    .codigo-h{
+        align-items: baseline;
+        justify-content: center;
+        gap: 5vw;
+        width: 30%;
+
+    }
+
+    .co-css{
+        align-items: baseline;
+        justify-content: center;
+        gap: 5vw;
+    }
+    .side{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; 
+        gap: 20px; 
+    }
+    #sidebar h2{
+        display: flex;
+        
+    text-align: center;
+        font-size: 2.em;
+
+    }
+
+    #sidebar ul{
+        flex-direction: column;
+        list-style-type: none;
+        padding: 2px;
+    }
+    #sidebar ul li{
+        margin:10px 0;
+    }
+    #sidebar ul li a{
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        
+    }
+    #sidebar ul li a:hover{
+        color: #0056b3;
+        cursor: pointer;
+    }
+
+    #side{
+        display: flex;
+    }    
+                    </code></pre> 
+                </div>             
+    </section>
+
 </section>
 
 
@@ -853,254 +891,6 @@ function hideAlert(){
                 <footer class="modal-footer">
                     <button onclick="continueBtn()" class="secondary-buton">Continue</button>
                 </footer>
-
-    <section id="checkbox-section">
-        <h1>Checkbox</h1>
-        <section id="checkbox-toppings">
-            <h3>Choose the toppings to go on your mochi:</h3>
-            <label class="container-checkbox">Whipped cream
-                <input type="checkbox" checked="checked">
-                <span class="checkmark-checkbox"></span>
-            </label>
-            <label class="container-checkbox">Strawberry jam
-                <input type="checkbox">
-                <span class="checkmark-checkbox"></span>
-            </label>
-            <label class="container-checkbox">Chocolate sauce
-                <input type="checkbox">
-                <span class="checkmark-checkbox"></span>
-            </label>
-            <label class="container-checkbox">Caramel sauce
-                <input type="checkbox">
-                <span class="checkmark-checkbox"></span>
-            </label>
-        </section>
-        <section id="checkbox-code">
-            <section id="checkbox-html">
-                <h2>Código HTML</h2>
-                <pre><code>
-                    &lt;label class="container-checkbox"&gt;Whipped cream
-                        &lt;input type="checkbox" checked="checked"&gt;
-                        &lt;span class="checkmark-checkbox"&gt;&lt;/span&gt;
-                    &lt;/label&gt;
-                    &lt;label class="container-checkbox"&gt;Strawberry jam
-                        &lt;input type="checkbox"&gt;
-                        &lt;span class="checkmark-checkbox"&gt;&lt;/span&gt;
-                    &lt;/label&gt;
-                    &lt;label class="container-checkbox"&gt;Chocolate sauce
-                        &lt;input type="checkbox"&gt;
-                        &lt;span class="checkmark-checkbox"&gt;&lt;/span&gt;
-                    &lt;/label&gt;
-                    &lt;label class="container-checkbox"&gt;Caramel sauce
-                        &lt;input type="checkbox"&gt;
-                        &lt;span class="checkmark-checkbox"&gt;&lt;/span&gt;
-                    &lt;/label&gt;
-                </code></pre>
-            </section>
-            <section id="checkbox-css">
-                <h2>Código CSS</h2>
-                <pre><code>
-                    .container-checkbox {
-                        position: relative;
-                        padding-left: 3vw;
-                        margin-bottom: 12px;
-                        font-size: 20px;
-                        cursor: pointer;
-                    }
-                    .container-checkbox input{
-                        position: absolute;
-                        opacity: 0;
-                        cursor: pointer;
-                    }
-                    .checkmark-checkbox{
-                        position: absolute;
-                        left: 0;
-                        height: 4vh;
-                        width: 2vw;
-                        background-color: #eee;
-                    } 
-                    .container-checkbox:hover input ~ .checkmark-checkbox{
-                        background-color: #b2afaf;
-                    }
-                    .container-checkbox input:checked ~ .checkmark-checkbox {
-                        background-color: #BFAEE2;
-                    }
-                    .checkmark-checkbox:after{
-                        content: "";
-                        position: absolute;
-                        display: none;
-                    }
-                    .container-checkbox input:checked ~ .checkmark-checkbox:after {
-                        display: block;
-                    }
-                    .container-checkbox .checkmark-checkbox:after{
-                        left: 9px;
-                        top: 5px;
-                        width: 5px;
-                        height: 10px;
-                        border: solid #f3eeff;
-                        border-width: 0 3px 3px 0;
-                        -webkit-transform: rotate(45deg);
-                        -ms-transform: rotate(45deg);
-                        transform: rotate(45deg);
-                    }
-                </code></pre>
-            </section>
-        </section>
-    </section>
-
-    <section id="radiobutton-section">
-        <h1>RadioButton</h1>
-        <section id="radiobutton-flavor">
-            <h3>Choose a flavor for your mochi:</h3>
-            <label class="container-radiobutton">Strawberry
-                <input type="radio" checked="checked" name="flavor">
-                <span class="checkmark-radiobutton"></span>
-            </label>
-            <label class="container-radiobutton">Matcha
-                <input type="radio" name="flavor">
-                <span class="checkmark-radiobutton"></span>
-            </label>
-            <label class="container-radiobutton">Mango
-                <input type="radio" name="flavor">
-                <span class="checkmark-radiobutton"></span>
-            </label>
-        </section>
-        <section id="radiobutton-code">
-            <section id="radiobutton-html">
-                <h2>Código HTML</h2>
-                <pre><code>
-                    &lt;label class="container-radiobutton"&gt;Strawberry
-                        &lt;input type="radio" checked="checked" name="flavor"&gt;
-                        &lt;span class="checkmark-radiobutton"&gt;&lt;/span&gt;
-                    &lt;/label&gt;
-                    &lt;label class="container-radiobutton"&gt;Matcha
-                        &lt;input type="radio" name="flavor"&gt;
-                        &lt;span class="checkmark-radiobutton"&gt;&lt;/span&gt;
-                    &lt;/label&gt;
-                    &lt;label class="container-radiobutton"&gt;Mango
-                        &lt;input type="radio" name="flavor"&gt;
-                        &lt;span class="checkmark-radiobutton"&gt;&lt;/span&gt;
-                    &lt;/label&gt;
-                </code></pre>
-            </section>
-            <section id="radiobutton-css">
-                <h2>Código CSS</h2>
-                <pre><code>
-                    .container-radiobutton {
-                        display: block;
-                        position: relative;
-                        margin-bottom: 2vh;
-                        padding-left: 35px;
-                        cursor: pointer;
-                    }
-                    .container-radiobutton input{
-                        position: absolute;
-                        cursor: pointer;
-                        opacity: 0%;
-                    }
-                    .checkmark-radiobutton{
-                        position: absolute;
-                        left: 0;
-                        height: 4vh;
-                        width: 2vw;
-                        background-color: #eee;
-                        border-radius: 50%;
-                    }
-                    .container-radiobutton:hover input ~ .checkmark-radiobutton{
-                        background-color: #b2afaf;
-                    }
-                    .container-radiobutton input:checked ~ .checkmark-radiobutton{
-                        background-color: #BFAEE2;
-                    }
-                    .checkmark-radiobutton:after {
-                        content: "";
-                        position: absolute;
-                        display: none;
-                    }
-                    .container-radiobutton input:checked ~ .checkmark-radiobutton:after {
-                        display: block;
-                    }
-                    .container-radiobutton .checkmark-radiobutton:after {
-                        top: 8px;
-                        left: 9px;
-                        width: 8px;
-                        height: 8px;
-                        border-radius: 50%;
-                        background:#f3eeff;
-                    }
-                </code></pre>
-            </section>
-        </section>
-    </section>
-
-    <section id="dropdown-section">
-        <h1>Dropdown</h1>
-        <section id="dropdown-services">
-            <div class="dropdown">
-            <button class="dropbtn">Featured services</button>
-                <div class="dropdown-content">
-                    <a href="#">Design your own cup</a>
-                    <a href="#">Special events</a>
-                    <a href="#">Free delivery</a>
-                </div>
-            </div>
-        </section>
-        <section id="dropdown-code">
-            <section id="dropdown-html">
-                <h2>Código HTML:</h2>
-                <pre><code>
-                    &lt;div class="dropdown"&gt;
-                        &lt;button class="dropbtn"&gt;Featured services&lt;/button&gt;
-                            &lt;div class="dropdown-content"&gt;
-                                &lt;a href="#"&gt;Design your own cup&lt;/a&gt;
-                                &lt;a href="#"&gt;Special events&lt;/a&gt;
-                                &lt;a href="#"&gt;Free delivery&lt;/a&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                </code></pre>
-            </section>
-            <section id="dropdown-css">
-                <h2>Código CSS:</h2>
-                <pre><code>
-                    .dropbtn{
-                        background-color:#BFAEE2;
-                        color: white;
-                        padding: 4vh;
-                        font-size: 16px;
-                        border: none;
-                        cursor: pointer;
-                    }
-                    .dropdown{
-                        position: relative;
-                        display: inline-block;
-                    }
-                    .dropdown-content{
-                        display: none;
-                        position: absolute;
-                        background-color: #f9f9f9;
-                        min-width: 160px;
-                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                    }
-                    .dropdown-content a{
-                        color: black;
-                        padding: 12px 16px;
-                        text-decoration: none;
-                        display: block;
-                    }
-                    .dropdown-content a:hover{
-                        background-color: #f1f1f1a8
-                    }
-                    .dropdown:hover .dropdown-content{
-                        display: block;
-                    }
-                    .dropdown:hover .dropbtn{
-                        background-color: #b39ce1;
-                    }
-                </code></pre>
-            </section>
-        </section>
-    </section>
         </div>
 
         <div class="container-code">
