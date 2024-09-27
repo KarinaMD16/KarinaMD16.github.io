@@ -24,16 +24,257 @@
             <div class="color-box" id="purple">#BFAEE2</div>
         </div>
     </section>
-    <section id="titles">
-        <h1>Titulos</h1>
-    </section>
 
-    <section id="navbar">
-        <h1>Navbar</h1>
-    </section>
+    <section id="titles"> 
+        <h1>our <span>Heading 1</span></h1>
+        
+            <div id="codigo-h1">
+                <div>
+                    <h2>Código HTML H1</h2>
+                <pre><code>
+&lt;h1&gt;our &lt;span&gt;Heading 1&lt;/span&gt;&lt;/h1&gt;
+                </code></pre>   
+                </div>
+                    
+                <div>
+                    <h2>Código CSS H1</h2>
+                    <pre><code>
+h1{
+    color: #000;
+    font-family:"Spicy Rice";
+    font-size:2em;
+    font-style:normal;
+    font-weight:600;
+}
 
-    <section id="sidebar">
-        <h1>Sidebar</h1>
+span{
+    color: #AA8BE8;
+}
+                </code></pre>
+                </div>
+            </div>
+
+            <h2 id="h2-ex">Heading 2</h2>
+            <div id="codigo-h2">
+                <div>
+                    <h2>Código HTML H2</h2>
+                <pre><code>
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+                </code></pre>   
+                </div>
+                    
+                <div>
+                    <h2>Código CSS H2</h2>
+                    <pre><code>
+h2{
+    color: #BFAEE2;
+    font-family:"Poppins";
+    font-size:2em;
+    font-style:normal;
+    font-weight:600;
+}
+                </code></pre>
+                </div>
+            </div>
+
+            <h3>Heading 3</h3>
+            <div id="codigo-h3">
+                <div>
+                    <h2>Código HTML H3</h2>
+                <pre><code>
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+                </code></pre>   
+                </div>
+                    
+                <div>
+                    <h2>Código CSS H3</h2>
+                    <pre><code>
+h3{
+    grid-area: heading3;
+    color: #000000;
+    font-family:"Poppins";
+    font-size:1.5em;
+    font-weight:500;
+}
+                </code></pre>
+                </div>
+            </div>
+
+            <h4>Heading 4</h4>
+            <div id="codigo-h4">
+                <div>
+                    <h2>Código HTML H4</h2>
+                <pre><code>
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+                </code></pre>   
+                </div>
+                    
+                <div>
+                    <h2>Código CSS H4</h2>
+                    <pre><code>
+h4{
+    color: #000;
+    font-family:"Poppins";
+    font-size:1em;
+    font-weight:500;
+}
+                </code></pre>
+                </div>
+            </div>
+
+    </section>
+        
+
+
+</section>
+<section id="navbar">
+    <h1>Navbar</h1>
+    
+            <nav>
+                <ul>
+                    <li id="home-background"><a href="#">Home</a></li>
+                    <li><a href>About Us</a></li>
+                    <li><a href>Products</a></li>
+                    <li><a href>Services</a></li>
+                    <li><a href="stylepage.html">Style Page</a></li>
+                    <li><a href>Contact</a></li>
+                </ul>
+            </nav>
+            <div class=" code">
+            <h2>Código HTML Navbar:</h2>
+            <pre><code>
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Log Out&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+            </code></pre>
+            <h2>Código CSS Navbar:</h2>
+            <pre><code>
+                nav a{
+                    display: flex;
+                    text-decoration: none;
+                    color: black;
+                }
+                nav ul{
+                    display:flex;
+                    list-style-type: none;
+                    gap: 20px;
+                    padding: 25px;
+                }
+            </code></pre>  
+        </div>
+</section>
+
+
+
+
+<section id="sidebar">
+    <h2>sidebar</h2>
+    <div class="menu">
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="stylepage.html">Style Page</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    
+        <h2>Share</h2>
+        
+        <ul>
+            <li>
+                <a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                  </svg>
+                  instagram
+                </a>
+            </li>
+            <li>
+                <a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                      </svg>
+                  Facebook
+                </a>
+            </li>
+        </ul>
+  </nav>
+</div>
+
+  <div class="codigo">
+    <h2>Código HTML sidebar:</h2>
+    <pre><code>
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Log Out&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+    </code></pre>
+    </div>
+    <div class="codigo-css">
+    <h2>Código CSS sidebar:</h2>
+    <pre><code>
+         
+            .menu{
+                top:60px;
+                width:150px;
+                background-color: #e6e4e4;
+                border-radius: 8px;
+                border-right: 2px;
+                padding: 8px;
+            
+            }
+        
+            .codigo{
+                width:400px;
+            }
+            
+            #sidebar h2{
+                font-size: 2.em;
+            }
+            
+            #sidebar ul{
+                flex-direction: column;
+                list-style-type: none;
+                padding: 2px;
+            }
+            #sidebar ul li{
+                margin:10px 0;
+            }
+            #sidebar ul li a{
+                text-decoration: none;
+                color: #007bff;
+                
+            }
+            #sidebar ul li a:hover{
+                color: #0056b3;
+            }
+            
+            #side{
+                display: flex;
+            
+            }    
+    </code></pre>  
+    </div>
+</section>
+
+
+
+
+
+
     </section>
     <section id="input">
             <h1>Inputs</h1>
