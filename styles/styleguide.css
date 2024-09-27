@@ -355,8 +355,16 @@ code{
     justify-content: center;
     gap: 5vw;
 }
+#navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-
+#sidebar{
+    display: flex;
+    justify-content: space-evenly;
+}
 nav a{
     display: flex;
     text-decoration: none;
@@ -365,21 +373,21 @@ nav a{
 nav ul{
     display:flex;
     list-style-type: none;
+    justify-content: space-evenly;
     gap: 20px;
     padding: 25px;
 }
 .code{
-    width: 30%;
-
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
 }
 .menu{
-    top:60px;
     width:150px;
     background-color: #e6e4e4;
     border-radius: 8px;
     border-right: 2px;
     padding: 8px;
-
 }
 
 .codigo{
@@ -409,8 +417,9 @@ nav ul{
 
 #side{
     display: flex;
+    
+}
 
-} 
 .codigo-css{
     width: 30%;
 }
