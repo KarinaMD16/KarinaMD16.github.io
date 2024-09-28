@@ -180,9 +180,9 @@ nav{
     #services-section h1{
         color: #000;
         font-family:"Spicy Rice";
-        font-size:3em;
-        font-style:normal;
-        font-weight:400;
+        font-size: 2.5vw;
+        font-style: normal;
+        font-weight: 400;
     }
     #services-title-id span{
         color: #AA8BE8;
@@ -273,12 +273,16 @@ nav{
     font-family: "Poppins", sans-serif;
 }
 
+.primary-button:hover{
+    background-color: #e3e3e3;
+    cursor: pointer;
+}
+
 /* estilos de reviews // daniel */
 #customer-reviews-title-id{
-    font-size: 40px;
+    font-size: 2.5vw;
     font-style: normal;
     font-weight: 400;
-    line-height: 100%;
 }
 .review-card{
     height: 35vh;
