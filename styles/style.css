@@ -145,7 +145,7 @@ nav{
     background-color: #F9F9F9;
     border: none;
     border-radius: 30px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
     
 }
 
@@ -156,7 +156,7 @@ nav{
 .product-card img{
     border: none;
     border-radius: 30px;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);;
 
 }
 
@@ -191,7 +191,7 @@ nav{
     .service-card{
         border-radius:40px;
         background: #F9F9F9;
-        box-shadow:6px 4px 11.6px 0px rgba(0,0,0,0.25);
+        box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
         z-index: 1;
     }
     .serviceInfo img{
@@ -250,7 +250,7 @@ nav{
     margin: 0 15vh 0 0;
     margin: 8vh;
     border-radius: 58px;
-    box-shadow: 0px 11px 28px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
     z-index: 1;
 }
 
@@ -266,7 +266,7 @@ nav{
     height: 10vh;
     background: #ffffff;
     border: #ffffff;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 18px;
     font-size: medium;
     font-weight: 500;
@@ -324,7 +324,7 @@ form input{
 .form-message input{
     border-radius: 20px;
     background: #F7DBF1;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 2vw;
     border: none;
 }
@@ -332,7 +332,7 @@ form input{
 .form-button{
     border-radius: 20px;
     background: #CDF0EA;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
     border: none;
     width: 20vh;
     height: 5vw;
