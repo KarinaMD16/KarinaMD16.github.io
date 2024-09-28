@@ -527,45 +527,69 @@ h4{
     <section id="card-section">
         <h1>Cards</h1>
         <div id="cards">
-            <div class="review-card card-1"></div>
-            <div class="review-card card-2"></div>
-            <div class="review-card card-3"></div>
-        </div>
-        <div>
-            <h1>HTML</h1>
-<pre><code>&lt;div id="cards"&gt;
-    &lt;div class="review-card card-1"&gt;&lt;/div&gt;
-    &lt;div class="review-card card-2"&gt;&lt;/div&gt;
-    &lt;div class="review-card card-3"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-            <h1>CSS</h1>
-            <pre><code>
-#cards {
+            <div>
+                <div class="product-card"></div>
+                <h1>HTML</h1>
+                <pre><code>
+                    &lt;div class="product-card"&gt;&lt;/div&gt;
+                </code></pre>
+                <h1>CSS</h1>
+                <pre>
+                    <code>
+.product-card {
+    background-color: #F9F9F9;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    height: 20vh;
+    width: 20vw;
     display: flex;
-    gap: 2vw;
+    justify-content: space-between;
 }
-            
-.review-card {
-    height: 35vh;
-    width: 23vw;
-    border-radius: 8px;
-    padding: 5vh;
-}
-            
-.card-1 {
-    background-color: #BFAEE2; /* Color de la primera card */
-}
-            
-.card-2 {
-    background-color: #f7dbf1; /* Color de la segunda card */
-}
-            
-.card-3 {
-    background-color: #CDF0EA; /* Color de la tercera card */
-}</code></pre>
-            
+                    </code>
+                  </pre>
+
+            </div>
+            <div>
+                <div class="service-card"></div>
+                <h1>HTML</h1>
+                <pre><code>
+                &lt;div class="service-card"&gt;&lt;/div&gt;
+                </code></pre>
+                <h1>CSS</h1>
+                <pre><code>
+                      .service-card {
+                          display: flex;
+                          width: 25vw;
+                          height: 70vh;
+                          align-items: center;
+                          justify-content: center;
+                          text-align: center;
+                      }
+                    </code></pre>
+            </div>
+            <div>
+                <div class="review-card"></div>
+                <h1>HTML</h1>
+                <pre><code>
+                &lt;div class="review-card"&gt;&lt;/div&gt;
+                </code></pre>
+                <h1>CSS</h1>
+                <pre>
+                    <code>
+                      .review-card {
+                          height: 35vh;
+                          width: 23vw;
+                          border-radius: 8px;
+                          padding: 5vh;
+                          background-color: #BFAEE2;
+                      }
+                    </code>
+                  </pre>
+                  
+            </div>
         </div>
+        
     </section>
     <section id="aside">
         <h1>Aside</h1>

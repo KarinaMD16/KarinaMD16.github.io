@@ -177,26 +177,28 @@ code{
     border-radius: 18px;
     background: #BB302A;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    width: 308px;
-    height: 93px;
+    width: 10vw;
+    height: 8vh;
     color: #FFF;
     text-align: center;
     font-family: Poppins;
-    font-size: 24px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
+    border: none;
 }
 #disabled{
     border-radius: 18px;
     background: #C5AFB8;
+    border: none;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    width: 308px;
-    height: 93px;
+    width: 10vw;
+    height: 8vh;
     color: #FFF;
     text-align: center;
     font-family: Poppins;
-    font-size: 24px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%; 
@@ -211,24 +213,37 @@ code{
     display: flex;
     gap: 2vw;
 }
+.product-card{
+    background-color: #F9F9F9;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    height: 20vh;
+    width: 20vw;
+    display: flex;
+    justify-content: space-between;
+}
+.service-card{
+    border-radius:40px;
+    background: #F9F9F9;
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+.service-card{
+    display: flex;
+    width: 25vw;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 .review-card{
     height: 35vh;
     width: 23vw;
     border-radius: 8px;
     padding: 5vh;
+    background-color: #BFAEE2;
 }
-.card-1 {
-    background-color: #BFAEE2; /* Color de la primera card */
-}
-
-.card-2 {
-    background-color: #f7dbf1; /* Color de la segunda card */
-}
-
-.card-3 {
-    background-color: #CDF0EA; /* Color de la tercera card */
-}
-
 #aside 
 {
     display: flex;
