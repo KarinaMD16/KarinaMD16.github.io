@@ -299,6 +299,10 @@ height: 30vh;
     justify-content: space-between;
 }
 
+.about-us-description-container{
+    width: 65%;
+}
+
 
 /* layout de reviews // daniel */
 

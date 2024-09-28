@@ -11,7 +11,7 @@
     z-index: 1;
     opacity: 0;
     animation: fade-in .1s linear .4s forwards;
-    left: 20vw;
+    left: 20.5vw;
 }
 
 .drop1, .drop2 {
