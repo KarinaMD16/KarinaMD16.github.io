@@ -148,7 +148,81 @@ code{
 }
 .secondary-buton:hover{
     background: #9083aa;
-}   
+}
+
+#moreButtons{
+    margin-top: 10vh;
+    gap: 5vw;
+    display: flex;
+}
+.primary-button
+{
+    width: 15vw;
+    height: 10vh;
+    background: #ffffff;
+    border: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 18px;
+    font-size: medium;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+#delete{
+    border-radius: 18px;
+    background: #BB302A;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 308px;
+    height: 93px;
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+#disabled{
+    border-radius: 18px;
+    background: #C5AFB8;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 308px;
+    height: 93px;
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; 
+}
+#card-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+}
+#cards{
+    display: flex;
+    gap: 2vw;
+}
+.review-card{
+    height: 35vh;
+    width: 23vw;
+    border-radius: 8px;
+    padding: 5vh;
+}
+.card-1 {
+    background-color: #BFAEE2; /* Color de la primera card */
+}
+
+.card-2 {
+    background-color: #f7dbf1; /* Color de la segunda card */
+}
+
+.card-3 {
+    background-color: #CDF0EA; /* Color de la tercera card */
+}
+
 #aside 
 {
     display: flex;
