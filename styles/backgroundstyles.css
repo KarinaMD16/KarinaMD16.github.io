@@ -221,21 +221,3 @@
     filter: blur(20px);
     border-radius: 0 0 70% 70%;
 }
-#about-us-section::after, #about-us-section::before
-{
-    content: "";
-    position: absolute;
-    opacity: 0.6;
-    border-radius: 70% 70% 0 0;
-}
-
-#about-us-section::before
-{
-    width: 30vw; 
-    height: 50vh;  
-    background: #F7DBF1; 
-    bottom: -4510px; /* Posición de la mancha */  
-    left: -200px;  
-    z-index: 0; /* Detrás del contenido */
-    filter: blur(20px);
-}
