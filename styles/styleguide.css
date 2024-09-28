@@ -167,6 +167,12 @@ code{
     font-weight: 500;
     font-family: "Poppins", sans-serif;
 }
+
+.primary-button:hover{
+    background-color: #e3e3e3;
+    cursor: pointer;
+}
+
 #delete{
     border-radius: 18px;
     background: #BB302A;
