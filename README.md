@@ -3,13 +3,6 @@
 Aplicacion web estatica que simula un explorador de archivos para mostrar CVs.
 Desde una vista tipo "folder explorer" puedes abrir el perfil de cada persona y navegar sus secciones (About me, Education, Experience, Skills, Languages), proyectos y contacto.
 
-## Objetivo del proyecto
-
-- Practicar JavaScript modular (`type="module"`) sin frameworks.
-- Renderizar contenido dinamico desde `data.json`.
-- Organizar una SPA simple con rutas basicas en barra de direccion.
-- Aplicar UI responsive y accesibilidad basica (teclado, `aria-*`, reduce motion).
-
 ## Tecnologias usadas
 
 - HTML5
@@ -43,7 +36,8 @@ Como el proyecto carga `data.json` con `fetch`, debe ejecutarse con servidor loc
 3. Abre la URL local (ejemplo: `http://127.0.0.1:5500/`).
 
 Si abres `index.html` directo en el navegador, aparecera el mensaje:
-`No se pudo cargar data.json. Usa Live Server (no file://).`
+`No se pudo cargar data.json. Usa Live Server (no file://).` 
+También puedes ingresar al proyecto por medio de la siguiente URL: https://karinamd16.github.io/ 
 
 ## Flujo de navegacion
 
