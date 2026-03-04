@@ -544,9 +544,75 @@ export function createCVView(person) {
         sec.style.setProperty("--i", i);
     });
 
+    // ===== Hamburger menu builder (used on mobile) =====
+    const buildHamburgerMenu = (container, onClose = () => {}) => {
+        container.replaceChildren();
+
+        // Navigate
+        const navDiv = document.createElement("div");
+        navDiv.className = "hamburgerMenuDivider";
+        navDiv.textContent = "Navigate";
+        container.appendChild(navDiv);
+
+        const aboutBtn = document.createElement("button");
+        aboutBtn.className = "hamburgerMenuItem";
+        aboutBtn.textContent = "About me";
+        aboutBtn.addEventListener("click", () => { scrollTo("#about"); onClose(); });
+        container.appendChild(aboutBtn);
+
+        const subItems = [
+            { label: "Education",  target: "#education" },
+            { label: "Experience", target: "#experience" },
+            { label: "Skills",     target: "#skills" },
+            { label: "Languages",  target: "#languages" },
+        ];
+        subItems.forEach((it) => {
+            const btn = document.createElement("button");
+            btn.className = "hamburgerMenuItem hamburgerMenuItem--sub";
+            btn.textContent = it.label;
+            btn.addEventListener("click", () => { scrollTo(it.target); onClose(); });
+            container.appendChild(btn);
+        });
+
+        // Projects
+        if ((person.projects || []).length) {
+            const projDiv = document.createElement("div");
+            projDiv.className = "hamburgerMenuDivider";
+            projDiv.textContent = "Projects";
+            container.appendChild(projDiv);
+
+            (person.projects || []).forEach((p) => {
+                const btn = document.createElement("button");
+                btn.className = "hamburgerMenuItem";
+                btn.textContent = p.name;
+                btn.addEventListener("click", () => { openProject(p); onClose(); });
+                container.appendChild(btn);
+            });
+        }
+
+        // Contact
+        if ((person.contact || []).length) {
+            const contactDiv = document.createElement("div");
+            contactDiv.className = "hamburgerMenuDivider";
+            contactDiv.textContent = "Contact";
+            container.appendChild(contactDiv);
+
+            (person.contact || []).forEach((c) => {
+                const btn = document.createElement("button");
+                btn.className = "hamburgerMenuItem";
+                btn.textContent = c.label || "Contact";
+                btn.addEventListener("click", () => {
+                    if (c.href) window.open(c.href, c.href.startsWith("mailto:") ? "_self" : "_blank");
+                    onClose();
+                });
+                container.appendChild(btn);
+            });
+        }
+    };
+
     if (prefersReducedMotion || !("IntersectionObserver" in window)) {
       sections.forEach((sec) => sec.classList.add("is-visible"));
-      return cvNode;
+      return { node: cvNode, buildHamburgerMenu };
     }
 
     const revealObserver = new IntersectionObserver(
@@ -564,5 +630,5 @@ export function createCVView(person) {
 
     sections.forEach((sec) => revealObserver.observe(sec));
 
-    return cvNode;
+    return { node: cvNode, buildHamburgerMenu };
 }

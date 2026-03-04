@@ -13,6 +13,27 @@ const viewHint = document.getElementById("viewHint");
 const ORIGIN_LABEL = "curriculum";
 const ORIGIN_PREFIX = ORIGIN_LABEL.toLowerCase() + "/";
 
+const windowEl = document.querySelector(".window");
+const hamburgerBar = document.getElementById("hamburgerBar");
+const hamburgerToggle = document.getElementById("hamburgerToggle");
+const hamburgerMenu = document.getElementById("hamburgerMenu");
+
+// Toggle hamburger menu open/close
+hamburgerToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = !hamburgerMenu.hidden;
+    hamburgerMenu.hidden = isOpen;
+    hamburgerToggle.setAttribute("aria-expanded", String(!isOpen));
+});
+
+// Close hamburger menu when clicking outside
+document.addEventListener("click", (e) => {
+    if (!hamburgerBar.contains(e.target) && !hamburgerMenu.hidden) {
+        hamburgerMenu.hidden = true;
+        hamburgerToggle.setAttribute("aria-expanded", "false");
+    }
+});
+
 let DATA = null;
 
 async function loadData() {
@@ -35,6 +56,11 @@ function showExplorer() {
     viewHint.textContent = "Tip: click abre el CV.";
     setBackEnabled(false);
 
+    windowEl.classList.remove("window--cv");
+    hamburgerBar.classList.remove("is-visible");
+    hamburgerMenu.hidden = true;
+    hamburgerToggle.setAttribute("aria-expanded", "false");
+
     clearMounts();
 
     const explorerView = createExplorerView({
@@ -50,6 +76,8 @@ function showPerson(personId) {
     const person = DATA?.people?.[personId];
     if (!person) {
         viewHint.textContent = `No existe: "${personId}"`;
+        windowEl.classList.remove("window--cv");
+        hamburgerBar.classList.remove("is-visible");
         return;
     }
 
@@ -57,10 +85,20 @@ function showPerson(personId) {
     viewHint.textContent = "";
     setBackEnabled(true);
 
+    windowEl.classList.add("window--cv");
+    hamburgerBar.classList.add("is-visible");
+    hamburgerMenu.hidden = true;
+    hamburgerToggle.setAttribute("aria-expanded", "false");
+
     clearMounts();
 
-    const cvView = createCVView(person);
+    const { node: cvView, buildHamburgerMenu } = createCVView(person);
     cvMount.appendChild(cvView);
+
+    buildHamburgerMenu(hamburgerMenu, () => {
+        hamburgerMenu.hidden = true;
+        hamburgerToggle.setAttribute("aria-expanded", "false");
+    });
 
     addressBar.value = toPersonAddress(personId, ORIGIN_LABEL);
 }
