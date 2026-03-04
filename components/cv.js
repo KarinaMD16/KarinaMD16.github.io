@@ -135,14 +135,12 @@ export function createCVView(person) {
 
     const cvNode = cvTpl.content.firstElementChild.cloneNode(true);
 
-    // ===== Palette -> CSS vars
     const pal = person.palette || {};
     cvNode.style.setProperty("--accent", pal.accent || "#FC889F");
     cvNode.style.setProperty("--accentDark", pal.accentDark || "#A52E52");
     cvNode.style.setProperty("--accentSoft", pal.accentSoft || "#FAE3DF");
     cvNode.style.setProperty("--bgSoft", pal.bgSoft || "#F8EBF2");
 
-    // ===== Fill main content
     cvNode.querySelector(".cv__name").textContent = person.name;
     cvNode.querySelector(".cv__summary").textContent = person.summary;
 
@@ -329,9 +327,9 @@ export function createCVView(person) {
         langWrap.textContent = "No languages added yet.";
     }
 
-    // ===== Sidebar build (like image)
+    // ===== Sidebar build 
     const sidebar = cvNode.querySelector(".cv__sidebar");
-    sidebar.replaceChildren(); // limpiamos el sidebar del template base
+    sidebar.replaceChildren(); 
 
     const main = cvNode.querySelector(".cv__main");
 
@@ -445,7 +443,7 @@ export function createCVView(person) {
 
     sidebar.appendChild(navGroup);
 
-    // --- Group: Projects (from JSON)
+    // --- Group: Projects 
     const projectsGroup = groupTpl.content.firstElementChild.cloneNode(true);
     projectsGroup.classList.add("sideGroup--projects");
     projectsGroup.querySelector(".sideGroup__title").textContent = "Projects";
@@ -493,7 +491,7 @@ export function createCVView(person) {
 
     sidebar.appendChild(projectsGroup);
 
-    // --- Group: Contact (from JSON)
+    // --- Group: Contact 
     const contactGroup = groupTpl.content.firstElementChild.cloneNode(true);
     contactGroup.classList.add("sideGroup--contact");
     contactGroup.querySelector(".sideGroup__title").textContent = "Contact";
