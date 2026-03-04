@@ -546,23 +546,75 @@ export function createCVView(person) {
 
     if (prefersReducedMotion || !("IntersectionObserver" in window)) {
       sections.forEach((sec) => sec.classList.add("is-visible"));
-      return cvNode;
+    } else {
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            entry.target.classList.toggle("is-visible", entry.isIntersecting);
+          });
+        },
+        {
+          root: main,
+          threshold: 0.2,
+          rootMargin: "0px 0px -10% 0px",
+        }
+      );
+
+      sections.forEach((sec) => revealObserver.observe(sec));
     }
 
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          entry.target.classList.toggle("is-visible", entry.isIntersecting);
-        });
-      },
-      {
-        root: main,
-        threshold: 0.2,
-        rootMargin: "0px 0px -10% 0px",
-      }
-    );
+    // ===== Hamburger menu (mobile only) =====
+    const mobileQuery = window.matchMedia("(max-width: 640px)");
+    // Delay allows the smooth scroll to begin before the overlay closes
+    const MENU_CLOSE_DELAY_MS = 350;
 
-    sections.forEach((sec) => revealObserver.observe(sec));
+    const hamburgerBtn = document.createElement("button");
+    hamburgerBtn.type = "button";
+    hamburgerBtn.className = "hamburger-btn";
+    hamburgerBtn.setAttribute("aria-label", "Abrir menú");
+    hamburgerBtn.setAttribute("aria-expanded", "false");
+    hamburgerBtn.innerHTML = `
+        <span class="hamburger-icon" aria-hidden="true">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </span>
+        <span class="hamburger-label">Menú</span>
+    `;
 
-    return cvNode;
+    const closeSidebar = () => {
+        sidebar.classList.remove("is-open");
+        hamburgerBtn.classList.remove("is-active");
+        hamburgerBtn.setAttribute("aria-expanded", "false");
+    };
+
+    hamburgerBtn.addEventListener("click", () => {
+        const isOpen = sidebar.classList.toggle("is-open");
+        hamburgerBtn.classList.toggle("is-active", isOpen);
+        hamburgerBtn.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    // Close sidebar after clicking a sidebar item on mobile
+    sidebar.addEventListener("click", (e) => {
+        if (!mobileQuery.matches) return;
+        if (e.target.closest("button")) {
+            setTimeout(closeSidebar, MENU_CLOSE_DELAY_MS);
+        }
+    });
+
+    // Close sidebar when clicking outside of it on mobile
+    cvNode.addEventListener("click", (e) => {
+        if (!mobileQuery.matches) return;
+        if (!sidebar.classList.contains("is-open")) return;
+        if (!sidebar.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+            closeSidebar();
+        }
+    });
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "cv__outerWrapper";
+    wrapper.appendChild(hamburgerBtn);
+    wrapper.appendChild(cvNode);
+
+    return wrapper;
 }

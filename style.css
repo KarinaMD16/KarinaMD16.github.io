@@ -724,6 +724,11 @@ body {
     line-height: 1.1;
 }
 
+/* ===== HAMBURGER BUTTON (hidden on desktop) ===== */
+.hamburger-btn {
+    display: none;
+}
+
 /* responsive */
 @media (max-width: 900px) {
     .grid {
@@ -771,6 +776,112 @@ body {
         min-width: 0;
         padding-left: 0;
         border-left: 0;
+    }
+}
+
+/* ===== MOBILE: portrait monitor + hamburger menu ===== */
+@media (max-width: 640px) {
+    body {
+        padding: 10px;
+    }
+
+    /* Flip the monitor to portrait */
+    .monitor {
+        width: min(340px, 94vw);
+        aspect-ratio: 9 / 16;
+    }
+
+    /* Hide empty header when CV is loaded */
+    .content:has(#cvMount:not(:empty)) .header {
+        display: none;
+    }
+
+    /* Hamburger button – shown on mobile when inside CV view */
+    .hamburger-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        padding: 10px 14px;
+        border: none;
+        border-bottom: 1px solid rgba(15, 23, 42, .08);
+        background: #f8fafc;
+        cursor: pointer;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-radius: 8px 8px 0 0;
+        text-align: left;
+    }
+
+    .hamburger-btn:hover {
+        background: #f1f5f9;
+    }
+
+    .hamburger-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 20px;
+        flex: 0 0 20px;
+    }
+
+    .hamburger-line {
+        display: block;
+        height: 2px;
+        background: #111827;
+        border-radius: 2px;
+        transition: transform .2s ease, opacity .2s ease;
+    }
+
+    .hamburger-btn.is-active .hamburger-line:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .hamburger-btn.is-active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-btn.is-active .hamburger-line:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .hamburger-label {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--muted);
+    }
+
+    /* CV: single column, sidebar as overlay */
+    .cv {
+        position: relative;
+    }
+
+    .cv__sidebar {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        background: #fff;
+        padding: 16px;
+        border-radius: 0 0 var(--radius-md, 14px) var(--radius-md, 14px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
+        max-height: 60vh;
+        overflow-y: auto;
+        border: 1px solid rgba(15, 23, 42, .08);
+        border-top: none;
+    }
+
+    .cv__sidebar.is-open {
+        display: block;
+    }
+
+    /* Adjust cv__main for portrait */
+    .cv__main {
+        max-height: 50vh;
+        padding-right: 4px;
     }
 }
 
