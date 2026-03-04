@@ -347,13 +347,11 @@ body {
     padding-left: 14px;
 }
 
-/* Línea vertical suave (como la imagen) */
 .sideGroup__body::before {
     content: "";
     position: absolute;
     left: 7px;
     top: 52px;
-    /* empieza debajo del pill */
     bottom: 10px;
     width: 2px;
     background: color-mix(in srgb, var(--accent) 20%, transparent);
@@ -369,7 +367,6 @@ body {
     display: none;
 }
 
-/* Main link pill */
 .sideMainLink {
     width: 100%;
     display: flex;
@@ -437,7 +434,7 @@ body {
     background: color-mix(in srgb, var(--bgSoft) 70%, white);
 }
 
-/* Active indicator bar (izquierda) */
+/* Active indicator bar */
 .sideSubLink.is-active::before {
     content: "";
     position: absolute;
@@ -530,7 +527,6 @@ body {
     font-size: 13px;
 }
 
-/* toast mínimo */
 .toast {
     position: absolute;
     left: 50%;
