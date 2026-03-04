@@ -2,8 +2,7 @@ export function createExplorerView({ people, onOpenPerson }) {
     const explorerTpl = document.getElementById("explorerTemplate");
     const folderTpl = document.getElementById("folderTemplate");
 
-    const explorerNode = explorerTpl.content.firstElementChild.cloneNode(true); // div.grid
-    const grid = explorerNode; 
+    const explorerNode = explorerTpl.content.firstElementChild.cloneNode(true);
 
     const entries = Object.entries(people);
 
@@ -14,7 +13,7 @@ export function createExplorerView({ people, onOpenPerson }) {
         folderNode.style.setProperty("--c", person.palette?.accent || "#FC889F");
 
         folderNode.querySelector(".folder__name").textContent = person.name;
-        folderNode.querySelector(".folder__sub").textContent = "About me";
+        folderNode.querySelector(".folder__sub").textContent = "Read more";
 
         folderNode.addEventListener("click", (e) => {
             e.preventDefault();
@@ -28,7 +27,7 @@ export function createExplorerView({ people, onOpenPerson }) {
             }
         });
 
-        grid.appendChild(folderNode);
+        explorerNode.appendChild(folderNode);
     });
 
     return explorerNode;

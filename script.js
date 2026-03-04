@@ -10,9 +10,9 @@ const addressBar = document.getElementById("address");
 
 const viewTitle = document.getElementById("viewTitle");
 const viewHint = document.getElementById("viewHint");
+const ORIGIN_LABEL = "curriculum";
 
 let DATA = null;
-let currentView = "explorer"; // "explorer" | personId
 
 async function loadData() {
     const res = await fetch("data.json");
@@ -30,7 +30,6 @@ function setBackEnabled(enabled) {
 }
 
 function showExplorer() {
-    currentView = "explorer";
     viewTitle.textContent = "Explorador";
     viewHint.textContent = "Tip: click abre el CV.";
     setBackEnabled(false);
@@ -43,7 +42,7 @@ function showExplorer() {
     });
 
     explorerMount.appendChild(explorerView);
-    addressBar.value = toExplorerAddress(getOriginLabel());
+    addressBar.value = toExplorerAddress(ORIGIN_LABEL);
 }
 
 function showPerson(personId) {
@@ -53,7 +52,6 @@ function showPerson(personId) {
         return;
     }
 
-    currentView = personId;
     viewTitle.textContent = "";
     viewHint.textContent = "";
     setBackEnabled(true);
@@ -63,11 +61,7 @@ function showPerson(personId) {
     const cvView = createCVView(person);
     cvMount.appendChild(cvView);
 
-    addressBar.value = toPersonAddress(personId, getOriginLabel());
-}
-
-function getOriginLabel() {
-    return "curriculum";
+    addressBar.value = toPersonAddress(personId, ORIGIN_LABEL);
 }
 
 // Back button

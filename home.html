@@ -50,7 +50,7 @@
 
     <!-- Explorador  -->
     <template id="explorerTemplate">
-        <div class="grid" id="grid"></div>
+        <div class="grid"></div>
     </template>
 
     <!-- carpeta -->
@@ -67,29 +67,13 @@
     <!-- CV -->
     <template id="cvTemplate">
         <section class="cv">
-            <aside class="cv__sidebar">
-                <h3 class="sideGroup__title">Navigate</h3>
-                <nav class="cv__nav">
-                    <a class="cv__navItem" href="#about">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                            class="bi bi-person" viewBox="0 0 16 16">
-                            <path
-                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
-                        </svg>
-                        About me</a>
-                    <a class="cv__navItem" href="#education">Education</a>
-                    <a class="cv__navItem" href="#experience">Experience</a>
-                    <a class="cv__navItem" href="#skills">Skills</a>
-                    <a class="cv__navItem" href="#languages">Languages</a>
-                </nav>
-            </aside>
+            <aside class="cv__sidebar"></aside>
 
             <main class="cv__main">
                 <section class="cvSection" id="about">
                     <h2 class="cvSection__title">About me</h2>
                     <div class="cvSection__content">
                         <p><strong class="cv__name"></strong></p>
-                        <p class="cv__role"></p>
                         <p class="cv__summary"></p>
                     </div>
                 </section>
@@ -111,10 +95,26 @@
 
                 <section class="cvSection" id="languages">
                     <h2 class="cvSection__title">Languages</h2>
-                    <p class="cv__languages">(Placeholder)</p>
+                    <div class="cv__languages"></div>
                 </section>
             </main>
         </section>
+    </template>
+    
+    <!-- Skills category -->
+    <template id="skillGroupTemplate">
+        <div class="skillGroup">
+            <h3 class="skillGroup__title"></h3>
+            <div class="pillRow skillGroup__row"></div>
+        </div>
+    </template>
+    
+    <!-- Pill con ícono -->
+    <template id="skillPillTemplate">
+        <span class="pill pill--skill">
+            <span class="pill__icon" aria-hidden="true"></span>
+            <span class="pill__text"></span>
+        </span>
     </template>
 
     <!-- Sidebar group: título + lista -->

@@ -3,8 +3,8 @@ export function normalizeRoute(input) {
 
     try {
         const u = new URL(raw);
-        return u.pathname.replace(/^\/+/, "").replace(/\/+$/, "").toLowerCase(); // "kary"
-    } catch (_) { }
+        return u.pathname.replace(/^\/+/, "").replace(/\/+$/, "").toLowerCase();
+    } catch (_) {}
 
     const cleaned = raw.replace(/^https?:\/\/[^/]+\/?/, "");
 
