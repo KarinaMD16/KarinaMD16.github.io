@@ -335,10 +335,54 @@ export function createCVView(person) {
 
     const main = cvNode.querySelector(".cv__main");
 
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let scrollAnimationFrame = null;
+
+    const smoothScrollToY = (targetY, duration = 720) => {
+      const maxScroll = Math.max(0, main.scrollHeight - main.clientHeight);
+      const clampedTarget = Math.min(Math.max(0, targetY), maxScroll);
+
+      if (prefersReducedMotion || duration <= 0) {
+        main.scrollTop = clampedTarget;
+        return;
+      }
+
+      if (scrollAnimationFrame) {
+        cancelAnimationFrame(scrollAnimationFrame);
+      }
+
+      const startY = main.scrollTop;
+      const delta = clampedTarget - startY;
+
+      if (!delta) return;
+
+      const startTime = performance.now();
+
+      const easeInOutCubic = (t) => (t < 0.5)
+        ? 4 * t * t * t
+        : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+      const tick = (now) => {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = easeInOutCubic(progress);
+
+        main.scrollTop = startY + delta * eased;
+
+        if (progress < 1) {
+          scrollAnimationFrame = requestAnimationFrame(tick);
+        } else {
+          scrollAnimationFrame = null;
+        }
+      };
+
+      scrollAnimationFrame = requestAnimationFrame(tick);
+    };
+
     const scrollTo = (selector) => {
         const el = cvNode.querySelector(selector);
         if (!el) return;
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      smoothScrollToY(el.offsetTop - 8);
     };
 
     const setActiveMain = (el) => {
@@ -492,8 +536,35 @@ export function createCVView(person) {
     contactBody.appendChild(contactBtn);
 
     sidebar.appendChild(contactGroup);
-
+    
     main.scrollTop = 0;
+
+    cvNode.classList.add("cv--reveal");
+
+    const sections = cvNode.querySelectorAll(".cv__main .cvSection");
+    sections.forEach((sec, i) => {
+        sec.style.setProperty("--i", i);
+    });
+
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+      sections.forEach((sec) => sec.classList.add("is-visible"));
+      return cvNode;
+    }
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
+        });
+      },
+      {
+        root: main,
+        threshold: 0.2,
+        rootMargin: "0px 0px -10% 0px",
+      }
+    );
+
+    sections.forEach((sec) => revealObserver.observe(sec));
 
     return cvNode;
 }
