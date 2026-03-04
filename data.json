@@ -1,25 +1,87 @@
 {
   "people": {
-    "kary": {
-      "id": "kary",
-      "name": "Kary",
+    "karina": {
+      "id": "karina",
+      "name": "Karina Moreno Diaz",
       "palette": {
-        "accent": "#FC889F",
-        "accentDark": "#A52E52",
-        "accentSoft": "#FAE3DF",
+        "accent": "#ffc9d6",
+        "accentDark": "#e378a8",
+        "accentSoft": "#ffecee",
         "bgSoft": "#F8EBF2"
       },
-      "role": "Front-End Developer",
-      "summary": "Me enfoco en UX/UI, buenas prácticas y crear interfaces claras.",
-      "skills": ["React", "HTML/CSS", "JavaScript", "UX/UI", "Accesibilidad"],
-      "experience": [
+      "summary": "Junior Information Systems Engineering student with hands-on experience in frontend development using React and TypeScript. Strong foundation in system analysis, data modeling, and user-centered design. Focused on building clean, functional, and intuitive web applications using modern development practices.",
+      "skills": [
         {
-          "title": "Proyecto X",
-          "detail": "Landing con enfoque en conversión y performance."
+          "title": "Technologies",
+          "items": [
+            { "name": "JavaScript (ES6+)", "icon": "js" },
+            { "name": "TypeScript", "icon": "ts" },
+            { "name": "HTML5", "icon": "html" },
+            { "name": "CSS3", "icon": "css" },
+            { "name": "Python (Basic)", "icon": "python" }
+          ]
+        },
+        {
+          "title": "Frontend",
+          "items": [
+            { "name": "React.js", "icon": "react" },
+            { "name": "Responsive Design", "icon": "responsive" }
+          ]
+        },
+        {
+          "title": "Concepts",
+          "items": [
+            { "name": "REST API Integration (Basic)", "icon": "api" },
+            { "name": "Database Design", "icon": "db" },
+            { "name": "Systems Analysis", "icon": "analysis" },
+            { "name": "Accessibility", "icon": "accessibility" },
+            { "name": "UX/UI", "icon": "uxui" }
+          ]
+        },
+        {
+          "title": "Tools",
+          "items": [
+            { "name": "Git", "icon": "git" },
+            { "name": "GitHub", "icon": "github" },
+            { "name": ".NET", "icon": "dotnet" }
+          ]
         }
       ],
-      "education": ["Ing. en Sistemas (en curso)"],
-      "languages": [{ "name": "English", "level": "Advanced" }],
+      "experience": [
+        {
+          "organization": "Hogar San Blas – Nursing Home",
+          "location": "",
+          "role": "Systems Analysis Project",
+          "roleAccent": true,
+          "period": "July 2025 – Present",
+          "summary": "Collaborated in the analysis and proposal of an information management solution for a real nursing home environment.",
+          "highlights": [
+            "Evaluated manual operational workflows and identified improvement opportunities in resident and staff data management.",
+            "Structured relational data models to organize operational information in a scalable and consistent way.",
+            "Defined functional requirements and translated business needs into technical documentation.",
+            "Designed simplified user flows tailored to non-technical staff.",
+            "Applied usability principles to improve clarity and reduce operational friction."
+          ]
+        }
+      ],
+      "education": [
+        {
+          "institution": "National University of Costa Rica (UNA)",
+          "degree": "Diploma in Computer Application Programming",
+          "location": "Nicoya",
+          "date": "November 2025"
+        },
+        {
+          "institution": "National University of Costa Rica (UNA)",
+          "degree": "Bachelor’s Degree in Information Systems Engineering",
+          "location": "Nicoya",
+          "date": "2023 – Present"
+        }
+      ],
+      "languages": [
+        { "name": "Spanish", "level": "Native" },
+        { "name": "English", "level": "Advanced" }
+      ],
       "projects": [
         { "name": "Hogar San Blas", "href": "#project-hogar" },
         { "name": "SIDNAM Admin", "href": "#project-sidnam" },
@@ -41,24 +103,149 @@
 
     "elein": {
       "id": "elein",
-      "name": "Elein",
+      "name": "Elein Rodríguez Chavarría",
       "palette": {
-        "accent": "#22c55e",
-        "accentDark": "#166534",
-        "accentSoft": "#dcfce7",
-        "bgSoft": "#f0fdf4"
+        "accent": "#90caf9",
+        "accentDark": "#42a5f5",
+        "accentSoft": "#e3f2fd",
+        "bgSoft": "#f5f3ff"
       },
-      "role": "QA / Developer",
       "summary": "Me gusta asegurar calidad y construir soluciones estables.",
-      "skills": ["Testing", "JavaScript", "Documentación", "Trabajo en equipo"],
-      "experience": [
+      "skills": [
         {
-          "title": "Proyecto Y",
-          "detail": "Casos de prueba, reporte de bugs, mejoras UX."
+          "title": "Technologies",
+          "items": [
+            { "name": "JavaScript (ES6+)", "icon": "js" },
+            { "name": "TypeScript", "icon": "ts" },
+            { "name": "HTML5", "icon": "html" },
+            { "name": "CSS3", "icon": "css" }
+          ]
+        },
+        {
+          "title": "Frontend",
+          "items": [
+            { "name": "React.js", "icon": "react" },
+            { "name": "Responsive Design", "icon": "responsive" }
+          ]
+        },
+        {
+          "title": "Concepts",
+          "items": [
+            { "name": "REST API Integration (Basic)", "icon": "api" },
+            { "name": "Database Design", "icon": "db" },
+            { "name": "Systems Analysis", "icon": "analysis" },
+            { "name": "Accessibility", "icon": "accessibility" },
+            { "name": "UX/UI", "icon": "uxui" }
+          ]
+        },
+        {
+          "title": "Tools",
+          "items": [
+            { "name": "Git", "icon": "git" },
+            { "name": "GitHub", "icon": "github" },
+            { "name": ".NET", "icon": "dotnet" }
+          ]
         }
       ],
-      "education": ["Formación técnica (ejemplo)"],
-      "languages": [{ "name": "Spanish", "level": "Native" }],
+      "experience": [
+        {
+          "organization": "Hogar San Blas – Nursing Home",
+          "location": "",
+          "role": "Systems Analysis Project",
+          "roleAccent": true,
+          "period": "July 2025 – Present",
+          "summary": "Collaborated in the analysis and proposal of an information management solution for a real nursing home environment.",
+          "highlights": [
+            "Evaluated manual operational workflows and identified improvement opportunities in resident and staff data management.",
+            "Structured relational data models to organize operational information in a scalable and consistent way.",
+            "Defined functional requirements and translated business needs into technical documentation.",
+            "Designed simplified user flows tailored to non-technical staff.",
+            "Applied usability principles to improve clarity and reduce operational friction."
+          ]
+        }
+      ],
+      "education": [
+        {
+          "institution": "National University of Costa Rica (UNA)",
+          "degree": "Diploma in Computer Application Programming",
+          "location": "Nicoya",
+          "date": "November 2025"
+        }
+      ],
+      "languages": [
+        { "name": "Spanish", "level": "Native" },
+        { "name": "English", "level": "Advanced" }
+      ],
+      "projects": [{ "name": "Project 1", "href": "#project-1" }],
+      "contact": [{ "label": "LinkedIn", "value": "Elein", "href": "#" }]
+    },
+
+    "daniel": {
+      "id": "daniel",
+      "name": "Daniel Nuez",
+      "palette": {
+        "accent": "#b7e4c7",
+        "accentDark": "#40916c",
+        "accentSoft": "#d8f3dc",
+        "bgSoft": "#f5f3ff"
+      },
+      "summary": "Me gusta asegurar calidad y construir soluciones estables.",
+      "skills": [
+        {
+          "title": "Technologies",
+          "items": [
+            { "name": "JavaScript (ES6+)", "icon": "js" },
+            { "name": "TypeScript", "icon": "ts" },
+            { "name": "HTML5", "icon": "html" },
+            { "name": "CSS3", "icon": "css" }
+          ]
+        },
+        {
+          "title": "Concepts",
+          "items": [
+            { "name": "REST API Integration (Basic)", "icon": "api" },
+            { "name": "Database Design", "icon": "db" },
+            { "name": "Systems Analysis", "icon": "analysis" }
+          ]
+        },
+        {
+          "title": "Tools",
+          "items": [
+            { "name": "Git", "icon": "git" },
+            { "name": "GitHub", "icon": "github" },
+            { "name": ".NET", "icon": "dotnet" }
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "organization": "Hogar San Blas – Nursing Home",
+          "location": "",
+          "role": "Systems Analysis Project",
+          "roleAccent": true,
+          "period": "July 2025 – Present",
+          "summary": "Collaborated in the analysis and proposal of an information management solution for a real nursing home environment.",
+          "highlights": [
+            "Evaluated manual operational workflows and identified improvement opportunities in resident and staff data management.",
+            "Structured relational data models to organize operational information in a scalable and consistent way.",
+            "Defined functional requirements and translated business needs into technical documentation.",
+            "Designed simplified user flows tailored to non-technical staff.",
+            "Applied usability principles to improve clarity and reduce operational friction."
+          ]
+        }
+      ],
+      "education": [
+        {
+          "institution": "National University of Costa Rica (UNA)",
+          "degree": "Diploma in Computer Application Programming",
+          "location": "Nicoya",
+          "date": "November 2025"
+        }
+      ],
+      "languages": [
+        { "name": "Spanish", "level": "Native" },
+        { "name": "English", "level": "Advanced" }
+      ],
       "projects": [{ "name": "Project 1", "href": "#project-1" }],
       "contact": [{ "label": "LinkedIn", "value": "Elein", "href": "#" }]
     }
