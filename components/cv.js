@@ -124,161 +124,158 @@ const SKILL_ICONS = {
 
 
 export function createCVView(person) {
-    const cvTpl = document.getElementById("cvTemplate");
-    const pillTpl = document.getElementById("pillTemplate");
-    const liTpl = document.getElementById("liTemplate");
+  const cvTpl = document.getElementById("cvTemplate");
+  const liTpl = document.getElementById("liTemplate");
 
-    const groupTpl = document.getElementById("sideGroupTemplate");
-    const mainLinkTpl = document.getElementById("sideMainLinkTemplate");
-    const subLinkTpl = document.getElementById("sideSubLinkTemplate");
-    const listItemTpl = document.getElementById("sideListItemTemplate");
+  const groupTpl = document.getElementById("sideGroupTemplate");
+  const mainLinkTpl = document.getElementById("sideMainLinkTemplate");
+  const subLinkTpl = document.getElementById("sideSubLinkTemplate");
+  const listItemTpl = document.getElementById("sideListItemTemplate");
 
-    const cvNode = cvTpl.content.firstElementChild.cloneNode(true);
+  const skillGroupTpl = document.getElementById("skillGroupTemplate");
+  const skillPillTpl = document.getElementById("skillPillTemplate");
 
-    const pal = person.palette || {};
-    cvNode.style.setProperty("--accent", pal.accent || "#FC889F");
-    cvNode.style.setProperty("--accentDark", pal.accentDark || "#A52E52");
-    cvNode.style.setProperty("--accentSoft", pal.accentSoft || "#FAE3DF");
-    cvNode.style.setProperty("--bgSoft", pal.bgSoft || "#F8EBF2");
+  const cvNode = cvTpl.content.firstElementChild.cloneNode(true);
 
-    cvNode.querySelector(".cv__name").textContent = person.name;
-    cvNode.querySelector(".cv__summary").textContent = person.summary;
+  // ===== Palette -> CSS vars
+  const pal = person.palette || {};
+  cvNode.style.setProperty("--accent", pal.accent || "#FC889F");
+  cvNode.style.setProperty("--accentDark", pal.accentDark || "#A52E52");
+  cvNode.style.setProperty("--accentSoft", pal.accentSoft || "#FAE3DF");
+  cvNode.style.setProperty("--bgSoft", pal.bgSoft || "#F8EBF2");
 
-    // Education
-    const eduList = cvNode.querySelector(".cv__education");
-    (person.education || []).forEach((item) => {
-        const li = liTpl.content.firstElementChild.cloneNode(true);
+  // ===== Main content
+  cvNode.querySelector(".cv__name").textContent = person.name || "";
+  cvNode.querySelector(".cv__summary").textContent = person.summary || "";
 
-        const institution = item?.institution || "";
-        const degree = item?.degree || "";
-        const location = item?.location || "";
-        const date = item?.date || "";
+  const main = cvNode.querySelector(".cv__main");
+  const sidebarEl = cvNode.querySelector(".cv__sidebar");
 
-        const eduItem = document.createElement("div");
-        eduItem.className = "eduItem";
+  // ===== Education
+  const eduList = cvNode.querySelector(".cv__education");
+  (person.education || []).forEach((item) => {
+    const li = liTpl.content.firstElementChild.cloneNode(true);
 
-        const leftCol = document.createElement("div");
-        leftCol.className = "eduItem__left";
+    const institution = item?.institution || "";
+    const degree = item?.degree || "";
+    const location = item?.location || "";
+    const date = item?.date || "";
 
-        const rightCol = document.createElement("div");
-        rightCol.className = "eduItem__right";
+    const eduItem = document.createElement("div");
+    eduItem.className = "eduItem";
 
-        const leftMain = document.createElement("p");
-        leftMain.className = "eduItem__line eduItem__line--main";
-        leftMain.textContent = institution;
+    const leftCol = document.createElement("div");
+    leftCol.className = "eduItem__left";
 
-        const leftSub = document.createElement("p");
-        leftSub.className = "eduItem__line";
-        leftSub.textContent = degree;
+    const rightCol = document.createElement("div");
+    rightCol.className = "eduItem__right";
 
-        const rightMain = document.createElement("p");
-        rightMain.className = "eduItem__line eduItem__line--accent";
-        rightMain.textContent = location;
+    const leftMain = document.createElement("p");
+    leftMain.className = "eduItem__line eduItem__line--main";
+    leftMain.textContent = institution;
 
-        const rightSub = document.createElement("p");
-        rightSub.className = "eduItem__line eduItem__line--accent";
-        rightSub.textContent = date;
+    const leftSub = document.createElement("p");
+    leftSub.className = "eduItem__line";
+    leftSub.textContent = degree;
 
-        if (leftMain.textContent) leftCol.appendChild(leftMain);
-        if (leftSub.textContent) leftCol.appendChild(leftSub);
-        if (rightMain.textContent) rightCol.appendChild(rightMain);
-        if (rightSub.textContent) rightCol.appendChild(rightSub);
+    const rightMain = document.createElement("p");
+    rightMain.className = "eduItem__line eduItem__line--accent";
+    rightMain.textContent = location;
 
-        eduItem.appendChild(leftCol);
-        eduItem.appendChild(rightCol);
-        li.appendChild(eduItem);
+    const rightSub = document.createElement("p");
+    rightSub.className = "eduItem__line eduItem__line--accent";
+    rightSub.textContent = date;
 
-        eduList.appendChild(li);
-    });
+    if (leftMain.textContent) leftCol.appendChild(leftMain);
+    if (leftSub.textContent) leftCol.appendChild(leftSub);
+    if (rightMain.textContent) rightCol.appendChild(rightMain);
+    if (rightSub.textContent) rightCol.appendChild(rightSub);
 
-    // Experience
-    const expList = cvNode.querySelector(".cv__experience");
-    (person.experience || []).forEach((x) => {
-        const li = liTpl.content.firstElementChild.cloneNode(true);
+    eduItem.appendChild(leftCol);
+    eduItem.appendChild(rightCol);
+    li.appendChild(eduItem);
+    eduList.appendChild(li);
+  });
 
-        const organization = x?.organization || "";
-        const role = x?.role || "";
-        const roleAccent = Boolean(x?.roleAccent);
-        const location = x?.location || "";
-        const period = x?.period || "";
-        const summary = x?.summary || "";
-        const highlights = Array.isArray(x?.highlights) ? x.highlights : [];
+  // ===== Experience
+  const expList = cvNode.querySelector(".cv__experience");
+  (person.experience || []).forEach((x) => {
+    const li = liTpl.content.firstElementChild.cloneNode(true);
 
-        const expItem = document.createElement("div");
-        expItem.className = "expItem";
+    const organization = x?.organization || "";
+    const role = x?.role || "";
+    const roleAccent = Boolean(x?.roleAccent);
+    const location = x?.location || "";
+    const period = x?.period || "";
+    const summary = x?.summary || "";
+    const highlights = Array.isArray(x?.highlights) ? x.highlights : [];
 
-        const header = document.createElement("div");
-        header.className = "expItem__header";
+    const expItem = document.createElement("div");
+    expItem.className = "expItem";
 
-        const leftCol = document.createElement("div");
-        leftCol.className = "expItem__left";
+    const header = document.createElement("div");
+    header.className = "expItem__header";
 
-        const rightCol = document.createElement("div");
-        rightCol.className = "expItem__right";
+    const leftCol = document.createElement("div");
+    leftCol.className = "expItem__left";
 
-        const leftMain = document.createElement("p");
-        leftMain.className = "expItem__line expItem__line--main";
-        leftMain.textContent = organization;
+    const rightCol = document.createElement("div");
+    rightCol.className = "expItem__right";
 
-        const leftSub = document.createElement("p");
-        leftSub.className = "expItem__line";
-        if (roleAccent) {
-            leftSub.classList.add("expItem__line--accent");
-        }
-        leftSub.textContent = role;
+    const leftMain = document.createElement("p");
+    leftMain.className = "expItem__line expItem__line--main";
+    leftMain.textContent = organization;
 
-        const rightMain = document.createElement("p");
-        rightMain.className = "expItem__line expItem__line--accent";
-        rightMain.textContent = location;
+    const leftSub = document.createElement("p");
+    leftSub.className = "expItem__line";
+    if (roleAccent) leftSub.classList.add("expItem__line--accent");
+    leftSub.textContent = role;
 
-        const rightSub = document.createElement("p");
-        rightSub.className = "expItem__line";
-        rightSub.textContent = period;
+    const rightMain = document.createElement("p");
+    rightMain.className = "expItem__line expItem__line--accent";
+    rightMain.textContent = location;
 
-        if (leftMain.textContent) leftCol.appendChild(leftMain);
-        if (leftSub.textContent) leftCol.appendChild(leftSub);
-        if (rightMain.textContent) rightCol.appendChild(rightMain);
-        if (rightSub.textContent) rightCol.appendChild(rightSub);
+    const rightSub = document.createElement("p");
+    rightSub.className = "expItem__line";
+    rightSub.textContent = period;
 
-        header.appendChild(leftCol);
-        header.appendChild(rightCol);
-        expItem.appendChild(header);
+    if (leftMain.textContent) leftCol.appendChild(leftMain);
+    if (leftSub.textContent) leftCol.appendChild(leftSub);
+    if (rightMain.textContent) rightCol.appendChild(rightMain);
+    if (rightSub.textContent) rightCol.appendChild(rightSub);
 
-        if (summary) {
-            const summaryP = document.createElement("p");
-            summaryP.className = "expItem__summary";
-            summaryP.textContent = summary;
-            expItem.appendChild(summaryP);
-        }
+    header.appendChild(leftCol);
+    header.appendChild(rightCol);
+    expItem.appendChild(header);
 
-        if (highlights.length) {
-            const highlightsList = document.createElement("ul");
-            highlightsList.className = "expItem__highlights";
+    if (summary) {
+      const summaryP = document.createElement("p");
+      summaryP.className = "expItem__summary";
+      summaryP.textContent = summary;
+      expItem.appendChild(summaryP);
+    }
 
-            highlights.forEach((highlight) => {
-                const highlightLi = document.createElement("li");
-                highlightLi.textContent = highlight;
-                highlightsList.appendChild(highlightLi);
-            });
+    if (highlights.length) {
+      const highlightsList = document.createElement("ul");
+      highlightsList.className = "expItem__highlights";
+      highlights.forEach((h) => {
+        const liH = document.createElement("li");
+        liH.textContent = h;
+        highlightsList.appendChild(liH);
+      });
+      expItem.appendChild(highlightsList);
+    }
 
-            expItem.appendChild(highlightsList);
-        }
+    li.appendChild(expItem);
+    expList.appendChild(li);
+  });
 
-        li.appendChild(expItem);
+  // ===== Skills (grouped + icons)
+  const skillsWrap = cvNode.querySelector(".cv__skills");
+  skillsWrap.replaceChildren();
 
-        expList.appendChild(li);
-    });
-
-    // Skills pills
-    const skillsWrap = cvNode.querySelector(".cv__skills");
-    skillsWrap.replaceChildren();
-
-    const skillGroupTpl = document.getElementById("skillGroupTemplate");
-    const skillPillTpl = document.getElementById("skillPillTemplate");
-
-    const skillGroups = Array.isArray(person.skills) ? person.skills : [];
-
-    skillGroups.forEach((group) => {
+  const skillGroups = Array.isArray(person.skills) ? person.skills : [];
+  skillGroups.forEach((group) => {
     const groupNode = skillGroupTpl.content.firstElementChild.cloneNode(true);
     groupNode.querySelector(".skillGroup__title").textContent = group?.title || "Skills";
 
@@ -286,269 +283,245 @@ export function createCVView(person) {
     const items = Array.isArray(group?.items) ? group.items : [];
 
     items.forEach((it) => {
-        const pill = skillPillTpl.content.firstElementChild.cloneNode(true);
+      const pill = skillPillTpl.content.firstElementChild.cloneNode(true);
+      const iconWrap = pill.querySelector(".pill__icon");
+      const textWrap = pill.querySelector(".pill__text");
 
-        const iconWrap = pill.querySelector(".pill__icon");
-        const textWrap = pill.querySelector(".pill__text");
+      textWrap.textContent = it?.name || "";
 
-        textWrap.textContent = it?.name || "";
+      const key = it?.icon;
+      iconWrap.innerHTML = key && SKILL_ICONS[key] ? SKILL_ICONS[key] : "";
 
-        const key = it?.icon;
-        iconWrap.innerHTML = key && SKILL_ICONS[key] ? SKILL_ICONS[key] : "";
-
-        row.appendChild(pill);
+      row.appendChild(pill);
     });
 
     skillsWrap.appendChild(groupNode);
+  });
+
+  // ===== Languages
+  const langWrap = cvNode.querySelector(".cv__languages");
+  langWrap.replaceChildren();
+  const languages = Array.isArray(person.languages) ? person.languages : [];
+  if (languages.length) {
+    languages.forEach((language) => {
+      const badge = document.createElement("span");
+      badge.className = "langBadge";
+
+      const name = document.createElement("span");
+      name.className = "langBadge__name";
+      name.textContent = language?.name || "Language";
+
+      const level = document.createElement("span");
+      level.className = "langBadge__level";
+      level.textContent = language?.level || "";
+
+      badge.appendChild(name);
+      if (level.textContent) badge.appendChild(level);
+      langWrap.appendChild(badge);
     });
+  } else {
+    langWrap.textContent = "No languages added yet.";
+  }
 
-    // Languages badges
-    const langWrap = cvNode.querySelector(".cv__languages");
-    const languages = Array.isArray(person.languages) ? person.languages : [];
+  // ===== Smooth scroll inside main
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let scrollAnimationFrame = null;
 
-    if (languages.length) {
-        languages.forEach((language) => {
-            const badge = document.createElement("span");
-            badge.className = "langBadge";
+  const smoothScrollToY = (targetY, duration = 720) => {
+    const maxScroll = Math.max(0, main.scrollHeight - main.clientHeight);
+    const clampedTarget = Math.min(Math.max(0, targetY), maxScroll);
 
-            const name = document.createElement("span");
-            name.className = "langBadge__name";
-            name.textContent = language?.name || "Language";
-
-            const level = document.createElement("span");
-            level.className = "langBadge__level";
-            level.textContent = language?.level || "";
-
-            badge.appendChild(name);
-            if (level.textContent) badge.appendChild(level);
-            langWrap.appendChild(badge);
-        });
-    } else {
-        langWrap.textContent = "No languages added yet.";
+    if (prefersReducedMotion || duration <= 0) {
+      main.scrollTop = clampedTarget;
+      return;
     }
 
-    // ===== Sidebar build 
-    const sidebar = cvNode.querySelector(".cv__sidebar");
-    sidebar.replaceChildren(); 
+    if (scrollAnimationFrame) cancelAnimationFrame(scrollAnimationFrame);
 
-    const main = cvNode.querySelector(".cv__main");
+    const startY = main.scrollTop;
+    const delta = clampedTarget - startY;
+    if (!delta) return;
 
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let scrollAnimationFrame = null;
+    const startTime = performance.now();
 
-    const smoothScrollToY = (targetY, duration = 720) => {
-      const maxScroll = Math.max(0, main.scrollHeight - main.clientHeight);
-      const clampedTarget = Math.min(Math.max(0, targetY), maxScroll);
+    const easeInOutCubic = (t) =>
+      t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 
-      if (prefersReducedMotion || duration <= 0) {
-        main.scrollTop = clampedTarget;
-        return;
-      }
+    const tick = (now) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeInOutCubic(progress);
 
-      if (scrollAnimationFrame) {
-        cancelAnimationFrame(scrollAnimationFrame);
-      }
+      main.scrollTop = startY + delta * eased;
 
-      const startY = main.scrollTop;
-      const delta = clampedTarget - startY;
-
-      if (!delta) return;
-
-      const startTime = performance.now();
-
-      const easeInOutCubic = (t) => (t < 0.5)
-        ? 4 * t * t * t
-        : 1 - Math.pow(-2 * t + 2, 3) / 2;
-
-      const tick = (now) => {
-        const elapsed = now - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const eased = easeInOutCubic(progress);
-
-        main.scrollTop = startY + delta * eased;
-
-        if (progress < 1) {
-          scrollAnimationFrame = requestAnimationFrame(tick);
-        } else {
-          scrollAnimationFrame = null;
-        }
-      };
-
-      scrollAnimationFrame = requestAnimationFrame(tick);
+      if (progress < 1) scrollAnimationFrame = requestAnimationFrame(tick);
+      else scrollAnimationFrame = null;
     };
 
-    const scrollTo = (selector) => {
-        const el = cvNode.querySelector(selector);
-        if (!el) return;
-      smoothScrollToY(el.offsetTop - 8);
-    };
+    scrollAnimationFrame = requestAnimationFrame(tick);
+  };
 
-    const setActiveMain = (el) => {
-        sidebar
-            .querySelectorAll(".sideMainLink, .sideGroup__titleRow--action")
-            .forEach((x) => x.classList.remove("is-active"));
-        if (el) el.classList.add("is-active");
-    };
+  const scrollTo = (selector) => {
+    const el = cvNode.querySelector(selector);
+    if (!el) return;
+    smoothScrollToY(el.offsetTop - 8);
+  };
 
-    const setActive = (btn) => {
-        sidebar.querySelectorAll(".sideSubLink").forEach(x => x.classList.remove("is-active"));
-        if (btn?.classList?.contains("sideSubLink")) btn.classList.add("is-active");
-    };
+  // ===== Sidebar actions helpers
+  const setActiveMain = (el) => {
+    sidebarEl
+      .querySelectorAll(".sideMainLink, .sideGroup__titleRow--action")
+      .forEach((x) => x.classList.remove("is-active"));
+    if (el) el.classList.add("is-active");
+  };
 
-    // --- Group: Navigate
-    const navGroup = groupTpl.content.firstElementChild.cloneNode(true);
-    navGroup.classList.add("sideGroup--navigate");
-    navGroup.querySelector(".sideGroup__title").textContent = "Navigate";
+  const setActive = (btn) => {
+    sidebarEl.querySelectorAll(".sideSubLink").forEach((x) => x.classList.remove("is-active"));
+    if (btn?.classList?.contains("sideSubLink")) btn.classList.add("is-active");
+  };
 
-    const navIcon = navGroup.querySelector(".sideGroup__icon");
-    if (navIcon) navIcon.style.display = "none";
+  // ===== Build sidebar
+  sidebarEl.replaceChildren();
 
-    const navBody = navGroup.querySelector(".sideGroup__body");
+  // --- Navigate
+  const navGroup = groupTpl.content.firstElementChild.cloneNode(true);
+  navGroup.classList.add("sideGroup--navigate");
+  navGroup.querySelector(".sideGroup__title").textContent = "Navigate";
+  const navIcon = navGroup.querySelector(".sideGroup__icon");
+  if (navIcon) navIcon.style.display = "none";
+  const navBody = navGroup.querySelector(".sideGroup__body");
 
-    // About me (pill)
-    const aboutBtn = mainLinkTpl.content.firstElementChild.cloneNode(true);
-    aboutBtn.querySelector(".sideMainLink__text").textContent = "About me";
-    aboutBtn.addEventListener("click", () => {
-        setActiveMain(aboutBtn);
-        scrollTo("#about");
-    });
-
-    const aboutIconWrap = document.createElement("span");
-    aboutIconWrap.className = "sideMainLink__svg";
-    aboutIconWrap.innerHTML = ICONS.about;
-    aboutBtn.prepend(aboutIconWrap);
-
-    navBody.appendChild(aboutBtn);
+  const aboutBtn = mainLinkTpl.content.firstElementChild.cloneNode(true);
+  aboutBtn.querySelector(".sideMainLink__text").textContent = "About me";
+  aboutBtn.addEventListener("click", () => {
     setActiveMain(aboutBtn);
+    scrollTo("#about");
+  });
 
-    const subItems = [
-        { label: "Education", target: "#education" },
-        { label: "Experience", target: "#experience" },
-        { label: "Skills", target: "#skills" },
-        { label: "Languages", target: "#languages" },
-    ];
+  const aboutIconWrap = document.createElement("span");
+  aboutIconWrap.className = "sideMainLink__svg";
+  aboutIconWrap.innerHTML = ICONS.about;
+  aboutBtn.prepend(aboutIconWrap);
 
-    subItems.forEach((it, idx) => {
-        const btn = subLinkTpl.content.firstElementChild.cloneNode(true);
-        btn.textContent = it.label;
-        if (idx === 0) btn.classList.add("is-active");
+  navBody.appendChild(aboutBtn);
+  setActiveMain(aboutBtn);
 
-        btn.addEventListener("click", () => {
-            setActive(btn);
-            scrollTo(it.target);
-        });
+  const subItems = [
+    { label: "Education", target: "#education" },
+    { label: "Experience", target: "#experience" },
+    { label: "Skills", target: "#skills" },
+    { label: "Languages", target: "#languages" },
+  ];
 
-        navBody.appendChild(btn);
+  subItems.forEach((it, idx) => {
+    const btn = subLinkTpl.content.firstElementChild.cloneNode(true);
+    btn.textContent = it.label;
+    if (idx === 0) btn.classList.add("is-active");
+    btn.addEventListener("click", () => {
+      setActive(btn);
+      scrollTo(it.target);
     });
+    navBody.appendChild(btn);
+  });
 
-    sidebar.appendChild(navGroup);
+  sidebarEl.appendChild(navGroup);
 
-    // --- Group: Projects 
-    const projectsGroup = groupTpl.content.firstElementChild.cloneNode(true);
-    projectsGroup.classList.add("sideGroup--projects");
-    projectsGroup.querySelector(".sideGroup__title").textContent = "Projects";
+  // --- Projects
+  const projectsGroup = groupTpl.content.firstElementChild.cloneNode(true);
+  projectsGroup.classList.add("sideGroup--projects");
+  projectsGroup.querySelector(".sideGroup__title").textContent = "Projects";
+  const projectsIcon = projectsGroup.querySelector(".sideGroup__icon");
+  if (projectsIcon) projectsIcon.innerHTML = ICONS.projects;
 
-    const projectsIcon = projectsGroup.querySelector(".sideGroup__icon");
-    if (projectsIcon) projectsIcon.innerHTML = ICONS.projects;
+  const projectsTitleRow = projectsGroup.querySelector(".sideGroup__titleRow");
+  projectsTitleRow.classList.add("sideGroup__titleRow--action");
+  projectsTitleRow.tabIndex = 0;
 
-    const projectsTitleRow = projectsGroup.querySelector(".sideGroup__titleRow");
-    projectsTitleRow.classList.add("sideGroup__titleRow--action");
-    projectsTitleRow.tabIndex = 0;
+  const projBody = projectsGroup.querySelector(".sideGroup__body");
+  const projectsList = person.projects || [];
 
-    const projBody = projectsGroup.querySelector(".sideGroup__body");
-    const projectsList = person.projects || [];
+  const openProject = (p) => {
+    if (!p) return;
+    if (p.href && p.href.startsWith("#")) scrollTo(p.href);
+    else if (p.href) window.open(p.href, "_blank");
+  };
 
-    const openProject = (p) => {
-        if (!p) return;
-        if (p.href && p.href.startsWith("#")) scrollTo(p.href);
-        else if (p.href) window.open(p.href, "_blank");
-    };
+  const onProjectsTitleClick = () => {
+    setActiveMain(projectsTitleRow);
+    openProject(projectsList[0]);
+  };
 
-    const onProjectsTitleClick = () => {
-        setActiveMain(projectsTitleRow);
-        openProject(projectsList[0]);
-    };
-
-    projectsTitleRow.addEventListener("click", onProjectsTitleClick);
-    projectsTitleRow.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            onProjectsTitleClick();
-        }
-    });
-
-    projectsList.forEach((p) => {
-        const btn = listItemTpl.content.firstElementChild.cloneNode(true);
-        btn.textContent = p.name;
-
-        btn.addEventListener("click", () => {
-            if (p.href && p.href.startsWith("#")) scrollTo(p.href);
-            else if (p.href) window.open(p.href, "_blank");
-        });
-
-        projBody.appendChild(btn);
-    });
-
-    sidebar.appendChild(projectsGroup);
-
-    // --- Group: Contact 
-    const contactGroup = groupTpl.content.firstElementChild.cloneNode(true);
-    contactGroup.classList.add("sideGroup--contact");
-    contactGroup.querySelector(".sideGroup__title").textContent = "Contact";
-
-    const contactIcon = contactGroup.querySelector(".sideGroup__icon");
-    if (contactIcon) contactIcon.innerHTML = ICONS.contact;
-
-    const contactTitleRow = contactGroup.querySelector(".sideGroup__titleRow");
-    contactTitleRow.classList.add("sideGroup__titleRow--action");
-    contactTitleRow.tabIndex = 0;
-
-    const contactBody = contactGroup.querySelector(".sideGroup__body");
-    const primaryContact = (person.contact || []).find((c) => c?.href) || (person.contact || [])[0];
-    const contactBtn = listItemTpl.content.firstElementChild.cloneNode(true);
-    contactBtn.textContent = "Contact";
-
-    const openPrimaryContact = () => {
-        if (!primaryContact?.href) return;
-        window.open(primaryContact.href, primaryContact.href.startsWith("mailto:") ? "_self" : "_blank");
-    };
-
-    const onContactTitleClick = () => {
-        setActiveMain(contactTitleRow);
-        openPrimaryContact();
-    };
-
-    contactTitleRow.addEventListener("click", onContactTitleClick);
-    contactTitleRow.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            onContactTitleClick();
-        }
-    });
-
-    contactBtn.addEventListener("click", () => {
-        setActiveMain(contactTitleRow);
-        openPrimaryContact();
-    });
-
-    contactBody.appendChild(contactBtn);
-
-    sidebar.appendChild(contactGroup);
-    
-    main.scrollTop = 0;
-
-    cvNode.classList.add("cv--reveal");
-
-    const sections = cvNode.querySelectorAll(".cv__main .cvSection");
-    sections.forEach((sec, i) => {
-        sec.style.setProperty("--i", i);
-    });
-
-    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-      sections.forEach((sec) => sec.classList.add("is-visible"));
-      return cvNode;
+  projectsTitleRow.addEventListener("click", onProjectsTitleClick);
+  projectsTitleRow.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      onProjectsTitleClick();
     }
+  });
 
+  projectsList.forEach((p) => {
+    const btn = listItemTpl.content.firstElementChild.cloneNode(true);
+    btn.textContent = p.name;
+    btn.addEventListener("click", () => openProject(p));
+    projBody.appendChild(btn);
+  });
+
+  sidebarEl.appendChild(projectsGroup);
+
+  // --- Contact
+  const contactGroup = groupTpl.content.firstElementChild.cloneNode(true);
+  contactGroup.classList.add("sideGroup--contact");
+  contactGroup.querySelector(".sideGroup__title").textContent = "Contact";
+  const contactIcon = contactGroup.querySelector(".sideGroup__icon");
+  if (contactIcon) contactIcon.innerHTML = ICONS.contact;
+
+  const contactTitleRow = contactGroup.querySelector(".sideGroup__titleRow");
+  contactTitleRow.classList.add("sideGroup__titleRow--action");
+  contactTitleRow.tabIndex = 0;
+
+  const contactBody = contactGroup.querySelector(".sideGroup__body");
+  const primaryContact = (person.contact || []).find((c) => c?.href) || (person.contact || [])[0];
+
+  const openPrimaryContact = () => {
+    if (!primaryContact?.href) return;
+    window.open(primaryContact.href, primaryContact.href.startsWith("mailto:") ? "_self" : "_blank");
+  };
+
+  const onContactTitleClick = () => {
+    setActiveMain(contactTitleRow);
+    openPrimaryContact();
+  };
+
+  contactTitleRow.addEventListener("click", onContactTitleClick);
+  contactTitleRow.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      onContactTitleClick();
+    }
+  });
+
+  const contactBtn = listItemTpl.content.firstElementChild.cloneNode(true);
+  contactBtn.textContent = "Contact";
+  contactBtn.addEventListener("click", () => {
+    setActiveMain(contactTitleRow);
+    openPrimaryContact();
+  });
+
+  contactBody.appendChild(contactBtn);
+  sidebarEl.appendChild(contactGroup);
+
+  // Reset scroll
+  main.scrollTop = 0;
+
+  // ===== Reveal sections (NO rompe el menú)
+  cvNode.classList.add("cv--reveal");
+
+  const sections = cvNode.querySelectorAll(".cv__main .cvSection");
+  sections.forEach((sec, i) => sec.style.setProperty("--i", i));
+
+  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+    sections.forEach((sec) => sec.classList.add("is-visible"));
+  } else {
     const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -561,8 +534,58 @@ export function createCVView(person) {
         rootMargin: "0px 0px -10% 0px",
       }
     );
-
     sections.forEach((sec) => revealObserver.observe(sec));
+  }
 
-    return cvNode;
+  // ===== Mobile hamburger menu (siempre se inicializa)
+  const cvRoot = cvNode;
+  const burgerBtn = cvNode.querySelector(".cvBurger");
+  const closeBtn = cvNode.querySelector(".cvBurger__close");
+  const burgerIcon = cvNode.querySelector(".cvBurger__icon");
+
+  if (cvRoot && burgerBtn && closeBtn && burgerIcon) {
+    // middle bar (si no existe)
+    if (!burgerIcon.querySelector("span")) {
+      burgerIcon.appendChild(document.createElement("span"));
+    }
+
+    const setOpen = (open) => {
+      cvRoot.classList.toggle("is-menuOpen", open);
+      burgerBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+
+    burgerBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      setOpen(!cvRoot.classList.contains("is-menuOpen"));
+    });
+
+    closeBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      setOpen(false);
+    });
+
+    // ✅ Cerrar tocando fuera del drawer (click-outside)
+    cvRoot.addEventListener("click", (e) => {
+      if (!cvRoot.classList.contains("is-menuOpen")) return;
+
+      const clickedInsideSidebar = sidebarEl.contains(e.target);
+      const clickedBurger = burgerBtn.contains(e.target);
+
+      if (!clickedInsideSidebar && !clickedBurger) setOpen(false);
+    });
+
+    // cerrar al escoger opción del sidebar
+    sidebarEl.addEventListener("click", (e) => {
+      const btn = e.target.closest("button, a");
+      if (!btn) return;
+      setOpen(false);
+    });
+
+    // ESC
+    cvNode.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setOpen(false);
+    });
+  }
+
+  return cvNode;
 }

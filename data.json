@@ -84,7 +84,10 @@
       ],
       "projects": [
         { "name": "Hogar San Blas", "href": "#project-hogar" },
-        { "name": "SIDNAM Admin", "href": "#project-sidnam" },
+        {
+          "name": "SIDNAM Administrative Web Panel",
+          "href": "#project-sidnam"
+        },
         { "name": "Color Nodes", "href": "#project-color" }
       ],
       "contact": [
@@ -176,7 +179,14 @@
         { "name": "Spanish", "level": "Native" },
         { "name": "English", "level": "Advanced" }
       ],
-      "projects": [{ "name": "Project 1", "href": "#project-1" }],
+      "projects": [
+        { "name": "Hogar San Blas", "href": "#project-hogar" },
+        {
+          "name": "SIDNAM Administrative Web Panel",
+          "href": "#project-sidnam"
+        },
+        { "name": "Color Nodes", "href": "#project-color" }
+      ],
       "contact": [{ "label": "LinkedIn", "value": "Elein", "href": "#" }]
     },
 
@@ -246,7 +256,14 @@
         { "name": "Spanish", "level": "Native" },
         { "name": "English", "level": "Advanced" }
       ],
-      "projects": [{ "name": "Project 1", "href": "#project-1" }],
+      "projects": [
+        { "name": "Hogar San Blas", "href": "#project-hogar" },
+        {
+          "name": "SIDNAM Administrative Web Panel",
+          "href": "#project-sidnam"
+        },
+        { "name": "Color Nodes", "href": "#project-color" }
+      ],
       "contact": [{ "label": "LinkedIn", "value": "Elein", "href": "#" }]
     }
   }

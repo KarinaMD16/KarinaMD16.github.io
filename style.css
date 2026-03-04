@@ -536,8 +536,8 @@ body {
 
 .eduItem {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 24px;
+    grid-template-columns: minmax(0, 1.35fr) minmax(180px, .9fr);
+    gap: 16px;
     align-items: start;
 }
 
@@ -548,7 +548,7 @@ body {
 }
 
 .eduItem__right {
-    min-width: 280px;
+    min-width: 0;
     padding-left: 18px;
     border-left: 1px solid rgba(15, 23, 42, .10);
 }
@@ -584,8 +584,8 @@ body {
 
 .expItem__header {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 24px;
+    grid-template-columns: minmax(0, 1.35fr) minmax(170px, .85fr);
+    gap: 16px;
     align-items: start;
 }
 
@@ -596,7 +596,7 @@ body {
 }
 
 .expItem__right {
-    min-width: 230px;
+    min-width: 0;
     padding-left: 18px;
     border-left: 1px solid rgba(15, 23, 42, .10);
 }
@@ -724,6 +724,16 @@ body {
     line-height: 1.1;
 }
 
+/* Contenedor donde JS monta el CV */
+#cvMount:empty {
+    display: none;
+}
+
+
+
+
+
+
 /* responsive */
 @media (max-width: 900px) {
     .grid {
@@ -743,6 +753,30 @@ body {
         border-bottom: 1px solid rgba(15, 23, 42, .08);
         padding-right: 0;
         padding-bottom: 16px;
+    }
+}
+
+@media (max-width: 680px) {
+    .eduItem {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .eduItem__right {
+        min-width: 0;
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    .expItem__header {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .expItem__right {
+        min-width: 0;
+        padding-left: 0;
+        border-left: 0;
     }
 }
 
@@ -788,7 +822,224 @@ body {
     }
 }
 
-/* Contenedor donde JS monta el CV */
-#cvMount:empty {
+@media (max-width: 520px) {
+    body {
+        padding: 12px;
+        place-items: start center;
+    }
+
+    .monitor {
+        width: min(420px, 95vw);
+        aspect-ratio: 9 / 16;
+        /* ✅ vertical */
+        padding: 12px;
+        border-radius: 20px;
+    }
+
+    .titlebar {
+        padding: 10px 10px;
+        gap: 8px;
+    }
+
+    .traffic {
+        gap: 6px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .nav-btn {
+        padding: 6px 8px;
+        font-size: 16px;
+    }
+
+    .address {
+        padding: 8px 10px;
+    }
+
+    .content {
+        padding: 12px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+.cvMobileBar {
     display: none;
+}
+
+@media (max-width: 900px) {
+    .cv {
+        grid-template-columns: 1fr;
+        position: relative;
+        min-height: clamp(460px, 72vh, 760px);
+    }
+
+    .cvMobileBar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+
+        position: sticky;
+        top: 0;
+        z-index: 50;
+
+        background: rgba(255, 255, 255, .92);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(15, 23, 42, .10);
+        border-radius: 14px;
+
+        padding: 10px 12px;
+        margin-bottom: 12px;
+    }
+
+    .cvBurger {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        border: 0;
+        cursor: pointer;
+        background: color-mix(in srgb, var(--accent) 18%, white);
+        color: #111827;
+        font-weight: 700;
+        padding: 10px 12px;
+        border-radius: 12px;
+        transition: transform .12s ease, background .12s ease;
+    }
+
+    .cvBurger:hover {
+        transform: translateY(-1px);
+        background: color-mix(in srgb, var(--accent) 25%, white);
+    }
+
+    .cvBurger__icon {
+        width: 18px;
+        height: 14px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .cvBurger__icon::before,
+    .cvBurger__icon::after,
+    .cvBurger__icon span {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #111827;
+        border-radius: 999px;
+    }
+
+    .cvBurger__icon::before {
+        top: 0;
+    }
+
+    .cvBurger__icon::after {
+        bottom: 0;
+    }
+
+    .cvBurger__icon span {
+        top: 6px;
+    }
+
+    .cvBurger__close {
+        border: 0;
+        background: transparent;
+        font-size: 18px;
+        padding: 8px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        opacity: .6;
+        transition: background .12s ease, opacity .12s ease;
+    }
+
+    .cvBurger__close:hover {
+        background: rgba(0, 0, 0, .06);
+        opacity: 1;
+    }
+
+    .cv__sidebar {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 56px;
+        bottom: 0;
+        margin: 0;
+
+        background: #fff;
+        border: 1px solid rgba(15, 23, 42, .10);
+        border-radius: 16px;
+        box-shadow: 0 18px 60px rgba(0, 0, 0, .18);
+
+        padding: 14px;
+        max-height: none;
+        overflow: auto;
+
+        transform: translateY(-8px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .18s ease, transform .18s ease;
+        z-index: 60;
+    }
+
+    .cv::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, .22);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .18s ease;
+        z-index: 55;
+    }
+
+    .cv.is-menuOpen::before {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .cv.is-menuOpen .cv__sidebar {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .cv__main {
+        max-height: 60vh;
+    }
+}
+
+@media (max-width: 520px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    #cvMount:not(:empty) {
+        flex: 1;
+        min-height: 0;
+        display: flex;
+    }
+
+    #cvMount:not(:empty)>.cv {
+        flex: 1;
+        height: 100%;
+        min-height: 100%;
+        grid-template-rows: auto minmax(0, 1fr);
+    }
+
+    #cvMount:not(:empty) .cv__main {
+        height: 100%;
+        max-height: none;
+        min-height: 0;
+    }
 }

@@ -67,6 +67,16 @@
     <!-- CV -->
     <template id="cvTemplate">
         <section class="cv">
+            <div class="cvMobileBar" aria-label="CV mobile navigation">
+                <button class="cvBurger" type="button" aria-label="Open menu" aria-expanded="false">
+                    <span class="cvBurger__icon" aria-hidden="true"></span>
+                    <span class="cvBurger__text">Menu</span>
+                </button>
+            
+                <button class="cvBurger__close" type="button" aria-label="Close menu">
+                    ✕
+                </button>
+            </div>
             <aside class="cv__sidebar"></aside>
 
             <main class="cv__main">
