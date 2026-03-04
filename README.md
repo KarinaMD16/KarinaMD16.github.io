@@ -118,8 +118,25 @@ Cada persona en `people` usa esta forma general:
       "items": [{ "name": "Skill", "icon": "js" }]
     }
   ],
-  "experience": [],
-  "education": [],
+  "experience": [{
+          "organization": "value",
+          "location": "value",
+          "role": "value",
+          "roleAccent": true,
+          "period": "value",
+          "summary": "value",
+          "highlights": [
+            "value",
+            "value",
+            "value",
+          ]
+        }],
+  "education": [{
+          "institution": "value",
+          "degree": "value",
+          "location": "value",
+          "date": "value"
+        }],
   "languages": [{ "name": "Spanish", "level": "Native" }],
   "projects": [{ "name": "Proyecto", "href": "#anchor o https://..." }],
   "contact": [{ "label": "Email", "value": "mail", "href": "mailto:..." }]
@@ -134,10 +151,3 @@ Cada persona en `people` usa esta forma general:
 4. Guarda y recarga el navegador.
 
 El explorador mostrara la nueva carpeta automaticamente.
-
-## Mejoras sugeridas
-
-- Validar esquema de `data.json` para evitar campos incompletos.
-- Sincronizar estado con URL real (`location.hash` o History API).
-- Agregar tests de render y navegacion.
-- Publicar demo en GitHub Pages.
