@@ -108,6 +108,20 @@
                     <h2 class="cvSection__title">Languages</h2>
                     <div class="cv__languages"></div>
                 </section>
+
+                <section class="cvSection" id="contact">
+                    <h2 class="cvSection__title">Contact</h2>
+                    <div class="cvSection__content">
+                        <ul class="cv__contactList pillRow"></ul>
+                        <form class="cv__contactForm">
+                            <div class="cv__formMessage" aria-live="polite"></div>
+                            <label>Name<br><input type="text" name="name" required></label><br>
+                            <label>Email<br><input type="email" name="email" required></label><br>
+                            <label>Message<br><textarea name="message" rows="4" required></textarea></label><br>
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+                </section>
             </main>
         </section>
     </template>

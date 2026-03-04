@@ -480,16 +480,10 @@ export function createCVView(person) {
   contactTitleRow.tabIndex = 0;
 
   const contactBody = contactGroup.querySelector(".sideGroup__body");
-  const primaryContact = (person.contact || []).find((c) => c?.href) || (person.contact || [])[0];
-
-  const openPrimaryContact = () => {
-    if (!primaryContact?.href) return;
-    window.open(primaryContact.href, primaryContact.href.startsWith("mailto:") ? "_self" : "_blank");
-  };
 
   const onContactTitleClick = () => {
     setActiveMain(contactTitleRow);
-    openPrimaryContact();
+    scrollTo("#contact");
   };
 
   contactTitleRow.addEventListener("click", onContactTitleClick);
@@ -500,15 +494,84 @@ export function createCVView(person) {
     }
   });
 
-  const contactBtn = listItemTpl.content.firstElementChild.cloneNode(true);
-  contactBtn.textContent = "Contact";
-  contactBtn.addEventListener("click", () => {
-    setActiveMain(contactTitleRow);
-    openPrimaryContact();
+  // add individual contact entries to sidebar too, using same style as navigate sublinks
+  (person.contact || []).forEach((c) => {
+    const btn = subLinkTpl.content.firstElementChild.cloneNode(true);
+    // optionally add icon inside button
+    if (c.icon && SKILL_ICONS[c.icon]) {
+      const iconSpan = document.createElement("span");
+      iconSpan.className = "sideMainLink__svg"; // reuse existing class for icon sizing
+      iconSpan.innerHTML = SKILL_ICONS[c.icon];
+      btn.prepend(iconSpan);
+    }
+    btn.textContent += (c.label || c.value || "");
+    btn.addEventListener("click", () => {
+      if (c.href) {
+        window.open(c.href, c.href.startsWith("mailto:") ? "_self" : "_blank");
+      }
+      setActiveMain(contactTitleRow);
+      scrollTo("#contact");
+    });
+    contactBody.appendChild(btn);
   });
 
-  contactBody.appendChild(contactBtn);
   sidebarEl.appendChild(contactGroup);
+
+  // ===== Contact section content
+  const contactSection = cvNode.querySelector("#contact");
+  if (contactSection) {
+    const contactListEl = contactSection.querySelector(".cv__contactList");
+    const contactItems = Array.isArray(person.contact) ? person.contact : [];
+    contactListEl.replaceChildren();
+    contactItems.forEach((c) => {
+      const li = document.createElement("li");
+      const pill = skillPillTpl.content.firstElementChild.cloneNode(true);
+      const iconWrap = pill.querySelector(".pill__icon");
+      const textWrap = pill.querySelector(".pill__text");
+
+      textWrap.textContent = c.value || c.label || "";
+      if (c.icon && SKILL_ICONS[c.icon]) {
+        iconWrap.innerHTML = SKILL_ICONS[c.icon];
+      } else {
+        iconWrap.innerHTML = "";
+      }
+
+      if (c.href) {
+        const a = document.createElement("a");
+        a.href = c.href;
+        a.target = c.href.startsWith("mailto:") ? "_self" : "_blank";
+        a.appendChild(pill);
+        li.appendChild(a);
+      } else {
+        li.appendChild(pill);
+      }
+      contactListEl.appendChild(li);
+    });
+
+    const form = contactSection.querySelector(".cv__contactForm");
+    if (form) {
+      const messageEl = form.querySelector(".cv__formMessage");
+
+      const showMessage = (text) => {
+        if (!messageEl) return;
+        messageEl.textContent = text;
+        messageEl.classList.add("is-visible");
+        setTimeout(() => {
+          messageEl.classList.remove("is-visible");
+        }, 3000);
+      };
+
+      form.addEventListener("submit", (ev) => {
+        ev.preventDefault();
+        const name = form.elements.name?.value || "";
+        const email = form.elements.email?.value || "";
+        const msg = form.elements.message?.value || "";
+        console.log("contact form submission", { name, email, msg });
+        showMessage("Thank you for reaching out!");
+        form.reset();
+      });
+    }
+  }
 
   // Reset scroll
   main.scrollTop = 0;
