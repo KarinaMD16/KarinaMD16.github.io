@@ -1,0 +1,66 @@
+{
+  "people": {
+    "kary": {
+      "id": "kary",
+      "name": "Kary",
+      "palette": {
+        "accent": "#FC889F",
+        "accentDark": "#A52E52",
+        "accentSoft": "#FAE3DF",
+        "bgSoft": "#F8EBF2"
+      },
+      "role": "Front-End Developer",
+      "summary": "Me enfoco en UX/UI, buenas prácticas y crear interfaces claras.",
+      "skills": ["React", "HTML/CSS", "JavaScript", "UX/UI", "Accesibilidad"],
+      "experience": [
+        {
+          "title": "Proyecto X",
+          "detail": "Landing con enfoque en conversión y performance."
+        }
+      ],
+      "education": ["Ing. en Sistemas (en curso)"],
+      "languages": [{ "name": "English", "level": "Advanced" }],
+      "projects": [
+        { "name": "Hogar San Blas", "href": "#project-hogar" },
+        { "name": "SIDNAM Admin", "href": "#project-sidnam" },
+        { "name": "Color Nodes", "href": "#project-color" }
+      ],
+      "contact": [
+        {
+          "label": "Email",
+          "value": "kary@email.com",
+          "href": "mailto:kary@email.com"
+        },
+        {
+          "label": "GitHub",
+          "value": "@kary",
+          "href": "https://github.com/kary"
+        }
+      ]
+    },
+
+    "elein": {
+      "id": "elein",
+      "name": "Elein",
+      "palette": {
+        "accent": "#22c55e",
+        "accentDark": "#166534",
+        "accentSoft": "#dcfce7",
+        "bgSoft": "#f0fdf4"
+      },
+      "role": "QA / Developer",
+      "summary": "Me gusta asegurar calidad y construir soluciones estables.",
+      "skills": ["Testing", "JavaScript", "Documentación", "Trabajo en equipo"],
+      "experience": [
+        {
+          "title": "Proyecto Y",
+          "detail": "Casos de prueba, reporte de bugs, mejoras UX."
+        }
+      ],
+      "education": ["Formación técnica (ejemplo)"],
+      "languages": [{ "name": "Spanish", "level": "Native" }],
+      "projects": [{ "name": "Project 1", "href": "#project-1" }],
+      "contact": [{ "label": "LinkedIn", "value": "Elein", "href": "#" }]
+    }
+  }
+}

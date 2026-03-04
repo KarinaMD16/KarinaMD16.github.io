@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Curriculum</title>
+    <link rel="shortcut icon" href="webicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="monitor" aria-label="main monitor">
+        <section class="window" role="application" aria-label="Explorador">
+            <div class="titlebar">
+                <button id="backBtn" class="nav-btn" aria-label="Back" disabled>←</button>
+
+                <div class="traffic" aria-hidden="true">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+
+                <div class="address" aria-label="Barra de dirección">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor"
+                            stroke-width="2" />
+                        <path d="M16.5 16.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    <input id="address" type="text" value="" aria-label="Dirección" />
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="header">
+                    <div>
+                        <h1 id="viewTitle">Explorador</h1>
+                        <p id="viewHint">Tip: click abre el CV.</p>
+                    </div>
+                </div>
+
+                <!-- MOUNTS -->
+                <div id="explorerMount"></div>
+                <div id="cvMount"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== TEMPLATES ===== -->
+
+    <!-- Explorador  -->
+    <template id="explorerTemplate">
+        <div class="grid" id="grid"></div>
+    </template>
+
+    <!-- carpeta -->
+    <template id="folderTemplate">
+        <a class="folder" href="#" tabindex="0">
+            <div class="icon" aria-hidden="true"></div>
+            <div class="meta">
+                <strong class="folder__name"></strong>
+                <span class="folder__sub"></span>
+            </div>
+        </a>
+    </template>
+
+    <!-- CV -->
+    <template id="cvTemplate">
+        <section class="cv">
+            <aside class="cv__sidebar">
+                <h3 class="sideGroup__title">Navigate</h3>
+                <nav class="cv__nav">
+                    <a class="cv__navItem" href="#about">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-person" viewBox="0 0 16 16">
+                            <path
+                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                        </svg>
+                        About me</a>
+                    <a class="cv__navItem" href="#education">Education</a>
+                    <a class="cv__navItem" href="#experience">Experience</a>
+                    <a class="cv__navItem" href="#skills">Skills</a>
+                    <a class="cv__navItem" href="#languages">Languages</a>
+                </nav>
+            </aside>
+
+            <main class="cv__main">
+                <section class="cvSection" id="about">
+                    <h2 class="cvSection__title">About me</h2>
+                    <div class="cvSection__content">
+                        <p><strong class="cv__name"></strong></p>
+                        <p class="cv__role"></p>
+                        <p class="cv__summary"></p>
+                    </div>
+                </section>
+
+                <section class="cvSection" id="education">
+                    <h2 class="cvSection__title">Education</h2>
+                    <ul class="cv__education"></ul>
+                </section>
+
+                <section class="cvSection" id="experience">
+                    <h2 class="cvSection__title">Experience</h2>
+                    <ul class="cv__experience"></ul>
+                </section>
+
+                <section class="cvSection" id="skills">
+                    <h2 class="cvSection__title">Skills</h2>
+                    <div class="pillRow cv__skills"></div>
+                </section>
+
+                <section class="cvSection" id="languages">
+                    <h2 class="cvSection__title">Languages</h2>
+                    <p class="cv__languages">(Placeholder)</p>
+                </section>
+            </main>
+        </section>
+    </template>
+
+    <!-- Sidebar group: título + lista -->
+    <template id="sideGroupTemplate">
+        <div class="sideGroup">
+            <div class="sideGroup__titleRow">
+                <span class="sideGroup__icon"></span>
+                <h3 class="sideGroup__title"></h3>
+            </div>
+
+            <div class="sideGroup__body"></div>
+        </div>
+    </template>
+
+    <!-- Link principal (pill) -->
+    <template id="sideMainLinkTemplate">
+        <button class="sideMainLink" type="button">
+            <span class="sideMainLink__text"></span>
+        </button>
+    </template>
+
+    <!-- Sub link -->
+    <template id="sideSubLinkTemplate">
+        <button class="sideSubLink" type="button"></button>
+    </template>
+
+    <!-- Item lista (projects/contact) -->
+    <template id="sideListItemTemplate">
+        <button class="sideListItem" type="button"></button>
+    </template>
+
+    <template id="pillTemplate">
+        <span class="pill"></span>
+    </template>
+
+    <template id="liTemplate">
+        <li></li>
+    </template>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
