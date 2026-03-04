@@ -11,6 +11,7 @@ const addressBar = document.getElementById("address");
 const viewTitle = document.getElementById("viewTitle");
 const viewHint = document.getElementById("viewHint");
 const ORIGIN_LABEL = "curriculum";
+const ORIGIN_PREFIX = ORIGIN_LABEL.toLowerCase() + "/";
 
 let DATA = null;
 
@@ -72,7 +73,8 @@ backBtn.addEventListener("click", () => {
 addressBar.addEventListener("keydown", (e) => {
     if (e.key !== "Enter") return;
 
-    const route = normalizeRoute(addressBar.value);
+    const normalized = normalizeRoute(addressBar.value);
+    const route = normalized.startsWith(ORIGIN_PREFIX) ? normalized.slice(ORIGIN_PREFIX.length) : normalized;
 
     if (route === "" || route === "explorer") {
         showExplorer();
