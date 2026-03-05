@@ -52,7 +52,7 @@ También puedes ingresar al proyecto por medio de la siguiente URL: https://kari
 - Sidebar con:
   - `Navigate`: salto interno a secciones.
   - `Projects`: abre anclas internas o links externos.
-  - `Contact`: abre `mailto:` o enlaces externos.
+  - `Contact`: muestra una vista dentro del CV con los métodos de contacto y un formulario.
 - En mobile (`<= 900px`) usa menu hamburguesa con overlay y cierre por click fuera o `Esc`.
 
 ### Barra de direccion interna

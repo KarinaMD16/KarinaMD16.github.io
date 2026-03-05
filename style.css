@@ -655,6 +655,83 @@ body {
     gap: 10px;
 }
 
+/* ===== Contact section ===== */
+.cv__contactList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.cv__contactList li {
+    margin: 0;
+}
+.cv__contactList li a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accentDark);
+    text-decoration: none;
+}
+.cv__contactList li a:hover {
+    text-decoration: underline;
+}
+
+.cv__contactHint {
+    margin-top: 32px;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #111827;
+    background-color: color-mix(in srgb, var(--accentSoft) 72%, white);
+    border-radius: 12px;
+}
+
+.cv__contactForm {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.cv__contactForm input,
+.cv__contactForm textarea {
+    width: 100%;
+    margin-top: 6px;
+    padding: 8px;
+    border: 1px solid gray;
+    border-radius: 20px;
+}
+.cv__contactForm button {
+    align-self: flex-start;
+    width: 100%;
+    padding: 10px 16px;
+    font-size: small;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    min-width: 120px; /* ensure consistent width */
+}
+.cv__contactForm button:hover {
+    background: var(--accentDark);
+}
+
+/* submission message */
+.cv__formMessage {
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: var(--accentSoft);
+    color: var(--accentDark);
+    font-size: 14px;
+    display: none;
+}
+.cv__formMessage.is-visible {
+    display: block;
+}
+
 .langBadge {
     display: inline-flex;
     flex-direction: column;
@@ -714,8 +791,8 @@ body {
 }
 
 .pill__icon svg {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
 
     color: unset;
 }

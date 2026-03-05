@@ -121,7 +121,20 @@ const SKILL_ICONS = {
 </svg>`
 };
 
-
+const CONTACT_ICONS = {
+  email: `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V4z"/>
+      <path d="M0 5.383v6.617a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5.383l-7.743 4.646a.5.5 0 0 1-.514 0L0 5.383z"/>
+  </svg>`,
+  github: `
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path fill="#181717" d="M12 .7a11.3 11.3 0 0 0-3.6 22c.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.2-1.3-1.6-1.3-1.6-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.2-1.3-5.2-5.8 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a10.9 10.9 0 0 1 5.9 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.2 5.8.4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6A11.3 11.3 0 0 0 12 .7z"/>
+  </svg>`,
+  linkedin: `
+  <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <path fill="#0077B5" d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.66720 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z"/>
+  </svg>`};
 
 export function createCVView(person) {
   const cvTpl = document.getElementById("cvTemplate");
@@ -468,7 +481,17 @@ export function createCVView(person) {
 
   sidebarEl.appendChild(projectsGroup);
 
-  // --- Contact
+  // helper to guess icon key from contact record or href
+  const detectContactIcon = (c) => {
+    if (c.icon) return c.icon;
+    const href = (c.href || "").toLowerCase();
+    if (href.includes("github.com")) return "github";
+    if (href.includes("linkedin.com")) return "linkedin";
+    if (href.startsWith("mailto:")) return "email";
+    return null;
+  };
+
+  // --- Contact (sidebar)
   const contactGroup = groupTpl.content.firstElementChild.cloneNode(true);
   contactGroup.classList.add("sideGroup--contact");
   contactGroup.querySelector(".sideGroup__title").textContent = "Contact";
@@ -480,16 +503,10 @@ export function createCVView(person) {
   contactTitleRow.tabIndex = 0;
 
   const contactBody = contactGroup.querySelector(".sideGroup__body");
-  const primaryContact = (person.contact || []).find((c) => c?.href) || (person.contact || [])[0];
-
-  const openPrimaryContact = () => {
-    if (!primaryContact?.href) return;
-    window.open(primaryContact.href, primaryContact.href.startsWith("mailto:") ? "_self" : "_blank");
-  };
 
   const onContactTitleClick = () => {
     setActiveMain(contactTitleRow);
-    openPrimaryContact();
+    scrollTo("#contact");
   };
 
   contactTitleRow.addEventListener("click", onContactTitleClick);
@@ -500,15 +517,85 @@ export function createCVView(person) {
     }
   });
 
-  const contactBtn = listItemTpl.content.firstElementChild.cloneNode(true);
-  contactBtn.textContent = "Contact";
-  contactBtn.addEventListener("click", () => {
-    setActiveMain(contactTitleRow);
-    openPrimaryContact();
+  // add individual contact entries to sidebar using subLink style and icons
+  (person.contact || []).forEach((c) => {
+    const btn = subLinkTpl.content.firstElementChild.cloneNode(true);
+    const key = detectContactIcon(c);
+    if (key && CONTACT_ICONS[key]) {
+      const iconSpan = document.createElement("span");
+      iconSpan.className = "sideMainLink__svg";
+      iconSpan.innerHTML = CONTACT_ICONS[key];
+      btn.prepend(iconSpan);
+    }
+    btn.textContent += (c.label || c.value || "");
+    btn.addEventListener("click", () => {
+      if (c.href) {
+        window.open(c.href, c.href.startsWith("mailto:") ? "_self" : "_blank");
+      }
+      setActiveMain(contactTitleRow);
+      scrollTo("#contact");
+    });
+    contactBody.appendChild(btn);
   });
 
-  contactBody.appendChild(contactBtn);
   sidebarEl.appendChild(contactGroup);
+
+  // ===== Contact section content
+  const contactSection = cvNode.querySelector("#contact");
+  if (contactSection) {
+    const contactListEl = contactSection.querySelector(".cv__contactList");
+    const contactItems = Array.isArray(person.contact) ? person.contact : [];
+    contactListEl.replaceChildren();
+    contactItems.forEach((c) => {
+      const li = document.createElement("li");
+      const pill = skillPillTpl.content.firstElementChild.cloneNode(true);
+      const iconWrap = pill.querySelector(".pill__icon");
+      const textWrap = pill.querySelector(".pill__text");
+
+      textWrap.textContent = c.value || c.label || "";
+      const key = detectContactIcon(c);
+      if (key && CONTACT_ICONS[key]) {
+        iconWrap.innerHTML = CONTACT_ICONS[key];
+      } else {
+        iconWrap.innerHTML = "";
+      }
+
+      if (c.href) {
+        const a = document.createElement("a");
+        a.href = c.href;
+        a.target = c.href.startsWith("mailto:") ? "_self" : "_blank";
+        a.appendChild(pill);
+        li.appendChild(a);
+      } else {
+        li.appendChild(pill);
+      }
+      contactListEl.appendChild(li);
+    });
+
+    const form = contactSection.querySelector(".cv__contactForm");
+    if (form) {
+      const messageEl = form.querySelector(".cv__formMessage");
+
+      const showMessage = (text) => {
+        if (!messageEl) return;
+        messageEl.textContent = text;
+        messageEl.classList.add("is-visible");
+        setTimeout(() => {
+          messageEl.classList.remove("is-visible");
+        }, 3000);
+      };
+
+      form.addEventListener("submit", (ev) => {
+        ev.preventDefault();
+        const name = form.elements.name?.value || "";
+        const email = form.elements.email?.value || "";
+        const msg = form.elements.message?.value || "";
+        console.log("contact form submission", { name, email, msg });
+        showMessage("Thank you for reaching out!");
+        form.reset();
+      });
+    }
+  }
 
   // Reset scroll
   main.scrollTop = 0;

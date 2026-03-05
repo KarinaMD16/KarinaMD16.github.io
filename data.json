@@ -94,12 +94,14 @@
         {
           "label": "Email",
           "value": "kary@email.com",
-          "href": "mailto:kary@email.com"
+          "href": "mailto:kary@email.com",
+          "icon": "email"
         },
         {
           "label": "GitHub",
           "value": "@kary",
-          "href": "https://github.com/kary"
+          "href": "https://github.com/kary",
+          "icon": "github"
         }
       ]
     },
@@ -187,7 +189,26 @@
         },
         { "name": "Color Nodes", "href": "#project-color" }
       ],
-      "contact": [{ "label": "LinkedIn", "value": "Elein", "href": "#" }]
+      "contact": [
+        {
+          "label": "Email",
+          "value": "rodriguezrayeli06@gmail.com",
+          "href": "mailto:rodriguezrayeli06@gmail.com",
+          "icon": "email"
+        },
+        {
+          "label": "GitHub",
+          "value": "@elein06",
+          "href": "https://github.com/elein06",
+          "icon": "github"
+        },
+        {
+          "label": "LinkedIn",
+          "value": "Elein Rodríguez Chavarría",
+          "href": "https://www.linkedin.com/in/elein-rodriguez-chavarria",
+          "icon": "linkedin"
+        }
+      ]
     },
 
     "daniel": {
@@ -264,7 +285,7 @@
         },
         { "name": "Color Nodes", "href": "#project-color" }
       ],
-      "contact": [{ "label": "LinkedIn", "value": "Elein", "href": "#" }]
+      "contact": [{ "label": "LinkedIn", "value": "Daniel Nuez", "href": "#", "icon": "linkedin" }]
     }
   }
 }
