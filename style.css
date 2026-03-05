@@ -678,6 +678,16 @@ body {
     text-decoration: underline;
 }
 
+.cv__contactHint {
+    margin-top: 32px;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #111827;
+    background-color: color-mix(in srgb, var(--accentSoft) 72%, white);
+    border-radius: 12px;
+}
+
 .cv__contactForm {
     margin-top: 16px;
     display: flex;
@@ -687,18 +697,22 @@ body {
 .cv__contactForm input,
 .cv__contactForm textarea {
     width: 100%;
+    margin-top: 6px;
     padding: 8px;
-    border: 1px solid rgba(15, 23, 42, .2);
-    border-radius: 4px;
+    border: 1px solid gray;
+    border-radius: 20px;
 }
 .cv__contactForm button {
     align-self: flex-start;
-    padding: 8px 16px;
+    width: 100%;
+    padding: 10px 16px;
+    font-size: small;
     background: var(--accent);
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 12px;
     cursor: pointer;
+    min-width: 120px; /* ensure consistent width */
 }
 .cv__contactForm button:hover {
     background: var(--accentDark);
@@ -777,8 +791,8 @@ body {
 }
 
 .pill__icon svg {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
 
     color: unset;
 }
