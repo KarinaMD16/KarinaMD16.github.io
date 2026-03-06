@@ -11,6 +11,65 @@
     scrollbar-color: var(--accent) transparent;
 }
 
+[data-theme="dark"] {
+    --bg: #0a001f;
+    --frame: #1a002b;
+    --panel: #120024;
+    --muted: #9ca3af;
+    --accent: #ff79c6;
+    --accentDark: #ff55a0;
+    --accentSoft: rgba(255,121,198,.1);
+    --bgSoft: rgba(255,121,198,.05);
+    --shadow: 0 30px 80px rgba(0, 0, 0, .5);
+    --ring: 0 0 0 3px rgba(255, 121, 198, .35);
+    scrollbar-color: var(--accent) transparent;
+}
+
+[data-theme="dark"] body {
+    color: #e5e7eb;
+    background: radial-gradient(ellipse at center, #1a002b 0%, #000 100%);
+}
+
+/* catch-all text color override for elements with hardcoded dark color */
+[data-theme="dark"] * {
+    color: #e5e7eb !important;
+}
+
+/* exceptions: keep accent colors intact */
+[data-theme="dark"] .accentDark,
+[data-theme="dark"] .pill,
+[data-theme="dark"] .langBadge,
+[data-theme="dark"] .sideGroup__title,
+[data-theme="dark"] .sideMainLink__text {
+    color: inherit !important;
+}
+
+/* dark theme tweaks for hover states and light backgrounds */
+[data-theme="dark"] .sideMainLink:hover,
+[data-theme="dark"] .sideSubLink:hover,
+[data-theme="dark"] .sideListItem:hover,
+[data-theme="dark"] .sideGroup__titleRow--action:hover {
+    /* make hover darker so light text stays readable */
+    background: color-mix(in srgb, var(--accentSoft) 15%, black);
+}
+
+[data-theme="dark"] .cvBurger {
+    background: color-mix(in srgb, var(--accent) 20%, black);
+    color: #e5e7eb !important;
+}
+[data-theme="dark"] .cvBurger:hover {
+    background: color-mix(in srgb, var(--accent) 30%, black);
+}
+
+[data-theme="dark"] .cv__contactHint {
+    color: #e5e7eb;
+    background-color: color-mix(in srgb, var(--accentSoft) 30%, black);
+}
+
+#themeToggle {
+    font-size: 16px;
+    margin-left: 6px;
+}
 * {
     box-sizing: border-box;
 }

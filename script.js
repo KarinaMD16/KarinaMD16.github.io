@@ -26,6 +26,44 @@ function clearMounts() {
     cvMount.replaceChildren();
 }
 
+// theme helpers
+const THEME_ICONS = {
+    light: `
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M7 3V0H9V3H7Z"/> <path d="M9 13V16H7V13H9Z"/> <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z"/> <path d="M0 9H3V7H0V9Z"/> <path d="M16 7H13V9H16V7Z"/> <path d="M3.75735 5.17157L1.63603 3.05025L3.05025 1.63603L5.17157 3.75735L3.75735 5.17157Z"/> <path d="M12.2426 10.8284L14.364 12.9497L12.9497 14.364L10.8284 12.2426L12.2426 10.8284Z"/> <path d="M3.05025 14.364L5.17157 12.2426L3.75735 10.8284L1.63603 12.9498L3.05025 14.364Z"/> <path d="M12.9497 1.63604L10.8284 3.75736L12.2426 5.17158L14.364 3.05026L12.9497 1.63604Z"/>
+        </svg>`
+    ,
+    dark: `
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+    `
+};
+
+function applyTheme(theme) {
+    if (theme === "dark") document.documentElement.setAttribute("data-theme", "dark");
+    else document.documentElement.removeAttribute("data-theme");
+    const btn = document.getElementById("themeToggle");
+    if (btn) btn.innerHTML = theme === "dark" ? THEME_ICONS.light : THEME_ICONS.dark;
+}
+
+function initTheme() {
+    let stored = localStorage.getItem("theme");
+    if (!stored) {
+        stored = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    applyTheme(stored);
+    const toggle = document.getElementById("themeToggle");
+    if (toggle) {
+        toggle.addEventListener("click", () => {
+            const current = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+            const next = current === "dark" ? "light" : "dark";
+            applyTheme(next);
+            localStorage.setItem("theme", next);
+        });
+    }
+}
+
 function setBackEnabled(enabled) {
     backBtn.disabled = !enabled;
 }
@@ -94,6 +132,7 @@ addressBar.addEventListener("keydown", (e) => {
     try {
         DATA = await loadData();
         showExplorer();
+        initTheme();
     } catch (err) {
         console.error(err);
         viewHint.textContent = "No se pudo cargar data.json. Usa Live Server (no file://).";
