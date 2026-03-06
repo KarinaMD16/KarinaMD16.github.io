@@ -336,6 +336,189 @@ export function createCVView(person) {
     langWrap.textContent = "No languages added yet.";
   }
 
+  // ===== Projects section
+const projectsWrap = cvNode.querySelector(".cv__projects");
+const projectsData = Array.isArray(person.projects) ? person.projects : [];
+
+let goToProject = () => {};
+
+if (projectsWrap) {
+  projectsWrap.replaceChildren();
+
+  if (!projectsData.length) {
+    const empty = document.createElement("p");
+    empty.className = "projectsEmpty";
+    empty.textContent = "No projects added yet.";
+    projectsWrap.appendChild(empty);
+  } else {
+    const carousel = document.createElement("div");
+    carousel.className = "projectsCarousel";
+
+    const prevBtn = document.createElement("button");
+    prevBtn.type = "button";
+    prevBtn.className = "projectsCarousel__nav projectsCarousel__nav--prev";
+    prevBtn.setAttribute("aria-label", "Previous project");
+    prevBtn.innerHTML = "‹";
+
+    const nextBtn = document.createElement("button");
+    nextBtn.type = "button";
+    nextBtn.className = "projectsCarousel__nav projectsCarousel__nav--next";
+    nextBtn.setAttribute("aria-label", "Next project");
+    nextBtn.innerHTML = "›";
+
+    const viewport = document.createElement("div");
+    viewport.className = "projectsCarousel__viewport";
+
+    const track = document.createElement("div");
+    track.className = "projectsCarousel__track";
+
+    const dots = document.createElement("div");
+    dots.className = "projectsCarousel__dots";
+
+    viewport.appendChild(track);
+    carousel.appendChild(prevBtn);
+    carousel.appendChild(viewport);
+    carousel.appendChild(nextBtn);
+
+    projectsWrap.appendChild(carousel);
+    projectsWrap.appendChild(dots);
+
+    const slides = [];
+    const indicators = [];
+    let currentProjectIndex = 0;
+
+    const getProjectId = (project, index) => {
+      if (project?.id) return project.id;
+      if (project?.href?.startsWith("#")) return project.href.slice(1);
+      return `project-${index + 1}`;
+    };
+
+    const createProjectLink = (label, href, extraClass = "") => {
+      if (!href) return null;
+      const a = document.createElement("a");
+      a.href = href;
+      a.target = "_blank";
+      a.rel = "noreferrer";
+      a.className = `projectCard__action ${extraClass}`.trim();
+      a.textContent = label;
+      return a;
+    };
+
+    projectsData.forEach((project, index) => {
+      const slide = document.createElement("article");
+      slide.className = "projectCard";
+      slide.id = getProjectId(project, index);
+
+      const media = document.createElement("div");
+      media.className = "projectCard__media";
+
+      if (project.image) {
+        media.style.backgroundImage = `url("${project.image}")`;
+      } else {
+        media.classList.add("projectCard__media--placeholder");
+        media.innerHTML = `<span>${project.name || "Project"}</span>`;
+      }
+
+      const body = document.createElement("div");
+      body.className = "projectCard__body";
+
+      const top = document.createElement("div");
+      top.className = "projectCard__top";
+
+      const title = document.createElement("h3");
+      title.className = "projectCard__title";
+      title.textContent = project.name || "Project";
+
+      const meta = document.createElement("p");
+      meta.className = "projectCard__meta";
+      meta.textContent = [project.role, project.category].filter(Boolean).join(" • ");
+
+      const description = document.createElement("p");
+      description.className = "projectCard__description";
+      description.textContent = project.description || "";
+
+      const techRow = document.createElement("div");
+      techRow.className = "projectCard__tech";
+
+      (project.tech || []).forEach((item) => {
+        const pill = document.createElement("span");
+        pill.className = "projectCard__pill";
+        pill.textContent = item;
+        techRow.appendChild(pill);
+      });
+
+      const actions = document.createElement("div");
+      actions.className = "projectCard__actions";
+
+      const liveLink = createProjectLink("Live", project.liveUrl, "projectCard__action--primary");
+      const repoLink = createProjectLink("Repository", project.repoUrl);
+
+      if (liveLink) actions.appendChild(liveLink);
+      if (repoLink) actions.appendChild(repoLink);
+
+      top.appendChild(title);
+      if (meta.textContent) top.appendChild(meta);
+
+      body.appendChild(top);
+      if (description.textContent) body.appendChild(description);
+      if (techRow.childElementCount) body.appendChild(techRow);
+      if (actions.childElementCount) body.appendChild(actions);
+
+      slide.appendChild(media);
+      slide.appendChild(body);
+      track.appendChild(slide);
+      slides.push(slide);
+
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "projectsCarousel__dot";
+      dot.setAttribute("aria-label", `Go to project ${index + 1}`);
+      dot.addEventListener("click", () => updateProjectCarousel(index));
+      dots.appendChild(dot);
+      indicators.push(dot);
+    });
+
+    const updateProjectCarousel = (index) => {
+      const total = slides.length;
+      if (!total) return;
+
+      currentProjectIndex = (index + total) % total;
+      track.style.transform = `translateX(-${currentProjectIndex * 100}%)`;
+
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("is-active", i === currentProjectIndex);
+      });
+
+      indicators.forEach((dot, i) => {
+        dot.classList.toggle("is-active", i === currentProjectIndex);
+      });
+    };
+
+    prevBtn.addEventListener("click", () => updateProjectCarousel(currentProjectIndex - 1));
+    nextBtn.addEventListener("click", () => updateProjectCarousel(currentProjectIndex + 1));
+
+    goToProject = (target) => {
+      const index =
+        typeof target === "number"
+          ? target
+          : projectsData.findIndex((project, i) => {
+              const projectId = getProjectId(project, i);
+              return projectId === target;
+            });
+
+      const resolvedIndex = index >= 0 ? index : 0;
+      updateProjectCarousel(resolvedIndex);
+
+      const projectsSection = cvNode.querySelector("#projects");
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    };
+
+    updateProjectCarousel(0);
+  }
+}
+
   // ===== Smooth scroll inside main
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let scrollAnimationFrame = null;
@@ -443,25 +626,29 @@ export function createCVView(person) {
   const projectsGroup = groupTpl.content.firstElementChild.cloneNode(true);
   projectsGroup.classList.add("sideGroup--projects");
   projectsGroup.querySelector(".sideGroup__title").textContent = "Projects";
+
   const projectsIcon = projectsGroup.querySelector(".sideGroup__icon");
-  if (projectsIcon) projectsIcon.innerHTML = ICONS.projects;
+  if (projectsIcon && typeof ICONS !== "undefined" && ICONS.projects) {
+    projectsIcon.innerHTML = ICONS.projects;
+  }
 
   const projectsTitleRow = projectsGroup.querySelector(".sideGroup__titleRow");
   projectsTitleRow.classList.add("sideGroup__titleRow--action");
   projectsTitleRow.tabIndex = 0;
 
   const projBody = projectsGroup.querySelector(".sideGroup__body");
-  const projectsList = person.projects || [];
-
-  const openProject = (p) => {
-    if (!p) return;
-    if (p.href && p.href.startsWith("#")) scrollTo(p.href);
-    else if (p.href) window.open(p.href, "_blank");
-  };
+  const projectButtons = [];
 
   const onProjectsTitleClick = () => {
-    setActiveMain(projectsTitleRow);
-    openProject(projectsList[0]);
+    if (typeof setActiveMain === "function") {
+      setActiveMain(projectsTitleRow);
+    }
+
+    if (projectButtons[0] && typeof setActive === "function") {
+      setActive(projectButtons[0]);
+    }
+
+    goToProject(0);
   };
 
   projectsTitleRow.addEventListener("click", onProjectsTitleClick);
@@ -472,10 +659,23 @@ export function createCVView(person) {
     }
   });
 
-  projectsList.forEach((p) => {
-    const btn = listItemTpl.content.firstElementChild.cloneNode(true);
-    btn.textContent = p.name;
-    btn.addEventListener("click", () => openProject(p));
+  projectsData.forEach((project, index) => {
+    const btn = subLinkTpl.content.firstElementChild.cloneNode(true);
+    btn.textContent = project.name;
+
+    btn.addEventListener("click", () => {
+      if (typeof setActiveMain === "function") {
+        setActiveMain(projectsTitleRow);
+      }
+
+      if (typeof setActive === "function") {
+        setActive(btn);
+      }
+
+      goToProject(index);
+    });
+
+    projectButtons.push(btn);
     projBody.appendChild(btn);
   });
 
