@@ -83,12 +83,42 @@
         { "name": "English", "level": "Advanced" }
       ],
       "projects": [
-        { "name": "Hogar San Blas", "href": "#project-hogar" },
         {
-          "name": "SIDNAM Administrative Web Panel",
-          "href": "#project-sidnam"
+          "id": "project-hogar",
+          "name": "Hogar San Blas",
+          "href": "#project-hogar",
+          "role": "Frontend Dev",
+          "category": "Landing Page",
+          "description": "Landing page for a nursing home focused on clarity, trust, accessibility and a warm visual experience for visitors and families.",
+          "tech": ["React", "Tailwind", "TypeScript"],
+          "image": "./assets/projects/san-blas.png",
+          "repoUrl": "https://github.com/KarinaMD16/hogar-san-blas-informativa.git",
+          "liveUrl": ""
         },
-        { "name": "Color Nodes", "href": "#project-color" }
+        {
+          "id": "project-sidnam",
+          "name": "SIDNAM Administrative Web Panel",
+          "href": "#project-sidnam",
+          "role": "Frontend Dev",
+          "category": "Administrative Panel",
+          "description": "Administrative web panel created to improve internal nursing home operations and support content and process management.",
+          "tech": ["React", "TypeScript", "CSS"],
+          "image": "./assets/projects/sidnam.png",
+          "repoUrl": "https://github.com/KarinaMD16/sidnam-administrativa.git",
+          "liveUrl": ""
+        },
+        {
+          "id": "project-color",
+          "name": "Color Nodes",
+          "href": "#project-color",
+          "role": "Frontend Dev",
+          "category": "Database Memory Game",
+          "description": "Interactive memory game inspired by database concepts, designed to make learning more dynamic and visual.",
+          "tech": ["React", "Tailwind", ".Net"],
+          "image": "./assets/projects/color-nodes.png",
+          "repoUrl": "https://github.com/KarinaMD16/color-nodes.git",
+          "liveUrl": ""
+        }
       ],
       "contact": [
         {
@@ -182,12 +212,42 @@
         { "name": "English", "level": "Advanced" }
       ],
       "projects": [
-        { "name": "Hogar San Blas", "href": "#project-hogar" },
         {
-          "name": "SIDNAM Administrative Web Panel",
-          "href": "#project-sidnam"
+          "id": "project-hogar",
+          "name": "Hogar San Blas",
+          "href": "#project-hogar",
+          "role": "Frontend Dev",
+          "category": "Landing Page",
+          "description": "Landing page for a nursing home focused on clarity, trust, accessibility and a warm visual experience for visitors and families.",
+          "tech": ["React", "Tailwind", "TypeScript"],
+          "image": "./assets/projects/san-blas.png",
+          "repoUrl": "https://github.com/KarinaMD16/hogar-san-blas-informativa.git",
+          "liveUrl": ""
         },
-        { "name": "Color Nodes", "href": "#project-color" }
+        {
+          "id": "project-sidnam",
+          "name": "SIDNAM Administrative Web Panel",
+          "href": "#project-sidnam",
+          "role": "Frontend Dev",
+          "category": "Administrative Panel",
+          "description": "Administrative web panel created to improve internal nursing home operations and support content and process management.",
+          "tech": ["React", "Tailwind", "TypeScript"],
+          "image": "./assets/projects/sidnam.png",
+          "repoUrl": "https://github.com/KarinaMD16/sidnam-administrativa.git",
+          "liveUrl": ""
+        },
+        {
+          "id": "project-color",
+          "name": "Color Nodes",
+          "href": "#project-color",
+          "role": "Frontend Dev",
+          "category": "Database Memory Game",
+          "description": "Interactive memory game inspired by database concepts, designed to make learning more dynamic and visual.",
+          "tech": ["React", "Tailwind", "TypeScript"],
+          "image": "./assets/projects/color-nodes.png",
+          "repoUrl": "https://github.com/KarinaMD16/color-nodes.git",
+          "liveUrl": ""
+        }
       ],
       "contact": [
         {
@@ -278,12 +338,42 @@
         { "name": "English", "level": "Advanced" }
       ],
       "projects": [
-        { "name": "Hogar San Blas", "href": "#project-hogar" },
         {
-          "name": "SIDNAM Administrative Web Panel",
-          "href": "#project-sidnam"
+          "id": "project-hogar",
+          "name": "Hogar San Blas",
+          "href": "#project-hogar",
+          "role": "Frontend Dev",
+          "category": "Landing Page",
+          "description": "Landing page for a nursing home focused on clarity, trust, accessibility and a warm visual experience for visitors and families.",
+          "tech": ["Nest", "MySQL", "TypeScript"],
+          "image": "./assets/projects/san-blas.png",
+          "repoUrl": "https://github.com/KarinaMD16/hogar-san-blas-informativa.git",
+          "liveUrl": ""
         },
-        { "name": "Color Nodes", "href": "#project-color" }
+        {
+          "id": "project-sidnam",
+          "name": "SIDNAM Administrative Web Panel",
+          "href": "#project-sidnam",
+          "role": "Frontend Dev",
+          "category": "Administrative Panel",
+          "description": "Administrative web panel created to improve internal nursing home operations and support content and process management.",
+          "tech": ["Nest", "MySQL", "TypeScript"],
+          "image": "./assets/projects/sidnam.png",
+          "repoUrl": "https://github.com/KarinaMD16/sidnam-administrativa.git",
+          "liveUrl": ""
+        },
+        {
+          "id": "project-color",
+          "name": "Color Nodes",
+          "href": "#project-color",
+          "role": "Frontend Dev",
+          "category": "Database Memory Game",
+          "description": "Interactive memory game inspired by database concepts, designed to make learning more dynamic and visual.",
+          "tech": [".Net", "React", "Tailwind"],
+          "image": "./assets/projects/color-nodes.png",
+          "repoUrl": "https://github.com/KarinaMD16/color-nodes.git",
+          "liveUrl": ""
+        }
       ],
       "contact": [{ "label": "LinkedIn", "value": "Daniel Nuez", "href": "#", "icon": "linkedin" }]
     }

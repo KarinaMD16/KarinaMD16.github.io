@@ -1120,3 +1120,229 @@ body {
         min-height: 0;
     }
 }
+
+/* ===== Projects section ===== */
+.cv__projects {
+    display: grid;
+    gap: 16px;
+}
+
+.projectsEmpty {
+    margin: 0;
+    color: #4b5563;
+}
+
+.projectsCarousel {
+    display: grid;
+    grid-template-columns: 54px minmax(0, 1fr) 54px;
+    gap: 16px;
+    align-items: center;
+    width: 100%;
+}
+
+.projectsCarousel__viewport {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 24px;
+}
+
+.projectsCarousel__track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.6s cubic-bezier(.22, 1, .36, 1);
+    will-change: transform;
+}
+
+.projectCard {
+    flex: 0 0 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    padding: 14px;
+    border-radius: 26px;
+    border: 1px solid rgba(15, 23, 42, .08);
+    background: linear-gradient(180deg, #fff7fa 0%, #ffffff 100%);
+    box-shadow: 0 16px 38px rgba(15, 23, 42, .08);
+
+    opacity: .88;
+    transform: scale(.985);
+    transition: opacity .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+
+.projectCard.is-active {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 20px 46px rgba(15, 23, 42, .12);
+}
+
+.projectCard__media {
+    width: 100%;
+    min-height: 200px;
+    border-radius: 20px 20px 0 0;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: var(--accentSoft);
+    border: 1px solid rgba(15, 23, 42, .06);
+    border-bottom: none;
+}
+
+.projectCard__media--placeholder {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    text-align: center;
+    color: var(--accentDark);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.projectCard__body {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "top top"
+        "description description"
+        "tech actions";
+    align-content: start;
+    align-items: center;
+    gap: 12px 14px;
+    padding: 18px 18px 16px;
+    border: 1px solid rgba(15, 23, 42, .06);
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    background: #fff;
+}
+
+.projectCard__top {
+    grid-area: top;
+    display: grid;
+    gap: 6px;
+}
+
+.projectCard__title {
+    margin: 0;
+    font-size: 30px;
+    line-height: 1.08;
+    color: #111827;
+}
+
+.projectCard__meta {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--accentDark);
+}
+
+.projectCard__description {
+    grid-area: description;
+    margin: 0;
+    line-height: 1.55;
+    color: #374151;
+}
+
+.projectCard__tech {
+    grid-area: tech;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-self: center;
+}
+
+.projectCard__pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #fff2f6;
+    border: 1px solid rgba(227, 120, 168, .18);
+    color: var(--accentDark);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.projectCard__actions {
+    grid-area: actions;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 0;
+}
+
+
+.projectCard__action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    padding: 10px 16px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid rgba(227, 120, 168, .22);
+    color: var(--accentDark);
+    background: #fff;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, .05);
+    transition: transform .18s ease, background .18s ease, box-shadow .18s ease, color .18s ease;
+}
+
+.projectCard__action:hover {
+    transform: translateY(-1px);
+    background: #fff4f7;
+    box-shadow: 0 12px 22px rgba(15, 23, 42, .08);
+}
+
+.projectCard__action--primary {
+    background: var(--accent);
+    color: #fff;
+    border-color: transparent;
+}
+
+.projectCard__action--primary:hover {
+    background: var(--accentDark);
+    color: #fff;
+}
+
+.projectsCarousel__nav {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 1;
+    color: var(--accentDark);
+    background: #fff1f5;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, .08);
+    transition: transform .18s ease, background .18s ease;
+}
+
+.projectsCarousel__nav:hover {
+    transform: translateY(-1px);
+    background: #ffe4ed;
+}
+
+.projectsCarousel__dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.projectsCarousel__dot {
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    background: rgba(15, 23, 42, .18);
+    transition: transform .18s ease, background .18s ease;
+}
+
+.projectsCarousel__dot.is-active {
+    transform: scale(1.2);
+    background: var(--accent);
+}
