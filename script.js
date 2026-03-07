@@ -15,6 +15,8 @@ const ORIGIN_PREFIX = ORIGIN_LABEL.toLowerCase() + "/";
 
 let DATA = null;
 
+const EMAILJS_CONFIG = window.EMAILJS_CONFIG || null;
+
 async function loadData() {
     const res = await fetch("data.json");
     if (!res.ok) throw new Error("No se pudo cargar data.json");
@@ -24,6 +26,18 @@ async function loadData() {
 function clearMounts() {
     explorerMount.replaceChildren();
     cvMount.replaceChildren();
+}
+
+function initEmailJs() {
+    const emailjs = window.emailjs;
+    if (!emailjs || !EMAILJS_CONFIG?.PUBLIC_KEY) return;
+    try {
+        emailjs.init({
+            publicKey: EMAILJS_CONFIG.PUBLIC_KEY,
+        });
+    } catch (err) {
+        console.error("EmailJS init failed", err);
+    }
 }
 
 // theme helpers
@@ -103,7 +117,7 @@ function showPerson(personId) {
 
     clearMounts();
 
-    const cvView = createCVView(person);
+    const cvView = createCVView(person, EMAILJS_CONFIG);
     cvMount.appendChild(cvView);
 
     addressBar.value = toPersonAddress(personId, ORIGIN_LABEL);
@@ -137,6 +151,7 @@ addressBar.addEventListener("keydown", (e) => {
 (async function init() {
     try {
         DATA = await loadData();
+        initEmailJs();
         showExplorer();
         initTheme();
     } catch (err) {

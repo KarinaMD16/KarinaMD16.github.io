@@ -9,8 +9,34 @@ Desde una vista tipo "folder explorer" puedes abrir el perfil de cada persona y 
 - CSS3 (custom properties, media queries, animaciones)
 - JavaScript ES6+ (modulos)
 - JSON como fuente de datos
+- EmailJS (envio de formularios sin backend)
 
 No usa dependencias externas ni build tools.
+
+## Configurar formulario de contacto (EmailJS)
+
+El formulario de Contact envia el correo automaticamente usando EmailJS (sin abrir la app de correo del sistema).
+
+1. Crea una cuenta en EmailJS y configura:
+  - `Service`
+  - `Template`
+  - `Public Key`
+2. En `index.html`, reemplaza estos valores en `window.EMAILJS_CONFIG`:
+  - `YOUR_EMAILJS_PUBLIC_KEY`
+  - `YOUR_EMAILJS_SERVICE_ID`
+  - `YOUR_EMAILJS_TEMPLATE_ID`
+3. En tu template de EmailJS usa estas variables:
+  - `{{to_email}}`
+  - `{{from_name}}`
+  - `{{from_email}}`
+  - `{{subject}}`
+  - `{{message}}`
+  - `{{profile_name}}`
+
+Cuando el usuario envia el formulario:
+- Destino: correo del perfil activo.
+- Asunto: `hey, im <name>`.
+- Reply-To recomendado: `{{from_email}}`.
 
 ## Estructura del proyecto
 
