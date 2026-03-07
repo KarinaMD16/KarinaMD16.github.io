@@ -100,7 +100,7 @@ body {
 /* ===== MONITOR ===== */
 .monitor {
     width: min(1100px, 95vw);
-    aspect-ratio: 16 / 9;
+    min-height: 85vh;
     background: linear-gradient(180deg, var(--frame-top), var(--frame-bottom));
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
@@ -205,6 +205,7 @@ body {
     flex: 1;
     padding: 18px;
     overflow: auto;
+    min-height: 0;
 }
 
 body.is-cv-mode .content {
@@ -335,13 +336,15 @@ body.is-cv-mode .header {
 
 .cv__main {
     position: relative;
-    overflow: auto;
-    max-height: 62vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: none;
+    min-height: 0;
     padding-right: 10px;
+    padding-left: 2px;
     scroll-behavior: smooth;
     scroll-padding-top: 8px;
     overscroll-behavior: contain;
-    padding-left: 2px;
     scrollbar-width: thin;
     scrollbar-color: var(--accent) transparent;
 }
