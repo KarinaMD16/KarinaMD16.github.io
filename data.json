@@ -286,23 +286,23 @@
         "accentSoft": "#d8f3dc",
         "bgSoft": "#f5f3ff"
       },
-      "summary": "Me gusta asegurar calidad y construir soluciones estables.",
+      "summary": "I focus on database modeling and implementation, requirements analysis, and backend development to build stable, scalable, and business-oriented solutions. I am interested in designing structures and processes that ensure data is managed correctly, consistently, and securely.",
       "skills": [
         {
           "title": "Technologies",
           "items": [
-            { "name": "JavaScript (ES6+)", "icon": "js" },
-            { "name": "TypeScript", "icon": "ts" },
-            { "name": "HTML5", "icon": "html" },
-            { "name": "CSS3", "icon": "css" }
+            { "name": "SQL", "icon": "db" },
+            { "name": "MySQL", "icon": "db" },
+            { "name": "SQL Server", "icon": "db" },
+            { "name": "TypeScript", "icon": "ts" }
           ]
         },
         {
           "title": "Concepts",
           "items": [
-            { "name": "REST API Integration (Basic)", "icon": "api" },
-            { "name": "Database Design", "icon": "db" },
-            { "name": "Systems Analysis", "icon": "analysis" }
+            { "name": "Database Modeling", "icon": "db" },
+            { "name": "Requirements Analysis", "icon": "analysis" },
+            { "name": "Backend Development", "icon": "api" }
           ]
         },
         {
@@ -318,16 +318,16 @@
         {
           "organization": "Hogar San Blas – Nursing Home",
           "location": "",
-          "role": "Systems Analysis Project",
+          "role": "Database Analysis and Backend Design Project",
           "roleAccent": true,
           "period": "July 2025 – Present",
-          "summary": "Collaborated in the analysis and proposal of an information management solution for a real nursing home environment.",
+          "summary": "Participated in the analysis of requirements and the design of a data-focused solution to improve information management in a real nursing home environment.",
           "highlights": [
-            "Evaluated manual operational workflows and identified improvement opportunities in resident and staff data management.",
-            "Structured relational data models to organize operational information in a scalable and consistent way.",
-            "Defined functional requirements and translated business needs into technical documentation.",
-            "Designed simplified user flows tailored to non-technical staff.",
-            "Applied usability principles to improve clarity and reduce operational friction."
+            "Analyzed operational needs and identified opportunities to improve how resident, staff, and administrative data are managed.",
+            "Proposed relational database structures to support consistent, organized, and scalable information management.",
+            "Translated business and operational requirements into technical specifications for backend and data management processes.",
+            "Defined entities, relationships, and key data flows to ensure integrity and clarity in the system design.",
+            "Contributed to solution proposals aimed at improving data accuracy, accessibility, and overall process efficiency."
           ]
         }
       ],

@@ -1304,13 +1304,10 @@ body.is-cv-mode .header {
 /* ===== Projects section ===== */
 #projects,
 #projects .cvSection__content,
-.cv__projects,
-.projectsCarousel,
-.projectsCarousel__viewport {
+.cv__projects {
     width: 100%;
     max-width: 100%;
     min-width: 0;
-    overflow-x: hidden;
 }
 
 .cv__projects {
@@ -1324,14 +1321,23 @@ body.is-cv-mode .header {
 }
 
 .projectsCarousel {
+    position: relative;
     display: grid;
     grid-template-columns: 54px minmax(0, 1fr) 54px;
     gap: 16px;
     align-items: center;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .projectsCarousel__viewport {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     border-radius: 24px;
+    overflow: hidden;
 }
 
 .projectsCarousel__track {
@@ -1347,7 +1353,6 @@ body.is-cv-mode .header {
     width: 100%;
     min-width: 100%;
     max-width: 100%;
-    min-height: 0;
     box-sizing: border-box;
 
     display: grid;
@@ -1365,6 +1370,7 @@ body.is-cv-mode .header {
     opacity: .88;
     transform: scale(.985);
     transition: opacity .25s ease, transform .25s ease, box-shadow .25s ease;
+
     overflow: hidden;
 }
 
@@ -1415,6 +1421,7 @@ body.is-cv-mode .header {
     border-radius: 0 0 20px 20px;
     background: var(--surface);
     min-width: 0;
+    overflow: hidden;
 }
 
 .projectCard__top {
@@ -1549,6 +1556,7 @@ body.is-cv-mode .header {
     box-shadow: 0 10px 24px rgba(15, 23, 42, .08);
     transition: transform .18s ease, background .18s ease;
     flex: 0 0 48px;
+    z-index: 2;
 }
 
 .projectsCarousel__nav:hover {
@@ -1560,6 +1568,7 @@ body.is-cv-mode .header {
     display: flex;
     justify-content: center;
     gap: 8px;
+    margin-top: 10px;
 }
 
 .projectsCarousel__dot {
@@ -1589,30 +1598,14 @@ body.is-cv-mode .header {
     }
 
     .projectsCarousel {
-        position: relative;
         display: block;
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
     }
 
     .projectsCarousel__viewport {
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
         border-radius: 20px;
     }
 
-    .projectsCarousel__track {
-        display: flex;
-        width: 100%;
-    }
-
     .projectCard {
-        flex: 0 0 100%;
-        min-width: 100%;
-        width: 100%;
-        max-width: 100%;
         padding: 10px;
         border-radius: 20px;
     }
@@ -1622,13 +1615,9 @@ body.is-cv-mode .header {
         aspect-ratio: 16 / 9;
         min-height: unset;
         border-radius: 16px 16px 0 0;
-        background-size: cover;
-        background-position: center top;
-        background-repeat: no-repeat;
     }
 
     .projectCard__body {
-        display: grid;
         grid-template-columns: 1fr;
         grid-template-areas:
             "top"
@@ -1660,8 +1649,6 @@ body.is-cv-mode .header {
     }
 
     .projectCard__tech {
-        display: flex;
-        flex-wrap: wrap;
         gap: 8px;
     }
 
@@ -1684,7 +1671,6 @@ body.is-cv-mode .header {
         position: absolute;
         top: 38%;
         transform: translateY(-50%);
-        z-index: 3;
         width: 40px;
         height: 40px;
         font-size: 22px;
@@ -1699,10 +1685,6 @@ body.is-cv-mode .header {
 
     .projectsCarousel__nav--next {
         right: 8px;
-    }
-
-    .projectsCarousel__dots {
-        margin-top: 10px;
     }
 }
 
