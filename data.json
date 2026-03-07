@@ -123,15 +123,21 @@
       "contact": [
         {
           "label": "Email",
-          "value": "kary@email.com",
-          "href": "mailto:kary@email.com",
+          "value": "karinaamorenodiaz@gmail.com",
+          "href": "mailto:karinaamorenodiaz@gmail.com",
           "icon": "email"
         },
         {
           "label": "GitHub",
-          "value": "@kary",
-          "href": "https://github.com/kary",
+          "value": "@KarinaMD16",
+          "href": "https://github.com/KarinaMD16",
           "icon": "github"
+        },
+        {
+          "label": "LinkedIn",
+          "value": "Karina Moreno Díaz",
+          "href": "https://www.linkedin.com/in/karina-moreno-diaz-8208683a8",
+          "icon": "linkedin"
         }
       ]
     },
@@ -375,7 +381,14 @@
           "liveUrl": ""
         }
       ],
-      "contact": [{ "label": "LinkedIn", "value": "Daniel Nuez", "href": "#", "icon": "linkedin" }]
+      "contact": [
+        {
+          "label": "LinkedIn",
+          "value": "Daniel Nuez",
+          "href": "#",
+          "icon": "linkedin"
+        }
+      ]
     }
   }
 }

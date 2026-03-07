@@ -1340,8 +1340,8 @@ body {
     align-items: center;
     padding: 8px 14px;
     border-radius: 999px;
-    background: #fff2f6;
-    border: 1px solid rgba(227, 120, 168, .18);
+    background: var(--accentSoft);
+    border: 1px solid var(--bgSoft);
     color: var(--accentDark);
     font-size: 14px;
     font-weight: 700;
@@ -1367,7 +1367,7 @@ body {
     border-radius: 14px;
     text-decoration: none;
     font-weight: 700;
-    border: 1px solid rgba(227, 120, 168, .22);
+    border: 1px solid var(--accent);
     color: var(--accentDark);
     background: #fff;
     box-shadow: 0 8px 18px rgba(15, 23, 42, .05);
@@ -1377,7 +1377,7 @@ body {
 
 .projectCard__action:hover {
     transform: translateY(-1px);
-    background: #fff4f7;
+    background:var(--accentSoft);
     box-shadow: 0 12px 22px rgba(15, 23, 42, .08);
 }
 
@@ -1401,7 +1401,7 @@ body {
     font-size: 28px;
     line-height: 1;
     color: var(--accentDark);
-    background: #fff1f5;
+    background:var(--bgSoft);
     box-shadow: 0 10px 24px rgba(15, 23, 42, .08);
     transition: transform .18s ease, background .18s ease;
     flex: 0 0 48px;
@@ -1409,7 +1409,7 @@ body {
 
 .projectsCarousel__nav:hover {
     transform: translateY(-1px);
-    background: #ffe4ed;
+    background: var(--accentSoft);
 }
 
 .projectsCarousel__dots {
@@ -1426,6 +1426,7 @@ body {
     cursor: pointer;
     background: rgba(15, 23, 42, .18);
     transition: transform .18s ease, background .18s ease;
+    margin-bottom: 2px;
 }
 
 .projectsCarousel__dot.is-active {
