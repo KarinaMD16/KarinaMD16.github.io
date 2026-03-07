@@ -68,7 +68,12 @@ function setBackEnabled(enabled) {
     backBtn.disabled = !enabled;
 }
 
+function setCvMode(enabled) {
+    document.body.classList.toggle("is-cv-mode", enabled);
+}
+
 function showExplorer() {
+    setCvMode(false);
     viewTitle.textContent = "Explorador";
     viewHint.textContent = "Tip: click abre el CV.";
     setBackEnabled(false);
@@ -91,6 +96,7 @@ function showPerson(personId) {
         return;
     }
 
+    setCvMode(true);
     viewTitle.textContent = "";
     viewHint.textContent = "";
     setBackEnabled(true);
