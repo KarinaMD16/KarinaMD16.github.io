@@ -123,15 +123,21 @@
       "contact": [
         {
           "label": "Email",
-          "value": "kary@email.com",
-          "href": "mailto:kary@email.com",
+          "value": "karinaamorenodiaz@gmail.com",
+          "href": "mailto:karinaamorenodiaz@gmail.com",
           "icon": "email"
         },
         {
           "label": "GitHub",
-          "value": "@kary",
-          "href": "https://github.com/kary",
+          "value": "@KarinaMD16",
+          "href": "https://github.com/KarinaMD16",
           "icon": "github"
+        },
+        {
+          "label": "LinkedIn",
+          "value": "Karina Moreno Díaz",
+          "href": "https://www.linkedin.com/in/karina-moreno-diaz-8208683a8",
+          "icon": "linkedin"
         }
       ]
     },
@@ -145,7 +151,7 @@
         "accentSoft": "#e3f2fd",
         "bgSoft": "#f5f3ff"
       },
-      "summary": "Me gusta asegurar calidad y construir soluciones estables.",
+      "summary": "Software Engineer in training focused on building clean and reliable web interfaces using modern technologies. Interested in usability, accessibility and structured problem solving, with hands-on experience translating real user needs into practical digital solutions.",
       "skills": [
         {
           "title": "Technologies",
@@ -166,11 +172,11 @@
         {
           "title": "Concepts",
           "items": [
-            { "name": "REST API Integration (Basic)", "icon": "api" },
-            { "name": "Database Design", "icon": "db" },
+            { "name": "REST API Integration", "icon": "api" },
+            { "name": "Database Modeling", "icon": "db" },
             { "name": "Systems Analysis", "icon": "analysis" },
-            { "name": "Accessibility", "icon": "accessibility" },
-            { "name": "UX/UI", "icon": "uxui" }
+            { "name": "Accessibility (a11y)", "icon": "accessibility" },
+            { "name": "UX/UI Principles", "icon": "uxui" }
           ]
         },
         {
@@ -189,7 +195,7 @@
           "role": "Systems Analysis Project",
           "roleAccent": true,
           "period": "July 2025 – Present",
-          "summary": "Collaborated in the analysis and proposal of an information management solution for a real nursing home environment.",
+          "summary": "Collaborated in the analysis and design of an information management solution for a real nursing home environment, focusing on improving data organization and operational workflows.",
           "highlights": [
             "Evaluated manual operational workflows and identified improvement opportunities in resident and staff data management.",
             "Structured relational data models to organize operational information in a scalable and consistent way.",
@@ -202,9 +208,9 @@
       "education": [
         {
           "institution": "National University of Costa Rica (UNA)",
-          "degree": "Diploma in Computer Application Programming",
+          "degree": "Bachelor’s Degree in Information Systems Engineering",
           "location": "Nicoya",
-          "date": "November 2025"
+          "date": "2023 – Present"
         }
       ],
       "languages": [
@@ -218,7 +224,7 @@
           "href": "#project-hogar",
           "role": "Frontend Dev",
           "category": "Landing Page",
-          "description": "Landing page for a nursing home focused on clarity, trust, accessibility and a warm visual experience for visitors and families.",
+          "description": "Informational landing page for a nursing home designed to provide clarity, accessibility and trust for families and visitors.",
           "tech": ["React", "Tailwind", "TypeScript"],
           "image": "./assets/projects/san-blas.png",
           "repoUrl": "https://github.com/KarinaMD16/hogar-san-blas-informativa.git",
@@ -230,7 +236,7 @@
           "href": "#project-sidnam",
           "role": "Frontend Dev",
           "category": "Administrative Panel",
-          "description": "Administrative web panel created to improve internal nursing home operations and support content and process management.",
+          "description": "Administrative web panel designed to support internal nursing home operations and simplify content and information management.",
           "tech": ["React", "Tailwind", "TypeScript"],
           "image": "./assets/projects/sidnam.png",
           "repoUrl": "https://github.com/KarinaMD16/sidnam-administrativa.git",
@@ -242,7 +248,7 @@
           "href": "#project-color",
           "role": "Frontend Dev",
           "category": "Database Memory Game",
-          "description": "Interactive memory game inspired by database concepts, designed to make learning more dynamic and visual.",
+          "description": "Interactive memory game inspired by database concepts, designed to make learning database structures more visual and engaging.",
           "tech": ["React", "Tailwind", "TypeScript"],
           "image": "./assets/projects/color-nodes.png",
           "repoUrl": "https://github.com/KarinaMD16/color-nodes.git",
@@ -375,7 +381,14 @@
           "liveUrl": ""
         }
       ],
-      "contact": [{ "label": "LinkedIn", "value": "Daniel Nuez", "href": "#", "icon": "linkedin" }]
+      "contact": [
+        {
+          "label": "LinkedIn",
+          "value": "Daniel Nuez",
+          "href": "#",
+          "icon": "linkedin"
+        }
+      ]
     }
   }
 }
