@@ -1478,6 +1478,7 @@ body.is-cv-mode .header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
     min-width: 140px;
     max-width: 100%;
     padding: 10px 16px;
@@ -1490,6 +1491,20 @@ body.is-cv-mode .header {
     box-shadow: 0 8px 18px rgba(15, 23, 42, .05);
     transition: transform .18s ease, background .18s ease, box-shadow .18s ease, color .18s ease;
     box-sizing: border-box;
+}
+
+.projectCard__actionIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+}
+
+.projectCard__actionIcon svg {
+    width: 16px;
+    height: 16px;
 }
 
 .projectCard__action:hover {

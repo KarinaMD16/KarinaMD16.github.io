@@ -342,6 +342,11 @@ const projectsData = Array.isArray(person.projects) ? person.projects : [];
 
 let goToProject = () => {};
 
+const GITHUB_ACTION_ICON = `
+<svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+  <path d="M12 .7a11.3 11.3 0 0 0-3.6 22c.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.2-1.3-1.6-1.3-1.6-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.2-1.3-5.2-5.8 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a10.9 10.9 0 0 1 5.9 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.2 5.8.4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6A11.3 11.3 0 0 0 12 .7z"/>
+</svg>`;
+
 if (projectsWrap) {
   projectsWrap.replaceChildren();
 
@@ -393,14 +398,28 @@ if (projectsWrap) {
       return `project-${index + 1}`;
     };
 
-    const createProjectLink = (label, href, extraClass = "") => {
+    const createProjectLink = (label, href, extraClass = "", iconMarkup = "") => {
       if (!href) return null;
       const a = document.createElement("a");
       a.href = href;
       a.target = "_blank";
       a.rel = "noreferrer";
       a.className = `projectCard__action ${extraClass}`.trim();
-      a.textContent = label;
+
+      if (iconMarkup) {
+        const icon = document.createElement("span");
+        icon.className = "projectCard__actionIcon";
+        icon.innerHTML = iconMarkup;
+
+        const text = document.createElement("span");
+        text.textContent = label;
+
+        a.appendChild(icon);
+        a.appendChild(text);
+      } else {
+        a.textContent = label;
+      }
+
       return a;
     };
 
@@ -451,7 +470,7 @@ if (projectsWrap) {
       actions.className = "projectCard__actions";
 
       const liveLink = createProjectLink("Live", project.liveUrl, "projectCard__action--primary");
-      const repoLink = createProjectLink("Repository", project.repoUrl);
+      const repoLink = createProjectLink("Repository", project.repoUrl, "", GITHUB_ACTION_ICON);
 
       if (liveLink) actions.appendChild(liveLink);
       if (repoLink) actions.appendChild(repoLink);
