@@ -100,7 +100,7 @@ body {
 /* ===== MONITOR ===== */
 .monitor {
     width: min(1100px, 95vw);
-    min-height: 85vh;
+    aspect-ratio: 16 / 9;
     background: linear-gradient(180deg, var(--frame-top), var(--frame-bottom));
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
