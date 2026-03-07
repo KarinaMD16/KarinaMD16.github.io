@@ -279,7 +279,7 @@
 
     "daniel": {
       "id": "daniel",
-      "name": "Daniel Nuez",
+      "name": "José Daniel Nunez Villalobos",
       "palette": {
         "accent": "#b7e4c7",
         "accentDark": "#40916c",
@@ -334,9 +334,9 @@
       "education": [
         {
           "institution": "National University of Costa Rica (UNA)",
-          "degree": "Diploma in Computer Application Programming",
+          "degree": "Bachelor’s Degree in Information Systems Engineering",
           "location": "Nicoya",
-          "date": "November 2025"
+          "date": "2023 – Present"
         }
       ],
       "languages": [
@@ -383,10 +383,16 @@
       ],
       "contact": [
         {
-          "label": "LinkedIn",
-          "value": "Daniel Nuez",
-          "href": "#",
-          "icon": "linkedin"
+          "label": "Email",
+          "value": "josedaniel4bb@gmail.com",
+          "href": "mailto:josedaniel4bb@gmail.com",
+          "icon": "email"
+        },
+        {
+          "label": "GitHub",
+          "value": "SoyMaloLoSeShh",
+          "href": "https://github.com/SoyMaloLoSeShh",
+          "icon": "github"
         }
       ]
     }
