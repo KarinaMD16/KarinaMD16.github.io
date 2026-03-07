@@ -77,6 +77,7 @@
     font-size: 16px;
     margin-left: 6px;
 }
+
 * {
     box-sizing: border-box;
 }
@@ -791,9 +792,11 @@ body.is-cv-mode .header {
     flex-wrap: wrap;
     gap: 8px;
 }
+
 .cv__contactList li {
     margin: 0;
 }
+
 .cv__contactList li a {
     display: inline-flex;
     align-items: center;
@@ -801,6 +804,7 @@ body.is-cv-mode .header {
     color: var(--accentDark);
     text-decoration: none;
 }
+
 .cv__contactList li a:hover {
     text-decoration: underline;
 }
@@ -825,6 +829,7 @@ body.is-cv-mode .header {
     flex-direction: column;
     gap: 8px;
 }
+
 .cv__contactForm input,
 .cv__contactForm textarea {
     width: 100%;
@@ -835,6 +840,7 @@ body.is-cv-mode .header {
     color: var(--text);
     border-radius: 20px;
 }
+
 .cv__contactForm button {
     align-self: flex-start;
     width: 100%;
@@ -845,10 +851,17 @@ body.is-cv-mode .header {
     border: none;
     border-radius: 12px;
     cursor: pointer;
-    min-width: 120px; /* ensure consistent width */
+    min-width: 120px;
+    /* ensure consistent width */
 }
+
 .cv__contactForm button:hover {
     background: var(--accentDark);
+}
+
+[data-theme="dark"] .cv__contactForm button,
+[data-theme="dark"] .cv__contactForm button:hover {
+    color: #111827;
 }
 
 /* submission message */
@@ -861,6 +874,7 @@ body.is-cv-mode .header {
     font-size: 14px;
     display: none;
 }
+
 .cv__formMessage.is-visible {
     display: block;
 }
@@ -1343,11 +1357,9 @@ body.is-cv-mode .header {
     padding: 14px;
     border-radius: 26px;
     border: 1px solid var(--border-soft);
-    background: linear-gradient(
-        180deg,
-        color-mix(in srgb, var(--accentSoft) 22%, var(--surface-soft)) 0%,
-        var(--surface) 100%
-    );
+    background: linear-gradient(180deg,
+            color-mix(in srgb, var(--accentSoft) 22%, var(--surface-soft)) 0%,
+            var(--surface) 100%);
     box-shadow: 0 16px 38px rgba(15, 23, 42, .08);
 
     opacity: .88;
@@ -1509,7 +1521,7 @@ body.is-cv-mode .header {
 
 .projectCard__action:hover {
     transform: translateY(-1px);
-    background:var(--accentSoft);
+    background: var(--accentSoft);
     box-shadow: 0 12px 22px rgba(15, 23, 42, .08);
 }
 
@@ -1533,7 +1545,7 @@ body.is-cv-mode .header {
     font-size: 28px;
     line-height: 1;
     color: var(--accentDark);
-    background:var(--bgSoft);
+    background: var(--bgSoft);
     box-shadow: 0 10px 24px rgba(15, 23, 42, .08);
     transition: transform .18s ease, background .18s ease;
     flex: 0 0 48px;
@@ -1746,4 +1758,3 @@ body.is-cv-mode .header {
         right: 6px;
     }
 }
-

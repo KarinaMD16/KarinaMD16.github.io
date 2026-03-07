@@ -35,7 +35,7 @@ El formulario de Contact envia el correo automaticamente usando EmailJS (sin abr
 
 Cuando el usuario envia el formulario:
 - Destino: correo del perfil activo.
-- Asunto: `hey, im <name>`.
+- Asunto: `CV Contact Request for <profile> - <name>`.
 - Reply-To recomendado: `{{from_email}}`.
 
 ## Estructura del proyecto

@@ -850,7 +850,7 @@ if (projectsWrap) {
           return;
         }
 
-        const subject = `hey, im ${name || "there"}`;
+        const subject = `CV Contact Request for ${person.name || "Profile"} - ${name || "Website Visitor"}`;
 
         setSubmitting(true);
         try {
